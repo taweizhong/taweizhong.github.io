@@ -1870,7 +1870,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1664158530594),
+    lastupdate: new Date(1664286292862),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","music","webinfo","qrcode","lastupdate"],
       for_post: ["toc"],
@@ -2755,9 +2755,149 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/09/27/Golang-标准库-输入输出/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="秋季的blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="秋季的blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"  itemprop="url">
+        Golang 标准库 输入输出
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        输入输出io-基本的IO接口io包为I&#x2F;O原语提供了基本的接口。包装了原语的已有实现。
+只要满足Reader和Writer接口，就可以使用IO包的功能。
+Reader接口定义：
+123type Reader interface &#123;	Read(p []byte) (n int, err error)&#125;
+
+Read将len(p)个字节读取到p中。返回读取的字节数n和...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="taweizhong">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-09-27T09:26:09+08:00">2022-09-27</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/09/26/JSON-指南/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="秋季的blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="秋季的blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/09/26/JSON-%E6%8C%87%E5%8D%97/"  itemprop="url">
+        JSON 指南
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        JSON 基础轻量级的、基于文本的、开放的数据交换格式，最受欢迎的、使用最广泛的交换格式之一。
+JSON是一种纯字符串形式的数据，本身不提供任何方法，适合在网络中进行传输。
+在JSON中，使用两种方式表示数据：
+
+Object（对象）：键值对的集合，使用&#123;&#125;定义。
+如&#123;&quot;name&quot;:&quot;taweizhong&quot;,&quot;a...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="taweizhong">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-09-26T20:32:19+08:00">2022-09-26</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/09/26/JSON-%E6%8C%87%E5%8D%97/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -3327,148 +3467,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/09/23/Hyperledger-Fabric网络架构/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/09/23/Hyperledger-Fabric%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/">
-        <img itemprop="image" class='headimg' alt="Hyperledger Fabric网络架构" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcn.hyperledger.org%2Fwp-content%2Fuploads%2F2019%2F03%2Fhllogo_blog.png&refer=http%3A%2F%2Fcn.hyperledger.org&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666402453&t=8904ba70fad95256d7602e0c4525bf52'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/23/Hyperledger-Fabric%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/"  itemprop="url">
-        Hyperledger Fabric网络架构
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>简述Hyperledger Fabric的网络的形成。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-23T10:16:21+08:00">2022-09-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url"><span itemprop="name">区块链</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/23/Hyperledger-Fabric%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/09/22/Hyperledger-Fabric-模型/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/09/22/Hyperledger-Fabric-%E6%A8%A1%E5%9E%8B/">
-        <img itemprop="image" class='headimg' alt="Hyperledger Fabric 模型" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcn.hyperledger.org%2Fwp-content%2Fuploads%2F2019%2F03%2Fhllogo_blog.png&refer=http%3A%2F%2Fcn.hyperledger.org&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666402453&t=8904ba70fad95256d7602e0c4525bf52'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/22/Hyperledger-Fabric-%E6%A8%A1%E5%9E%8B/"  itemprop="url">
-        Hyperledger Fabric 模型
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>简述Hyperledger Fabric的模型。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-22T09:59:07+08:00">2022-09-22</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url"><span itemprop="name">区块链</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/22/Hyperledger-Fabric-%E6%A8%A1%E5%9E%8B/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3753,7 +3751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>38 篇</div>
+          <div>40 篇</div>
         </div>
       
 
@@ -3774,7 +3772,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-09-26 日</div>
+          <div id="last-update-show">2022-09-27 日</div>
         </div>
       
     </div>
@@ -3824,7 +3822,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E7%A7%81%E6%9C%89%E6%95%B0%E6%8D%AE/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 私有数据</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E6%8E%92%E5%BA%8F%E6%9C%8D%E5%8A%A1/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 排序服务</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E8%B4%A6%E6%9C%AC/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 账本</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 智能合约</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E8%8A%82%E7%82%B9/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 节点</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"><div class="item"><time>2022-09-27</time></div><span>Golang 标准库 输入输出</span></a></li><li><a class="widget-last" href="/2022/09/26/JSON-%E6%8C%87%E5%8D%97/"><div class="item"><time>2022-09-26</time></div><span>JSON 指南</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E7%A7%81%E6%9C%89%E6%95%B0%E6%8D%AE/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 私有数据</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E6%8E%92%E5%BA%8F%E6%9C%8D%E5%8A%A1/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 排序服务</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E8%B4%A6%E6%9C%AC/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 账本</span></a></li></ul>
   </div>
 </section>
 
@@ -4790,7 +4788,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp"];
   let index = 0;
   let IntervalParallax = null;
 

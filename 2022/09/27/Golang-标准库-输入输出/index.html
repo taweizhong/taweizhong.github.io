@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://peapod.top/archives/2022/page/4/"/>
+  
+  <link rel="canonical" href="http://peapod.top/2022/09/27/golang-标准库-输入输出/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,15 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2022 - 秋季的blog</title>
+  <title>Golang 标准库 输入输出 - 秋季的blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="秋季的blog">
-<meta property="og:url" content="http://peapod.top/archives/2022/page/4/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang 标准库 输入输出">
+<meta property="og:url" content="http://peapod.top/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/index.html">
 <meta property="og:site_name" content="秋季的blog">
+<meta property="og:description" content="输入输出io-基本的IO接口io包为I&#x2F;O原语提供了基本的接口。包装了原语的已有实现。 只要满足Reader和Writer接口，就可以使用IO包的功能。 Reader接口定义： 123type Reader interface &amp;#123;	Read(p []byte) (n int, err error)&amp;#125;  Read将len(p)个字节读取到p中。返回读取的字节数n和遇到的">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-09-27T01:26:09.000Z">
+<meta property="article:modified_time" content="2022-09-27T07:10:03.520Z">
 <meta property="article:author" content="他维忠">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2295,7 +2299,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2584,7 +2588,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2661,16 +2665,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/26/Go函数/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/09/27/Golang-标准库-输入输出/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2679,707 +2675,412 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/26/Go%E5%87%BD%E6%95%B0/">
-        <img itemprop="image" class='headimg' alt="Go函数" src='https://w.wallhaven.cc/full/g7/wallhaven-g7rere.png'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/26/Go%E5%87%BD%E6%95%B0/"  itemprop="url">
-        Go函数
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>函数的基本操作</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-26T16:31:43+08:00">2022-08-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/26/Go%E5%87%BD%E6%95%B0/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/26/Go控制结构/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/26/Go%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/">
-        <img itemprop="image" class='headimg' alt="Go控制结构" src='https://w.wallhaven.cc/full/72/wallhaven-728oz3.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/26/Go%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/"  itemprop="url">
-        Go控制结构
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>基本的控制结构</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-26T16:31:25+08:00">2022-08-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/26/Go%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/26/Go基本数据类型/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/26/Go%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        <img itemprop="image" class='headimg' alt="Go基本数据类型" src='https://w.wallhaven.cc/full/g7/wallhaven-g7o9pl.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/26/Go%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"  itemprop="url">
-        Go基本数据类型
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>基本数据类型</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-26T16:31:00+08:00">2022-08-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/26/Go%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/26/Go基本结构/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/26/Go%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
-        <img itemprop="image" class='headimg' alt="Go基本结构" src='https://w.wallhaven.cc/full/z8/wallhaven-z8lpvv.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/26/Go%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/"  itemprop="url">
-        Go基本结构
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>程序不不可少的基础结构</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-26T16:30:29+08:00">2022-08-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/26/Go%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/26/Go编辑于调试/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/26/Go%E7%BC%96%E8%BE%91%E4%BA%8E%E8%B0%83%E8%AF%95/">
-        <img itemprop="image" class='headimg' alt="Go编辑于调试" src='https://w.wallhaven.cc/full/o3/wallhaven-o3o867.png'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/26/Go%E7%BC%96%E8%BE%91%E4%BA%8E%E8%B0%83%E8%AF%95/"  itemprop="url">
-        Go编辑于调试
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>编辑代码和调试</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-26T16:29:58+08:00">2022-08-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/26/Go%E7%BC%96%E8%BE%91%E4%BA%8E%E8%B0%83%E8%AF%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/26/Go安装与运行/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/26/Go%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%90%E8%A1%8C/">
-        <img itemprop="image" class='headimg' alt="Go安装与运行" src='https://w.wallhaven.cc/full/57/wallhaven-572k81.png'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/26/Go%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%90%E8%A1%8C/"  itemprop="url">
-        Go安装与运行
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>安装和运行</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-26T16:29:40+08:00">2022-08-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/26/Go%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%90%E8%A1%8C/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/26/Go起源与发展/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/26/Go%E8%B5%B7%E6%BA%90%E4%B8%8E%E5%8F%91%E5%B1%95/">
-        <img itemprop="image" class='headimg' alt="Go起源与发展" src='https://w.wallhaven.cc/full/m9/wallhaven-m9jjp9.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/26/Go%E8%B5%B7%E6%BA%90%E4%B8%8E%E5%8F%91%E5%B1%95/"  itemprop="url">
-        Go起源与发展
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Go语言的前生今世</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-26T16:29:16+08:00">2022-08-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/26/Go%E8%B5%B7%E6%BA%90%E4%B8%8E%E5%8F%91%E5%B1%95/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/25/Git入门指南/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/25/Git%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
-        <img itemprop="image" class='headimg' alt="Git入门指南" src='https://w.wallhaven.cc/full/72/wallhaven-72rd8e.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/25/Git%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"  itemprop="url">
-        Git入门指南
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>版本控制</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-25T22:06:50+08:00">2022-08-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/08/25/Git%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/25/服务器部署/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/25/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/"  itemprop="url">
-        服务器部署
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+    
+      <h1 class="title" itemprop="name headline">
+        Golang 标准库 输入输出
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">taweizhong</p>
+  </a>
+</div>
+
+          
         
-        <time itemprop="dateCreated datePublished" datetime="2022-08-25T20:10:38+08:00">2022-08-25</time>
+          
+            
+
+          
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-27T09:26:09+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 27, 2022</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="输入输出"><a href="#输入输出" class="headerlink" title="输入输出"></a>输入输出</h1><h2 id="io-基本的IO接口"><a href="#io-基本的IO接口" class="headerlink" title="io-基本的IO接口"></a>io-基本的IO接口</h2><p>io包为I&#x2F;O原语提供了基本的接口。包装了原语的已有实现。</p>
+<p>只要满足Reader和Writer接口，就可以使用IO包的功能。</p>
+<h3 id="Reader接口"><a href="#Reader接口" class="headerlink" title="Reader接口"></a>Reader接口</h3><p>定义：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Reader <span class="keyword">interface</span> &#123;</span><br><span class="line">	Read(p []<span class="type">byte</span>) (n <span class="type">int</span>, err <span class="type">error</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Read将len(p)个字节读取到p中。返回读取的字节数n和遇到的错误。</p>
+<p>Reader接口的方法集只包含了一个Read方法，所有实现了Read方法的类型都可以满足io.Reader接口。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ReadFrom</span><span class="params">(reader io.Reader, num <span class="type">int</span>)</span></span> ([]<span class="type">byte</span>, <span class="type">error</span>) &#123;</span><br><span class="line">    p := <span class="built_in">make</span>([]<span class="type">byte</span>, num)</span><br><span class="line">    n, err := reader.Read(p)</span><br><span class="line">    <span class="keyword">if</span> n &gt; <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> p[:n], <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p, err</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 从标准输入读取</span></span><br><span class="line">data, err = ReadFrom(os.Stdin, <span class="number">11</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从普通文件读取，其中 file 是 os.File 的实例</span></span><br><span class="line">data, err = ReadFrom(file, <span class="number">9</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从字符串读取</span></span><br><span class="line">data, err = ReadFrom(strings.NewReader(<span class="string">&quot;from string&quot;</span>), <span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 传递的参数是个接口，在函数中调用了这个接口变量的Read方法，只需要在向ReadFrom函数传递实参的时候传递一个实现了该接口的对象，这样就把对象赋值给了接口。</p>
+</blockquote>
+<h3 id="Writer-接口"><a href="#Writer-接口" class="headerlink" title="Writer 接口"></a>Writer 接口</h3><p>定义：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Write <span class="keyword">interface</span> &#123;</span><br><span class="line">	Write(p <span class="type">byte</span>[]) (n <span class="type">int</span>, err <span class="type">error</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所有实现了Write方法的类型都实现了 io.Writer 接口。</p>
+<h3 id="实现了io-Reader接口或io-Writer接口的类型"><a href="#实现了io-Reader接口或io-Writer接口的类型" class="headerlink" title="实现了io.Reader接口或io.Writer接口的类型"></a>实现了io.Reader接口或io.Writer接口的类型</h3><ul>
+<li>os.File 同时实现了 io.Reader 和 io.Writer</li>
+<li>strings.Reader 实现了 io.Reader</li>
+<li>bufio.Reader&#x2F;Writer 分别实现了 io.Reader 和 io.Writer</li>
+<li>bytes.Buffer 同时实现了 io.Reader 和 io.Writer</li>
+<li>bytes.Reader 实现了 io.Reader</li>
+<li>encoding&#x2F;csv.Reader&#x2F;Writer 分别实现了 io.Reader 和 io.Writer</li>
+<li>net&#x2F;conn 分别实现了 io.Reader 和 io.Writer(Conn接口定义了Read&#x2F;Write)</li>
+</ul>
+<p>常用的类型有：os.File、strings.Reader、bufio.Reader&#x2F;Writer、bytes.Buffer、bytes.Reader</p>
+<blockquote>
+<p> Go 中接口的命名约定：接口名以 er 结尾。</p>
+</blockquote>
+<h3 id="ReaderAt-和-WriterAt-接口"><a href="#ReaderAt-和-WriterAt-接口" class="headerlink" title="ReaderAt 和 WriterAt 接口"></a>ReaderAt 和 WriterAt 接口</h3><h4 id="ReaderAt-接口的定义："><a href="#ReaderAt-接口的定义：" class="headerlink" title="ReaderAt 接口的定义："></a><strong>ReaderAt 接口</strong>的定义：</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ReaderAt <span class="keyword">interface</span> &#123;</span><br><span class="line">    ReadAt(p []<span class="type">byte</span>, off <span class="type">int64</span>) (n <span class="type">int</span>, err <span class="type">error</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ReadAt 从基本输入源的偏移量 off 处开始，将 len(p) 个字节读取到 p 中。它返回读取的字节数 n（0 &lt;&#x3D; n &lt;&#x3D; len(p)）以及任何遇到的错误。</p>
+</blockquote>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">reader := strings.NewReader(<span class="string">&quot;Go语言中文网&quot;</span>)</span><br><span class="line">p := <span class="built_in">make</span>([]<span class="type">byte</span>, <span class="number">6</span>)</span><br><span class="line">n, err := reader.ReadAt(p, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    <span class="built_in">panic</span>(err)</span><br><span class="line">&#125;</span><br><span class="line">fmt.Printf(<span class="string">&quot;%s, %d\n&quot;</span>, p, n)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 语言, 6</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="WriterAt-接口的定义："><a href="#WriterAt-接口的定义：" class="headerlink" title="WriterAt 接口的定义："></a><strong>WriterAt 接口</strong>的定义：</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> WriterAt <span class="keyword">interface</span> &#123;</span><br><span class="line">    WriteAt(p []<span class="type">byte</span>, off <span class="type">int64</span>) (n <span class="type">int</span>, err <span class="type">error</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>WriteAt 从 p 中将 len(p) 个字节写入到偏移量 off 处的基本数据流中。它返回从 p 中被写入的字节数 n（0 &lt;&#x3D; n &lt;&#x3D; len(p)）以及任何遇到的引起写入提前停止的错误。</p>
+</blockquote>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">file, err := os.Create(<span class="string">&quot;writeAt.txt&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    <span class="built_in">panic</span>(err)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">defer</span> file.Close()</span><br><span class="line">file.WriteString(<span class="string">&quot;Golang中文社区——这里是多余&quot;</span>)</span><br><span class="line">n, err := file.WriteAt([]<span class="type">byte</span>(<span class="string">&quot;Go语言中文网&quot;</span>), <span class="number">24</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    <span class="built_in">panic</span>(err)</span><br><span class="line">&#125;</span><br><span class="line">fmt.Println(n)</span><br></pre></td></tr></table></figure>
+
+<h3 id="ReaderFrom-和-WriterTo-接口"><a href="#ReaderFrom-和-WriterTo-接口" class="headerlink" title="ReaderFrom 和 WriterTo 接口"></a>ReaderFrom 和 WriterTo 接口</h3><h4 id="ReaderFrom-的定义"><a href="#ReaderFrom-的定义" class="headerlink" title="ReaderFrom 的定义:"></a><strong>ReaderFrom</strong> 的定义:</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ReaderFrom <span class="keyword">interface</span> &#123;</span><br><span class="line">    ReadFrom(r Reader) (n <span class="type">int64</span>, err <span class="type">error</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ReadFrom 从 r 中读取数据，直到 EOF 或发生错误。其返回值 n 为读取的字节数。</p>
+</blockquote>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">file, err := os.Open(<span class="string">&quot;writeAt.txt&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    <span class="built_in">panic</span>(err)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">defer</span> file.Close()</span><br><span class="line">writer := bufio.NewWriter(os.Stdout)</span><br><span class="line">writer.ReadFrom(file)</span><br><span class="line">writer.Flush()</span><br></pre></td></tr></table></figure>
+
+<h4 id="WriterTo的定义"><a href="#WriterTo的定义" class="headerlink" title="WriterTo的定义:"></a><strong>WriterTo</strong>的定义:</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> WriterTo <span class="keyword">interface</span> &#123;</span><br><span class="line">    WriteTo(w Writer) (n <span class="type">int64</span>, err <span class="type">error</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>WriteTo 将数据写入 w 中，直到没有数据可写或发生错误。其返回值 n 为写入的字节数。</p>
+</blockquote>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reader := bytes.NewReader([]<span class="type">byte</span>(<span class="string">&quot;Go语言中文网&quot;</span>))</span><br><span class="line">reader.WriteTo(os.Stdout)</span><br></pre></td></tr></table></figure>
+
+<h2 id="ioutil-—-方便的IO操作函数集"><a href="#ioutil-—-方便的IO操作函数集" class="headerlink" title="ioutil — 方便的IO操作函数集"></a>ioutil — 方便的IO操作函数集</h2><h3 id="ReadAll-函数"><a href="#ReadAll-函数" class="headerlink" title="ReadAll 函数"></a>ReadAll 函数</h3><p>Go 提供了 ReadAll 这个函数，用来从io.Reader 中一次读取所有数据。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ReadAll</span><span class="params">(r io.Reader)</span></span> ([]<span class="type">byte</span>, <span class="type">error</span>)</span><br></pre></td></tr></table></figure>
+
+<p>它是通过 bytes.Buffer 中的 <a target="_blank" rel="noopener" href="http://docscn.studygolang.com/src/bytes/buffer.go?s=5385:5444#L144">ReadFrom</a> 来实现读取所有数据的。</p>
+<h3 id="ReadDri-函数"><a href="#ReadDri-函数" class="headerlink" title="ReadDri 函数"></a>ReadDri 函数</h3><p>读取目录并返回排好序的文件和子目录名（ []os.FileInfo ）。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fileInfos, err := ioutil.ReadDir(path)</span><br></pre></td></tr></table></figure>
+
+<h3 id="ReadFile-和-WriteFile-函数"><a href="#ReadFile-和-WriteFile-函数" class="headerlink" title="ReadFile 和 WriteFile 函数"></a>ReadFile 和 WriteFile 函数</h3><p>ReadFile 读取整个文件的内容。</p>
+<p>ReadFile 的实现和ReadAll 类似，不过，ReadFile 会先判断文件的大小，给 bytes.Buffer 一个预定义容量，避免额外分配内存。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ReadFile</span><span class="params">(filename <span class="type">string</span>)</span></span> ([]<span class="type">byte</span>, <span class="type">error</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ReadFile 从 filename 指定的文件中读取数据并返回文件的内容。</p>
+</blockquote>
+<p>WriteFile 函数：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">WriteFile</span><span class="params">(filename <span class="type">string</span>, data []<span class="type">byte</span>, perm os.FileMode)</span></span> <span class="type">error</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>WriteFile 将data写入filename文件中，当文件不存在时会根据perm指定的权限进行创建一个,文件存在时会先清空文件内容。</p>
+</blockquote>
+<h3 id="TempDir-和-TempFile-函数"><a href="#TempDir-和-TempFile-函数" class="headerlink" title="TempDir 和 TempFile 函数"></a>TempDir 和 TempFile 函数</h3><p>TempDir 创建临时目录。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b.work, err = ioutil.TempDir(<span class="string">&quot;&quot;</span>, <span class="string">&quot;go-build&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>第一个参数如果为空，表明在系统默认的临时目录（ os.TempDir ）中创建临时目录；第二个参数指定临时目录名的前缀，该函数返回临时目录的路径。</p>
+</blockquote>
+<p>TempFile 用于创建临时文件。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f1, err := ioutil.TempFile(<span class="string">&quot;&quot;</span>, <span class="string">&quot;gofmt&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>第一个参数如果为空，表明在系统默认的临时目录（ os.TempDir ）中创建临时文件；第二个参数指定临时文件名的前缀，该函数返回临时文件的路径。</p>
+</blockquote>
+<p><strong>创建者创建的临时文件和临时目录要负责删除这些临时目录和文件。</strong></p>
+<p>如删除临时文件：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">       f.Close()</span><br><span class="line">       os.Remove(f.Name())</span><br><span class="line">   &#125;()</span><br></pre></td></tr></table></figure>
+
+<h2 id="fmt-—-格式化IO"><a href="#fmt-—-格式化IO" class="headerlink" title="fmt — 格式化IO"></a>fmt — 格式化IO</h2><h3 id="Printing"><a href="#Printing" class="headerlink" title="Printing"></a>Printing</h3><h4 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> user <span class="keyword">struct</span> &#123;</span><br><span class="line">    name <span class="type">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    u := user&#123;<span class="string">&quot;tang&quot;</span>&#125;</span><br><span class="line">    <span class="comment">//Printf 格式化输出</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;% + v\n&quot;</span>, u)     <span class="comment">//格式化输出结构</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%#v\n&quot;</span>, u)       <span class="comment">//输出值的 Go 语言表示方法</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%T\n&quot;</span>, u)        <span class="comment">//输出值的类型的 Go 语言表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%t\n&quot;</span>, <span class="literal">true</span>)     <span class="comment">//输出值的 true 或 false</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%b\n&quot;</span>, <span class="number">1024</span>)     <span class="comment">//二进制表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%c\n&quot;</span>, <span class="number">11111111</span>) <span class="comment">//数值对应的 Unicode 编码字符</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%d\n&quot;</span>, <span class="number">10</span>)       <span class="comment">//十进制表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%o\n&quot;</span>, <span class="number">8</span>)        <span class="comment">//八进制表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%q\n&quot;</span>, <span class="number">22</span>)       <span class="comment">//转化为十六进制并附上单引号</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%x\n&quot;</span>, <span class="number">1223</span>)     <span class="comment">//十六进制表示，用a-f表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%X\n&quot;</span>, <span class="number">1223</span>)     <span class="comment">//十六进制表示，用A-F表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%U\n&quot;</span>, <span class="number">1233</span>)     <span class="comment">//Unicode表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%b\n&quot;</span>, <span class="number">12.34</span>)    <span class="comment">//无小数部分，两位指数的科学计数法6946802425218990p-49</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%e\n&quot;</span>, <span class="number">12.345</span>)   <span class="comment">//科学计数法，e表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%E\n&quot;</span>, <span class="number">12.34455</span>) <span class="comment">//科学计数法，E表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%f\n&quot;</span>, <span class="number">12.3456</span>)  <span class="comment">//有小数部分，无指数部分</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%g\n&quot;</span>, <span class="number">12.3456</span>)  <span class="comment">//根据实际情况采用%e或%f输出</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%G\n&quot;</span>, <span class="number">12.3456</span>)  <span class="comment">//根据实际情况采用%E或%f输出</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%s\n&quot;</span>, <span class="string">&quot;wqdew&quot;</span>)  <span class="comment">//直接输出字符串或者[]byte</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%q\n&quot;</span>, <span class="string">&quot;dedede&quot;</span>) <span class="comment">//双引号括起来的字符串</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%x\n&quot;</span>, <span class="string">&quot;abczxc&quot;</span>) <span class="comment">//每个字节用两字节十六进制表示，a-f表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%X\n&quot;</span>, <span class="string">&quot;asdzxc&quot;</span>) <span class="comment">//每个字节用两字节十六进制表示，A-F表示</span></span><br><span class="line">    fmt.Printf(<span class="string">&quot;%p\n&quot;</span>, <span class="number">0x123</span>)    <span class="comment">//0x开头的十六进制数表示</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h4><table>
+<thead>
+<tr>
+<th>占位符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%v</td>
+<td>相应值的默认格式。“加号”标记（%+v）会添加字段名</td>
+</tr>
+<tr>
+<td>%#v</td>
+<td>相应值的Go语法表示</td>
+</tr>
+<tr>
+<td>%T</td>
+<td>相应值的类型的Go语法表示</td>
+</tr>
+<tr>
+<td>%%</td>
+<td>字面上的百分号，并非值的占位符</td>
+</tr>
+<tr>
+<td>%t</td>
+<td>true 或 false。</td>
+</tr>
+<tr>
+<td>%b</td>
+<td>二进制表示</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>相应Unicode码点所表示的字符</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>十进制表示</td>
+</tr>
+<tr>
+<td>%o</td>
+<td>八进制表示</td>
+</tr>
+<tr>
+<td>%q</td>
+<td>单引号围绕的字符字面值，由Go语法安全地转义</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>十六进制表示，字母形式为小写 a-f</td>
+</tr>
+<tr>
+<td>%X</td>
+<td>十六进制表示，字母形式为大写 A-F</td>
+</tr>
+<tr>
+<td>%s</td>
+<td>输出字符串表示（string类型或[]byte)</td>
+</tr>
+<tr>
+<td>%p</td>
+<td>十六进制表示，前缀 0x</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>有小数点而无指数，例如 123.456</td>
+</tr>
+<tr>
+<td>%e</td>
+<td>科学计数法，例如 -1234.456e+78</td>
+</tr>
+<tr>
+<td>%g</td>
+<td>根据情况选择 %e 或 %f 以产生更紧凑的（无末尾的0）输出</td>
+</tr>
+<tr>
+<td>%G</td>
+<td>根据情况选择 %E 或 %f 以产生更紧凑的（无末尾的0）输出</td>
+</tr>
+<tr>
+<td>%E</td>
+<td>科学计数法，例如 -1234.456E+78</td>
+</tr>
+</tbody></table>
+<p>对数值而言，宽度为该数值占用区域的最小宽度；精度为小数点之后的位数。</p>
+<h3 id="Scanning"><a href="#Scanning" class="headerlink" title="Scanning"></a>Scanning</h3><p>Scan、Scanf 和 Scanln 从 os.Stdin 中读取； Fscan、Fscanf 和 Fscanln 从指定的 io.Reader 中读取； Sscan、Sscanf 和 Sscanln 从实参字符串中读取。 </p>
+<p>Scanf、Fscanf 和 Sscanf 需要输入换行符来匹配格式中的换行符；其它函数则将换行符视为空格。</p>
+<p>Scanf、Fscanf 和 Sscanf 根据格式字符串解析实参。</p>
+<p>宽度被解释为输入的文本（%5s 意为最多从输入中读取5个 rune 来扫描成字符串），而扫描函数则没有精度的语法（没有 %5.2f，只有 %5f）。</p>
+<h3 id="Print-序列函数"><a href="#Print-序列函数" class="headerlink" title="Print 序列函数"></a>Print 序列函数</h3><p>Fprint&#x2F;Fprintf&#x2F;Fprintln 函数的第一个参数接收一个io.Writer类型，会将内容输出到 io.Writer 中去。</p>
+<p>Print&#x2F;Printf&#x2F;Println 函数是将内容输出到标准输出中。</p>
+<p>Sprint&#x2F;Sprintf&#x2F;Sprintln 是格式化内容为 string 类型，而并不输出到某处，需要格式化字符串并返回时。</p>
+<h3 id="Scan-序列函数"><a href="#Scan-序列函数" class="headerlink" title="Scan 序列函数"></a>Scan 序列函数</h3><p>Fscan&#x2F;Fscanf&#x2F;Fscanln 函数的第一个参数接收一个 io.Reader 类型，从其读取内容并赋值给相应的实参。</p>
+<p>Scan&#x2F;Scanf&#x2F;Scanln 正是从标准输入获取内容。</p>
+<p>Sscan&#x2F;Sscanf&#x2F;Sscanln 则直接从字符串中获取内容。</p>
+<h2 id="bufio-—-缓存IO"><a href="#bufio-—-缓存IO" class="headerlink" title="bufio — 缓存IO"></a>bufio — 缓存IO</h2><h3 id="Reader-类型和方法"><a href="#Reader-类型和方法" class="headerlink" title="Reader 类型和方法"></a>Reader 类型和方法</h3><p>bufio.Reader 结构包装了一个 io.Reader 对象，提供缓存功能，同时实现了 io.Reader 接口。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Reader <span class="keyword">struct</span> &#123;</span><br><span class="line">        buf          []<span class="type">byte</span>        <span class="comment">// 缓存</span></span><br><span class="line">        rd           io.Reader    <span class="comment">// 底层的io.Reader</span></span><br><span class="line">        <span class="comment">// r:从buf中读走的字节（偏移）；w:buf中填充内容的偏移；</span></span><br><span class="line">        <span class="comment">// w - r 是buf中可被读的长度（缓存数据的大小），也是Buffered()方法的返回值</span></span><br><span class="line">        r, w         <span class="type">int</span></span><br><span class="line">        err          <span class="type">error</span>        <span class="comment">// 读过程中遇到的错误</span></span><br><span class="line">        lastByte     <span class="type">int</span>        <span class="comment">// 最后一次读到的字节（ReadByte/UnreadByte)</span></span><br><span class="line">        lastRuneSize <span class="type">int</span>        <span class="comment">// 最后一次读到的Rune的大小 (ReadRune/UnreadRune)</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="实列化"><a href="#实列化" class="headerlink" title="实列化"></a>实列化</h4><p>bufio 包提供了两个实例化 bufio.Reader 对象的函数：NewReader 和 NewReaderSize。其中，NewReader 函数是调用 NewReaderSize 函数实现的：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewReader</span><span class="params">(rd io.Reader)</span></span> *Reader &#123;</span><br><span class="line">        <span class="comment">// 默认缓存大小：defaultBufSize=4096</span></span><br><span class="line">        <span class="keyword">return</span> NewReaderSize(rd, defaultBufSize)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>NewReaderSize的源码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">NewReaderSize</span><span class="params">(rd io.Reader, size <span class="type">int</span>)</span></span> *Reader &#123;</span><br><span class="line">        <span class="comment">// 已经是bufio.Reader类型，且缓存大小不小于 size，则直接返回</span></span><br><span class="line">        b, ok := rd.(*Reader)</span><br><span class="line">        <span class="keyword">if</span> ok &amp;&amp; <span class="built_in">len</span>(b.buf) &gt;= size &#123;</span><br><span class="line">            <span class="keyword">return</span> b</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 缓存大小不会小于 minReadBufferSize （16字节）</span></span><br><span class="line">        <span class="keyword">if</span> size &lt; minReadBufferSize &#123;</span><br><span class="line">            size = minReadBufferSize</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 构造一个bufio.Reader实例</span></span><br><span class="line">        <span class="keyword">return</span> &amp;Reader&#123;</span><br><span class="line">            buf:          <span class="built_in">make</span>([]<span class="type">byte</span>, size),</span><br><span class="line">            rd:           rd,</span><br><span class="line">            lastByte:     <span class="number">-1</span>,</span><br><span class="line">            lastRuneSize: <span class="number">-1</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/08/25/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2/' itemprop="url">
-            Read More
-          </a>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/qrcode/github@volantis.png'>
+            
+              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/qrcode/github@volantis.png'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
-        
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/08/25/使用指南/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/08/25/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
-        <img itemprop="image" class='headimg' alt="使用指南" src='https://w.wallhaven.cc/full/m9/wallhaven-m9xlmy.jpg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/25/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"  itemprop="url">
-        使用指南
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>教程</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-27T15:10:03+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 27, 2022</p>
+  </a>
+</div>
+
+        
+      
         
           
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
+
         
-        <time itemprop="dateCreated datePublished" datetime="2022-08-25T18:11:34+08:00">2022-08-25</time>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2022/08/25/%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/&title=Golang 标准库 输入输出 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/&title=Golang 标准库 输入输出 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/&title=Golang 标准库 输入输出 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/09/26/JSON-%E6%8C%87%E5%8D%97/'>
+          <p class='title'>JSON 指南<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>JSON 基础轻量级的、基于文本的、开放的数据交换格式，最受欢迎的、使用最广泛的交换格式之一。
+JSON是一种纯字符串形式的数据，本身不提供任何方法，适合在网络中进行传输。
+在JSON中，使用两...</p>
+        </a>
       
     </div>
   
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
+  <!-- Custom Files postEnd begin-->
   
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2022/page/3/">
-            <section class="post prev white-box shadow floatable blur" >
-              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>&nbsp;Previous&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          4 / 4
-        </p>
-        
-      </div>
-    
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
-	
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3388,345 +3089,64 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F4436a54e725d25b2cf37f7a47188967a18f41115.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665223631&t=b53f0138aca639fde0f360d11587f8dc'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>他维忠</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">秋季的blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget grid desktop mobile pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/volantis-x/hexo-theme-volantis'><i class="fa fa-credit-card-alt fa-fw" aria-hidden="true"></i><span class='name'>导航</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/taweizhong?tab=repositories"
-          
-          
-          active-action="action-https:githubcomtaweizhong?tab=repositories">
-          
-            <i class="fab fa-github-alt fa-fw" aria-hidden="true"></i>
-          
-          GitHub
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://music.163.com/"
-          
-          
-          active-action="action-https:music163com">
-          
-            <i class="fas fa-music fa-fw" aria-hidden="true"></i>
-          
-          网易云
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/issues/"
-          
-          
-          active-action="action-https:githubcomvolantis-xhexo-theme-volantisissues">
-          
-            <i class="fas fa-lightbulb fa-fw" aria-hidden="true"></i>
-          
-          提个建议
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Web/" href="/categories/Web/"
-            active-action="action-categoriesWeb"
-            ><div class='name'>Web</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"
-            active-action="action-categoriesE58CBAE59D97E993BE"
-            ><div class='name'>区块链</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AE%9E%E7%94%A8/" href="/categories/%E5%AE%9E%E7%94%A8/"
-            active-action="action-categoriesE5AE9EE794A8"
-            ><div class='name'>实用</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE7AC94E8AEB0"
-            ><div class='name'>笔记</div><div class='badge'>(14)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%B4%E6%98%8E/" href="/categories/%E8%AF%B4%E6%98%8E/"
-            active-action="action-categoriesE8AFB4E6988E"
-            ><div class='name'>说明</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Gin/" style="font-size: 19px; color: #777">Gin</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Go/" style="font-size: 21.5px; color: #666">Go</a> <a href="/tags/HTML/" style="font-size: 19px; color: #777">HTML</a> <a href="/tags/Hyperledger-Fabric/" style="font-size: 24px; color: #555">Hyperledger Fabric</a> <a href="/tags/beego/" style="font-size: 16.5px; color: #888">beego</a> <a href="/tags/clash/" style="font-size: 14px; color: #999">clash</a> <a href="/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/tags/%E8%AF%B4%E6%98%8E/" style="font-size: 16.5px; color: #888">说明</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-
-  
-    
-    
-      
-
-  <section class='widget desktop mobile  music'>
-    
-
-    <div class='content'>
-      
-
-  
-    <meting-js
-      theme='#1BCDFC'
-      autoplay='false'
-      volume='0.7'
-      loop='all'
-      order='list'
-      fixed='false'
-      list-max-height='320px'
-      server='netease'
-      type='playlist'
-      id='3175833810'
-      list-folded='true'>
-    </meting-js>
-  
-
-
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>40 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2022-09-27 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget qrcode desktop mobile pjax">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-      <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/qrcode/github@volantis.png'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop mobile pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"><div class="item"><time>2022-09-27</time></div><span>Golang 标准库 输入输出</span></a></li><li><a class="widget-last" href="/2022/09/26/JSON-%E6%8C%87%E5%8D%97/"><div class="item"><time>2022-09-26</time></div><span>JSON 指南</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E7%A7%81%E6%9C%89%E6%95%B0%E6%8D%AE/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 私有数据</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E6%8E%92%E5%BA%8F%E6%9C%8D%E5%8A%A1/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 排序服务</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E8%B4%A6%E6%9C%AC/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 账本</span></a></li></ul>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#io-%E5%9F%BA%E6%9C%AC%E7%9A%84IO%E6%8E%A5%E5%8F%A3"><span class="toc-text">io-基本的IO接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Reader%E6%8E%A5%E5%8F%A3"><span class="toc-text">Reader接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Writer-%E6%8E%A5%E5%8F%A3"><span class="toc-text">Writer 接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E4%BA%86io-Reader%E6%8E%A5%E5%8F%A3%E6%88%96io-Writer%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">实现了io.Reader接口或io.Writer接口的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ReaderAt-%E5%92%8C-WriterAt-%E6%8E%A5%E5%8F%A3"><span class="toc-text">ReaderAt 和 WriterAt 接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ReaderAt-%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-text">ReaderAt 接口的定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WriterAt-%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-text">WriterAt 接口的定义：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ReaderFrom-%E5%92%8C-WriterTo-%E6%8E%A5%E5%8F%A3"><span class="toc-text">ReaderFrom 和 WriterTo 接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ReaderFrom-%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">ReaderFrom 的定义:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WriterTo%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">WriterTo的定义:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ioutil-%E2%80%94-%E6%96%B9%E4%BE%BF%E7%9A%84IO%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B0%E9%9B%86"><span class="toc-text">ioutil — 方便的IO操作函数集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ReadAll-%E5%87%BD%E6%95%B0"><span class="toc-text">ReadAll 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ReadDri-%E5%87%BD%E6%95%B0"><span class="toc-text">ReadDri 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ReadFile-%E5%92%8C-WriteFile-%E5%87%BD%E6%95%B0"><span class="toc-text">ReadFile 和 WriteFile 函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TempDir-%E5%92%8C-TempFile-%E5%87%BD%E6%95%B0"><span class="toc-text">TempDir 和 TempFile 函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fmt-%E2%80%94-%E6%A0%BC%E5%BC%8F%E5%8C%96IO"><span class="toc-text">fmt — 格式化IO</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Printing"><span class="toc-text">Printing</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Sample"><span class="toc-text">Sample</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="toc-text">占位符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scanning"><span class="toc-text">Scanning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Print-%E5%BA%8F%E5%88%97%E5%87%BD%E6%95%B0"><span class="toc-text">Print 序列函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scan-%E5%BA%8F%E5%88%97%E5%87%BD%E6%95%B0"><span class="toc-text">Scan 序列函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bufio-%E2%80%94-%E7%BC%93%E5%AD%98IO"><span class="toc-text">bufio — 缓存IO</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Reader-%E7%B1%BB%E5%9E%8B%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-text">Reader 类型和方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E5%88%97%E5%8C%96"><span class="toc-text">实列化</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3754,13 +3174,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3769,14 +3190,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4907,7 +4328,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/archives/2022/","name":"2022"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2022/09/27/Golang-标准库-输入输出/","name":"Golang 标准库 输入输出"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Golang 标准库 输入输出","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/","wordCount":0,"datePublished":"2022-09-27T01:26:09.000Z","dateModified":"2022-09-27T07:10:03.520Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
