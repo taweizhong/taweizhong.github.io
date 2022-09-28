@@ -1870,7 +1870,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1664286292862),
+    lastupdate: new Date(1664330590796),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","music","webinfo","qrcode","lastupdate"],
       for_post: ["toc"],
@@ -2777,9 +2777,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">
+        <img itemprop="image" class='headimg' alt="Golang 标准库 输入输出" src='https://w.wallhaven.cc/full/gp/wallhaven-gpz9v7.png'/>
+      </a>
+    </div>
   
   
     
@@ -2791,14 +2793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='md article-desc' itemprop="articleBody">
     
-      
-        输入输出io-基本的IO接口io包为I&#x2F;O原语提供了基本的接口。包装了原语的已有实现。
-只要满足Reader和Writer接口，就可以使用IO包的功能。
-Reader接口定义：
-123type Reader interface &#123;	Read(p []byte) (n int, err error)&#125;
-
-Read将len(p)个字节读取到p中。返回读取的字节数n和...
-      
+      <p>简介io包中的接口、ioutil中的方法、fmt包。</p>
     
   </div>
   
@@ -2806,14 +2801,22 @@ Read将len(p)个字节读取到p中。返回读取的字节数n和...
       <div>
         
           
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1'></a>
           <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
+            <meta itemprop="image" content="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+            <meta itemprop="name" content="他维忠">
+            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
           </span>
         
         <time itemprop="dateCreated datePublished" datetime="2022-09-27T09:26:09+08:00">2022-09-27</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
+            </span>
+          
         
       </div>
       
@@ -3658,7 +3661,7 @@ Object（对象）：键值对的集合，使用&#123;&#125;定义。
           <li><a class="flat-box"
             title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/"
             active-action="action-categoriesE7AC94E8AEB0"
-            ><div class='name'>笔记</div><div class='badge'>(14)</div></a></li>
+            ><div class='name'>笔记</div><div class='badge'>(15)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E8%AF%B4%E6%98%8E/" href="/categories/%E8%AF%B4%E6%98%8E/"
@@ -3688,7 +3691,7 @@ Object（对象）：键值对的集合，使用&#123;&#125;定义。
 
 
     <div class='content'>
-      <a href="/tags/Gin/" style="font-size: 19px; color: #777">Gin</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Go/" style="font-size: 21.5px; color: #666">Go</a> <a href="/tags/HTML/" style="font-size: 19px; color: #777">HTML</a> <a href="/tags/Hyperledger-Fabric/" style="font-size: 24px; color: #555">Hyperledger Fabric</a> <a href="/tags/beego/" style="font-size: 16.5px; color: #888">beego</a> <a href="/tags/clash/" style="font-size: 14px; color: #999">clash</a> <a href="/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/tags/%E8%AF%B4%E6%98%8E/" style="font-size: 16.5px; color: #888">说明</a>
+      <a href="/tags/Gin/" style="font-size: 19px; color: #777">Gin</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Go/" style="font-size: 21.5px; color: #666">Go</a> <a href="/tags/Golang/" style="font-size: 14px; color: #999">Golang</a> <a href="/tags/HTML/" style="font-size: 19px; color: #777">HTML</a> <a href="/tags/Hyperledger-Fabric/" style="font-size: 24px; color: #555">Hyperledger Fabric</a> <a href="/tags/beego/" style="font-size: 16.5px; color: #888">beego</a> <a href="/tags/clash/" style="font-size: 14px; color: #999">clash</a> <a href="/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/tags/%E8%AF%B4%E6%98%8E/" style="font-size: 16.5px; color: #888">说明</a>
     </div>
   </section>
 
@@ -3772,7 +3775,7 @@ Object（对象）：键值对的集合，使用&#123;&#125;定义。
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2022-09-27 日</div>
+          <div id="last-update-show">2022-09-28 日</div>
         </div>
       
     </div>
@@ -3822,7 +3825,7 @@ Object（对象）：键值对的集合，使用&#123;&#125;定义。
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"><div class="item"><time>2022-09-27</time></div><span>Golang 标准库 输入输出</span></a></li><li><a class="widget-last" href="/2022/09/26/JSON-%E6%8C%87%E5%8D%97/"><div class="item"><time>2022-09-26</time></div><span>JSON 指南</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E7%A7%81%E6%9C%89%E6%95%B0%E6%8D%AE/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 私有数据</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E6%8E%92%E5%BA%8F%E6%9C%8D%E5%8A%A1/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 排序服务</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E8%B4%A6%E6%9C%AC/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 账本</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2022/09/27/Golang-%E6%A0%87%E5%87%86%E5%BA%93-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"><div class="item"><time>2022-09-28</time><span>笔记</span></div><span>Golang 标准库 输入输出</span></a></li><li><a class="widget-last" href="/2022/09/26/JSON-%E6%8C%87%E5%8D%97/"><div class="item"><time>2022-09-26</time></div><span>JSON 指南</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E7%A7%81%E6%9C%89%E6%95%B0%E6%8D%AE/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 私有数据</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E6%8E%92%E5%BA%8F%E6%9C%8D%E5%8A%A1/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 排序服务</span></a></li><li><a class="widget-last" href="/2022/09/23/Hyperledger-Fabric-%E8%B4%A6%E6%9C%AC/"><div class="item"><time>2022-09-24</time><span>区块链</span></div><span>Hyperledger Fabric 账本</span></a></li></ul>
   </div>
 </section>
 
@@ -4788,7 +4791,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp"];
   let index = 0;
   let IntervalParallax = null;
 
