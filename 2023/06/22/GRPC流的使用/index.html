@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://peapod.top/archives/2022/10/"/>
+  
+  <link rel="canonical" href="http://peapod.top/2023/06/22/grpc流的使用/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,16 +32,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2022/10 - 秋季的blog</title>
-  <meta name="keywords" content="null">
+  <title>GRPC流的使用 - 秋季的blog</title>
+  <meta name="keywords" content="微服务,null">
   <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="秋季的blog">
-<meta property="og:url" content="http://peapod.top/archives/2022/10/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="GRPC流的使用">
+<meta property="og:url" content="http://peapod.top/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="秋季的blog">
+<meta property="og:description" content="GRPC流的使用流传输方式简介客户端流客户端发送多次，服务端响应一次（关闭时响应）。 服务端流客户端先发送一次，服务端响应多次。 双向流客户端发送，服务端响应。 客户端流服务定义1rpc ClientStreamPing(stream PingRequest) returns (PingReply);  客户端123456789101112131415161718192021stream, err">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-06-22T11:38:45.000Z">
+<meta property="article:modified_time" content="2023-06-22T12:19:42.464Z">
 <meta property="article:author" content="他维忠">
+<meta property="article:tag" content="微服务">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2179,7 +2184,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2468,7 +2473,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2553,32 +2558,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/10/26/分布式系统/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/22/GRPC流的使用/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2587,428 +2568,245 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
+
+
   
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
   
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/10/26/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/">
-        <img itemprop="image" class='headimg' alt="分布式系统" src='https://www.apple.com.cn/v/mac-studio/b/images/overview/design/internals/hw_elements_case__cf1pppj511jm_large.jpg'/>
-      </a>
-    </div>
-  
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/26/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"  itemprop="url">
-        分布式系统
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>分布式系统课程笔记。</p>
+    
+      <h1 class="title" itemprop="name headline">
+        GRPC流的使用
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">taweizhong</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-22T19:38:45+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 22, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="GRPC流的使用"><a href="#GRPC流的使用" class="headerlink" title="GRPC流的使用"></a>GRPC流的使用</h1><h2 id="流传输方式简介"><a href="#流传输方式简介" class="headerlink" title="流传输方式简介"></a>流传输方式简介</h2><h3 id="客户端流"><a href="#客户端流" class="headerlink" title="客户端流"></a>客户端流</h3><p>客户端发送多次，服务端响应一次（关闭时响应）。</p>
+<h3 id="服务端流"><a href="#服务端流" class="headerlink" title="服务端流"></a>服务端流</h3><p>客户端先发送一次，服务端响应多次。</p>
+<h3 id="双向流"><a href="#双向流" class="headerlink" title="双向流"></a>双向流</h3><p>客户端发送，服务端响应。</p>
+<h2 id="客户端流-1"><a href="#客户端流-1" class="headerlink" title="客户端流"></a>客户端流</h2><h3 id="服务定义"><a href="#服务定义" class="headerlink" title="服务定义"></a>服务定义</h3><figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">rpc</span> ClientStreamPing(stream PingRequest) <span class="keyword">returns</span> (PingReply)</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">stream, err := client.SayStream(context.Background())</span><br><span class="line">	err = stream.Send(&amp;pd.HelloReq&#123;</span><br><span class="line">		Name: <span class="string">&quot;111&quot;</span>,</span><br><span class="line">		Age:  <span class="number">3</span>,</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Printf(err.Error())</span><br><span class="line">	&#125;</span><br><span class="line">	stream.Send(&amp;pd.HelloReq&#123;</span><br><span class="line">		Name: <span class="string">&quot;111&quot;</span>,</span><br><span class="line">		Age:  <span class="number">4</span>,</span><br><span class="line">	&#125;)</span><br><span class="line">	stream.Send(&amp;pd.HelloReq&#123;</span><br><span class="line">		Name: <span class="string">&quot;111&quot;</span>,</span><br><span class="line">		Age:  <span class="number">5</span>,</span><br><span class="line">	&#125;)</span><br><span class="line">	recv, err := stream.CloseAndRecv()</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Printf(<span class="string">&quot;接受：%s&quot;</span>, recv.Say)</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>创建客户端之后，调用服务生成流</li>
+<li>使用流发送消息</li>
+<li>关闭流并接受服务端的响应</li>
+</ol>
+<h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Server)</span></span> SayStream(stream pd.HelloServer_SayStreamServer) <span class="type">error</span> &#123;</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="comment">//源源不断的去接收客户端发来的信息</span></span><br><span class="line">		recv, err := stream.Recv()</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err == io.EOF &#123;</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> err</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		fmt.Println(<span class="string">&quot;服务端接收到的流&quot;</span>, recv.Name, recv.Age)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> stream.SendAndClose(&amp;pd.HelloRep&#123;Say: <span class="string">&quot;结束&quot;</span>&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>实现流的接口</li>
+<li>接受客户端发送的消息</li>
+<li>正常关闭时发送响应消息</li>
+</ol>
+<h2 id="服务端流-1"><a href="#服务端流-1" class="headerlink" title="服务端流"></a>服务端流</h2><h3 id="服务定义-1"><a href="#服务定义-1" class="headerlink" title="服务定义"></a>服务定义</h3><figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">rpc</span> ServerStreamPing(PingRequest) <span class="keyword">returns</span> (stream PingReply)</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="客户端-1"><a href="#客户端-1" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">stream, err := client.SayStreamServer(context.Background(), &amp;pd.HelloReq&#123;</span><br><span class="line">		Name: <span class="string">&quot;111&quot;</span>,</span><br><span class="line">		Age:  <span class="number">0</span>,</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		recv, err := stream.Recv()</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err == io.EOF &#123;</span><br><span class="line">				fmt.Println(<span class="string">&quot;客户端数据接收完成&quot;</span>)</span><br><span class="line">				err := stream.CloseSend()</span><br><span class="line">				<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">					log.Fatal(err)</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">break</span></span><br><span class="line">			&#125;</span><br><span class="line">			log.Fatal(err)</span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(<span class="string">&quot;客户端收到的流&quot;</span>, recv.Say)</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="服务端-1"><a href="#服务端-1" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Server)</span></span> SayStreamServer(req *pd.HelloReq, stream pd.HelloServer_SayStreamServerServer) <span class="type">error</span> &#123;</span><br><span class="line">	count := <span class="number">0</span></span><br><span class="line">	fmt.Printf(req.Name, req.Age)</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		rsp := &amp;pd.HelloRep&#123;Say: <span class="string">&quot;server send&quot;</span>&#125;</span><br><span class="line">		err := stream.Send(rsp)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> err</span><br><span class="line">		&#125;</span><br><span class="line">		time.Sleep(time.Second)</span><br><span class="line">		count++</span><br><span class="line">		<span class="keyword">if</span> count &gt; <span class="number">10</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="双向流-1"><a href="#双向流-1" class="headerlink" title="双向流"></a>双向流</h2><h3 id="服务定义-2"><a href="#服务定义-2" class="headerlink" title="服务定义"></a>服务定义</h3><figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">rpc</span> SayDoubleStream(stream helloReq) <span class="keyword">returns</span> (stream helloRep) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="客户端-2"><a href="#客户端-2" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">stream, err := client.SayDoubleStream(context.Background())</span><br><span class="line">	<span class="keyword">var</span> count <span class="type">int32</span> = <span class="number">22</span></span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		request := &amp;pd.HelloReq&#123;</span><br><span class="line">			Name: <span class="string">&quot;zzz&quot;</span>,</span><br><span class="line">			Age:  count,</span><br><span class="line">		&#125;</span><br><span class="line">		err = stream.Send(request)</span><br><span class="line">		count++</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			log.Fatal(err)</span><br><span class="line">		&#125;</span><br><span class="line">		time.Sleep(time.Second)</span><br><span class="line">		recv, err := stream.Recv()</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			log.Fatal(err)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//websocket</span></span><br><span class="line">		fmt.Println(<span class="string">&quot;客户端收到的流信息&quot;</span>, recv.Say)</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="服务端-2"><a href="#服务端-2" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Server)</span></span> SayDoubleStream(stream pd.HelloServer_SayDoubleStreamServer) <span class="type">error</span> &#123;</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		recv, err := stream.Recv()</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(<span class="string">&quot;服务端收到客户端的消息&quot;</span>, recv.Name, recv.Age)</span><br><span class="line">		time.Sleep(time.Second)</span><br><span class="line">		rsp := &amp;pd.HelloRep&#123;Say: fmt.Sprintf(<span class="string">&quot;%s的年龄：%d&quot;</span>, recv.Name, recv.Age)&#125;</span><br><span class="line">		err = stream.Send(rsp)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-26T19:07:12+08:00">2022-10-26</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/">分布式系统</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" itemprop="url"><span itemprop="name">分布式系统</span></a>
-            </span>
-          
-        
-      </div>
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/10/26/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/' itemprop="url">
-            Read More
-          </a>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://raw.githubusercontent.com/taweizhong/images/main/my.JPG'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-22T20:19:42+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jun 22, 2023</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/10/19/知链区块链教程/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
+          
   
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/10/19/%E7%9F%A5%E9%93%BE%E5%8C%BA%E5%9D%97%E9%93%BE%E6%95%99%E7%A8%8B/">
-        <img itemprop="image" class='headimg' alt="知链区块链教程" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Frd5-public.zhaopin.cn%2Fimgs%2Fcompany%2F622b1e3d7c9674e4cd9a230d03e8ed2d.png&refer=http%3A%2F%2Frd5-public.zhaopin.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668763569&t=5e930151d70b45d9e9d3b815e806f42drefer=http%3A%2F%2Fcn.hyperledger.org&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666402453&t=8904ba70fad95256d7602e0c4525bf52'/>
-      </a>
-    </div>
-  
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>微服务</p></a></div>
+  <span hidden itemprop="keywords">微服务</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/19/%E7%9F%A5%E9%93%BE%E5%8C%BA%E5%9D%97%E9%93%BE%E6%95%99%E7%A8%8B/"  itemprop="url">
-        知链区块链教程
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/&title=GRPC流的使用 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
     
-      <p>简述知链区块链教程。</p>
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/&title=GRPC流的使用 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/&title=GRPC流的使用 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-19T16:47:26+08:00">2022-10-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url"><span itemprop="name">区块链</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/10/19/%E7%9F%A5%E9%93%BE%E5%8C%BA%E5%9D%97%E9%93%BE%E6%95%99%E7%A8%8B/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/10/15/Hyperledger-Fabric-网络构建/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/10/15/Hyperledger-Fabric-%E7%BD%91%E7%BB%9C%E6%9E%84%E5%BB%BA/">
-        <img itemprop="image" class='headimg' alt="Hyperledger-Fabric 网络构建" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcn.hyperledger.org%2Fwp-content%2Fuploads%2F2019%2F03%2Fhllogo_blog.png&refer=http%3A%2F%2Fcn.hyperledger.org&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666402453&t=8904ba70fad95256d7602e0c4525bf52'/>
-      </a>
     </div>
-  
-  
+    <!-- Custom Files bottomMeta begin -->
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/15/Hyperledger-Fabric-%E7%BD%91%E7%BB%9C%E6%9E%84%E5%BB%BA/"  itemprop="url">
-        Hyperledger-Fabric 网络构建
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>简述Hyperledger Fabric网络构建的步骤和配置文件。</p>
-    
+    <!-- Custom Files bottomMeta end -->
   </div>
+
+
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-15T14:22:10+08:00">2022-10-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url"><span itemprop="name">区块链</span></a>
-            </span>
-          
-        
-      </div>
+  
+
+  
+    <div class="prev-next">
       
-        <div>
-          <a class='readmore' href='/2022/10/15/Hyperledger-Fabric-%E7%BD%91%E7%BB%9C%E6%9E%84%E5%BB%BA/' itemprop="url">
-            Read More
-          </a>
-        </div>
+      
+        <a class='next' href='/2023/06/22/GRPC%E4%BD%BF%E7%94%A8openssl/'>
+          <p class='title'>GRPC使用openssl<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>GRPC使用openssl证书加密数据传输过程，保证调用的安全性。
+证书生成自签证书（root CA）命令解析：https://blog.csdn.net/adminstate/article/...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/10/15/Hyperledger-Fabric-核心配置文件/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/10/15/Hyperledger-Fabric-%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
-        <img itemprop="image" class='headimg' alt="Hyperledger-Fabric 核心配置文件" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fcn.hyperledger.org%2Fwp-content%2Fuploads%2F2019%2F03%2Fhllogo_blog.png&refer=http%3A%2F%2Fcn.hyperledger.org&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666402453&t=8904ba70fad95256d7602e0c4525bf52'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/15/Hyperledger-Fabric-%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"  itemprop="url">
-        Hyperledger-Fabric 核心配置文件
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>简述Hyperledger Fabric网络搭建的核心文件配置。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-15T14:21:21+08:00">2022-10-15</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" itemprop="url"><span itemprop="name">区块链</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/10/15/Hyperledger-Fabric-%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/10/04/锁和-sync-包/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/10/04/%E9%94%81%E5%92%8C-sync-%E5%8C%85/">
-        <img itemprop="image" class='headimg' alt="锁和 sync 包" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/04/%E9%94%81%E5%92%8C-sync-%E5%8C%85/"  itemprop="url">
-        锁和 sync 包
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>对共享资源实现加锁操作。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-04T14:57:58+08:00">2022-10-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/">golang标准库</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/" itemprop="url"><span itemprop="name">golang标准库</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/10/04/%E9%94%81%E5%92%8C-sync-%E5%8C%85/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/10/04/regexp包/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/10/04/regexp%E5%8C%85/">
-        <img itemprop="image" class='headimg' alt="regexp包" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/04/regexp%E5%8C%85/"  itemprop="url">
-        regexp包
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>正则表达式的运用。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-04T14:22:40+08:00">2022-10-04</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/">golang标准库</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/" itemprop="url"><span itemprop="name">golang标准库</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/10/04/regexp%E5%8C%85/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
   
 
 
-	
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3017,364 +2815,68 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F4436a54e725d25b2cf37f7a47188967a18f41115.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665223631&t=b53f0138aca639fde0f360d11587f8dc'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>taweizhong</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">秋季的blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget grid desktop mobile pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/volantis-x/hexo-theme-volantis'><i class="fa fa-credit-card-alt fa-fw" aria-hidden="true"></i><span class='name'>导航</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/taweizhong?tab=repositories"
-          
-          
-          active-action="action-https:githubcomtaweizhong?tab=repositories">
-          
-            <i class="fab fa-github-alt fa-fw" aria-hidden="true"></i>
-          
-          GitHub
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://music.163.com/"
-          
-          
-          active-action="action-https:music163com">
-          
-            <i class="fas fa-music fa-fw" aria-hidden="true"></i>
-          
-          网易云
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/taweizhong/taweizhong.github.io/issues"
-          
-          
-          active-action="action-https:githubcomtaweizhongtaweizhonggithubioissues">
-          
-            <i class="fas fa-lightbulb fa-fw" aria-hidden="true"></i>
-          
-          提个建议
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Web/" href="/categories/Web/"
-            active-action="action-categoriesWeb"
-            ><div class='name'>Web</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Web%E5%89%8D%E7%AB%AF/" href="/categories/Web%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesWebE5898DE7ABAF"
-            ><div class='name'>Web前端</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/" href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/"
-            active-action="action-categoriesgolangE6A087E58786E5BA93"
-            ><div class='name'>golang标准库</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/" href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/"
-            active-action="action-categoriesE4BA91E58E9FE7949F"
-            ><div class='name'>云原生</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"
-            active-action="action-categoriesE58886E5B883E5BC8FE7B3BBE7BB9F"
-            ><div class='name'>分布式系统</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"
-            active-action="action-categoriesE58CBAE59D97E993BE"
-            ><div class='name'>区块链</div><div class='badge'>(15)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AE%9E%E7%94%A8/" href="/categories/%E5%AE%9E%E7%94%A8/"
-            active-action="action-categoriesE5AE9EE794A8"
-            ><div class='name'>实用</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE7AC94E8AEB0"
-            ><div class='name'>笔记</div><div class='badge'>(16)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%B4%E6%98%8E/" href="/categories/%E8%AF%B4%E6%98%8E/"
-            active-action="action-categoriesE8AFB4E6988E"
-            ><div class='name'>说明</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/GRPC/" style="font-size: 14px; color: #999">GRPC</a> <a href="/tags/Gin/" style="font-size: 19px; color: #777">Gin</a> <a href="/tags/Git/" style="font-size: 15.67px; color: #8e8e8e">Git</a> <a href="/tags/Go/" style="font-size: 24px; color: #555">Go</a> <a href="/tags/HTML/" style="font-size: 19px; color: #777">HTML</a> <a href="/tags/Hyperledger-Fabric/" style="font-size: 22.33px; color: #606060">Hyperledger Fabric</a> <a href="/tags/Hyperledger-Fabric%E8%BF%9B%E9%98%B6/" style="font-size: 15.67px; color: #8e8e8e">Hyperledger Fabric进阶</a> <a href="/tags/JSON/" style="font-size: 14px; color: #999">JSON</a> <a href="/tags/Vue3/" style="font-size: 20.67px; color: #6c6c6c">Vue3</a> <a href="/tags/beego/" style="font-size: 15.67px; color: #8e8e8e">beego</a> <a href="/tags/clash/" style="font-size: 14px; color: #999">clash</a> <a href="/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/tags/javascript/" style="font-size: 14px; color: #999">javascript</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 17.33px; color: #828282">微服务</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 15.67px; color: #8e8e8e">测试</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15.67px; color: #8e8e8e">笔记</a> <a href="/tags/%E8%AF%B4%E6%98%8E/" style="font-size: 15.67px; color: #8e8e8e">说明</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>78 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-06-22 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget qrcode desktop mobile pjax">
-  
-  <header>
-    
-      <a href='/blog/tags/'><i class=" fa-fw" aria-hidden="true"></i><span class='name'>联系我</span></a>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      <img src='https://raw.githubusercontent.com/taweizhong/images/main/my.JPG'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop mobile pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/"><div class="item"><time>2023-06-22</time></div><span>GRPC流的使用</span></a></li><li><a class="widget-last" href="/2023/06/22/GRPC%E4%BD%BF%E7%94%A8openssl/"><div class="item"><time>2023-06-22</time></div><span>GRPC使用openssl</span></a></li><li><a class="widget-last" href="/2023/06/19/GRPC%E4%BD%BF%E7%94%A8/"><div class="item"><time>2023-06-20</time></div><span>GRPC使用</span></a></li><li><a class="widget-last" href="/2023/04/19/%E4%BE%A6%E5%90%AC%E5%99%A8/"><div class="item"><time>2023-06-19</time><span>Web前端</span></div><span>侦听器</span></a></li><li><a class="widget-last" href="/2023/04/19/%E6%A8%A1%E7%89%88%E5%BC%95%E7%94%A8/"><div class="item"><time>2023-06-19</time><span>Web前端</span></div><span>模版引用（访问DOM元素）</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/taweizhong?tab=repositories'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>项目</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p>您的赞对我来说很重要，如果您喜欢本主题，希望能够给下面的项目点个赞来支持一下。</p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/taweizhong/python_Reptile"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/taweizhong/blockchain"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/Inspire"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F%E7%AE%80%E4%BB%8B"><span class="toc-text">流传输方式简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B5%81"><span class="toc-text">客户端流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B5%81"><span class="toc-text">服务端流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E6%B5%81"><span class="toc-text">双向流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B5%81-1"><span class="toc-text">客户端流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%AE%9A%E4%B9%89"><span class="toc-text">服务定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">服务端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B5%81-1"><span class="toc-text">服务端流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%AE%9A%E4%B9%89-1"><span class="toc-text">服务定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-1"><span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-1"><span class="toc-text">服务端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E6%B5%81-1"><span class="toc-text">双向流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%AE%9A%E4%B9%89-2"><span class="toc-text">服务定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-2"><span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF-2"><span class="toc-text">服务端</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3398,13 +2900,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3413,14 +2916,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4551,7 +4054,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/archives/2022/","name":"2022"}},{"@type":"ListItem","position":4,"item":{"@id":"http://peapod.top/archives/2022/10/","name":"10"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/06/22/GRPC流的使用/","name":"GRPC流的使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"GRPC流的使用","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/","wordCount":0,"datePublished":"2023-06-22T11:38:45.000Z","dateModified":"2023-06-22T12:19:42.464Z","keywords":"微服务","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
