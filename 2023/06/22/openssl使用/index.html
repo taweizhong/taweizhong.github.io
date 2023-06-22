@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://peapod.top/2022/09/17/服务器安装clash/"/>
+  <link rel="canonical" href="http://peapod.top/2023/06/22/openssl使用/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,21 +32,20 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>服务器安装Clash - 秋季的blog</title>
-  <meta name="keywords" content="clash,null">
-  <meta desc name="description" content="通过安装clash for liunx实现服务器访问外网 - 他维忠 - 秋季的blog">
+  <title>秋季的blog</title>
+  <meta name="keywords" content="null">
+  <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="服务器安装Clash">
-<meta property="og:url" content="http://peapod.top/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/index.html">
+<meta property="og:title" content="秋季的blog">
+<meta property="og:url" content="http://peapod.top/2023/06/22/openssl%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="秋季的blog">
-<meta property="og:description" content="通过安装clash for liunx实现服务器访问外网">
+<meta property="og:description" content="GRPC使用openssl证书加密数据传输过程，保证调用的安全性。 证书生成自签证书（root CA）命令解析：https:&#x2F;&#x2F;blog.csdn.net&#x2F;adminstate&#x2F;article&#x2F;details&#x2F;128662641  生成私钥文件 1openssl genrsa -des3 -out private.key 2048  创建证书请求 1openssl req -new -key pr">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-09-17T09:58:46.000Z">
-<meta property="article:modified_time" content="2022-09-17T10:30:42.000Z">
+<meta property="article:published_time" content="2023-06-22T01:18:57.602Z">
+<meta property="article:modified_time" content="2023-06-22T02:57:27.716Z">
 <meta property="article:author" content="他维忠">
-<meta property="article:tag" content="clash">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2184,7 +2183,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2473,7 +2472,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper post search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2559,7 +2558,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/09/17/服务器安装Clash/">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/22/openssl使用/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2571,104 +2570,68 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <div class='headimg-div'>
-      <a class='headimg-a'>
-        <img itemprop="image" class='headimg' src='https://w.wallhaven.cc/full/rd/wallhaven-rdvl8w.png'/>
-      </a>
-    </div>
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
   
   <div class="article-meta" id="top">
     
     
-      <a title='服务器安装Clash' href='/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/'>
-        <img itemprop="image" class='thumbnail' src='https://w.wallhaven.cc/full/rd/wallhaven-rdvl8w.png'>
-      </a>
     
-    
-      <h1 class="title" itemprop="name headline">
-        服务器安装Clash
-      </h1>
-      <div class='new-meta-box'>
+      <span hidden itemprop="name headline">
         
-          
-            
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' target="_blank" href="https://gameofthrones.fandom.com/wiki/Jon_Snow" rel="nofollow noopener">
-    <img itemprop="image" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93" class="lazyload" data-srcset="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">他维忠</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E5%AE%9E%E7%94%A8/">实用</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E5%AE%9E%E7%94%A8/" itemprop="url"><span itemprop="name">实用</span></a>
       </span>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-17T17:58:46+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Sep 17, 2022</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-
-
-          
-        
-        <!-- Custom Files topMeta begin-->
-        
-        <!-- Custom Files topMeta end-->
-      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="Clash安装教程"><a href="#Clash安装教程" class="headerlink" title="Clash安装教程"></a>Clash安装教程</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>地址（<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash%EF%BC%89">https://github.com/Dreamacro/clash）</a></p>
-<p>找到对应的版本复制下载地址.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> Clsah</span><br><span class="line">wget ‘包的地址’</span><br><span class="line">gunzip ‘下载下来的文件’ -d ./Clash</span><br><span class="line"><span class="built_in">cd</span> Clash</span><br><span class="line"><span class="built_in">mv</span> ‘文件名’ clash</span><br><span class="line"><span class="built_in">chmod</span> +x clash</span><br></pre></td></tr></table></figure>
+    <h1 id="GRPC使用openssl证书"><a href="#GRPC使用openssl证书" class="headerlink" title="GRPC使用openssl证书"></a>GRPC使用openssl证书</h1><p>加密数据传输过程，保证调用的安全性。</p>
+<h2 id="证书生成"><a href="#证书生成" class="headerlink" title="证书生成"></a>证书生成</h2><h3 id="自签证书（root-CA）"><a href="#自签证书（root-CA）" class="headerlink" title="自签证书（root CA）"></a>自签证书（root CA）</h3><p>命令解析：<a target="_blank" rel="noopener" href="https://blog.csdn.net/adminstate/article/details/128662641">https://blog.csdn.net/adminstate/article/details/128662641</a></p>
+<ol>
+<li><p>生成私钥文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl genrsa -des3 -out private.key 2048</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建证书请求</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -new -key private.key -out ca.csr</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成ca.crt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl x509 -req -days 365 -<span class="keyword">in</span> ca.csr -signkey private.key -out ca.crt</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="SAN证书"><a href="#SAN证书" class="headerlink" title="SAN证书"></a>SAN证书</h3><p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/a145127/article/details/126311442">https://blog.csdn.net/a145127/article/details/126311442</a></p>
+<p>SAN证书需要上述生成的根证书。</p>
+<ol>
+<li><p>设置配置文件</p>
+<ul>
+<li>终端<code>openssl version -d</code>可以查找配置文件</li>
+<li>修改配置文件</li>
+</ul>
+</li>
+<li><p>生成服务器密钥和证书</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成服务器私钥，密码输入123456</span></span><br><span class="line">$ openssl genpkey -algorithm RSA -out ../server/server.key</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 使用私钥来签名证书</span></span><br><span class="line">$ openssl req -new -nodes -key ../server/server.key -out ../server/server.csr -config openssl.cnf -extensions <span class="string">&#x27;v3_req&#x27;</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 生成SAN证书</span></span><br><span class="line">$ openssl x509 -req -<span class="keyword">in</span> ../server/server.csr -out ../server/server.pem -CA ca.crt -CAkey private.key -CAcreateserial -extfile ./openssl.cnf -extensions <span class="string">&#x27;v3_req&#x27;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成客户端密钥和证书</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 生成客户端私钥，密码输入123456</span><br><span class="line">$ openssl genpkey -algorithm RSA -out ../client/client.key</span><br><span class="line"> </span><br><span class="line"># 使用私钥来签名证书</span><br><span class="line">$ openssl req -new -nodes -key ../client/client.key -out ../client/client.csr -config openssl.cnf -extensions &#x27;v3_req&#x27;</span><br><span class="line"> </span><br><span class="line"># 生成SAN证书</span><br><span class="line">$ openssl x509 -req -in ../client/client.csr -out ../client/client.pem -CA ca.crt -CAkey private.key -CAcreateserial -extfile ./openssl.cnf -extensions &#x27;v3_req&#x27;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><img src="/Users/taweizhong/Library/Application Support/typora-user-images/截屏2023-06-22 10.15.43.png" class="lazyload" data-srcset="/Users/taweizhong/Library/Application Support/typora-user-images/截屏2023-06-22 10.15.43.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="截屏2023-06-22 10.15.43" style="zoom:50%;" />
 
-<h3 id="配置订阅信息"><a href="#配置订阅信息" class="headerlink" title="配置订阅信息"></a>配置订阅信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Clash</span><br><span class="line">sudo wget -O config.yaml [订阅链接]</span><br><span class="line">sudo wget -O Country.mmdb https://www.sub-speeder.com/client-download/Country.mmdb</span><br></pre></td></tr></table></figure>
+<h2 id="单项认证"><a href="#单项认证" class="headerlink" title="单项认证"></a>单项认证</h2><ol>
+<li><p>服务端使用证书和私钥</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;context&quot;</span></span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc/credentials&quot;</span></span><br><span class="line">	pd <span class="string">&quot;grpc_helloworld/server/proto&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;net&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Server <span class="keyword">struct</span> &#123;</span><br><span class="line">	pd.UnimplementedHelloServerServer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Server)</span></span> Say(ctx context.Context, q *pd.HelloReq) (*pd.HelloRep, <span class="type">error</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> &amp;pd.HelloRep&#123;</span><br><span class="line">		Say: fmt.Sprintf(<span class="string">&quot;%s已经%d岁了&quot;</span>, q.Name, q.Age),</span><br><span class="line">	&#125;, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// 读取证书</span></span><br><span class="line">	file, _ := credentials.NewServerTLSFromFile(<span class="string">&quot;./server.pem&quot;</span>, <span class="string">&quot;./server.key&quot;</span>)</span><br><span class="line"></span><br><span class="line">	listen, _ := net.Listen(<span class="string">&quot;tcp&quot;</span>, <span class="string">&quot;:8080&quot;</span>)</span><br><span class="line">	<span class="comment">// 创建服务并添加证书</span></span><br><span class="line">	newServer := grpc.NewServer(grpc.Creds(file))</span><br><span class="line">	pd.RegisterHelloServerServer(newServer, <span class="built_in">new</span>(Server))</span><br><span class="line">	err := newServer.Serve(listen)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Print(<span class="string">&quot;err:&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>客户端使用公钥(证书中有公钥)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;context&quot;</span></span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc/credentials&quot;</span></span><br><span class="line">	pd <span class="string">&quot;grpc_helloworld/client/proto&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// 添加证书</span></span><br><span class="line">	file, err2 := credentials.NewClientTLSFromFile(<span class="string">&quot;../server/server.pem&quot;</span>, <span class="string">&quot;*.test.example.com&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> err2 != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;证书错误&quot;</span>, err2)</span><br><span class="line">	&#125;</span><br><span class="line">	conn, err := grpc.Dial(<span class="string">&quot;:8080&quot;</span>, grpc.WithTransportCredentials(file))</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Print(err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> conn.Close()</span><br><span class="line">	client := pd.NewHelloServerClient(conn)</span><br><span class="line">	feature, err := client.Say(context.Background(), &amp;pd.HelloReq&#123;</span><br><span class="line">		Name: <span class="string">&quot;hello&quot;</span>,</span><br><span class="line">		Age:  <span class="number">22</span>,</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Print(err)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Print(feature)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="设置系统代理"><a href="#设置系统代理" class="headerlink" title="设置系统代理"></a>设置系统代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
+<!--客户端和服务端使用的都是一方的公私钥--></li>
+</ol>
+<h2 id="双向认证"><a href="#双向认证" class="headerlink" title="双向认证"></a>双向认证</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	cert, err := tls.LoadX509KeyPair(<span class="string">&quot;./server.pem&quot;</span>, <span class="string">&quot;./server.key&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;证书读取错误&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 创建一个新的、空的 CertPool</span></span><br><span class="line">	certPool := x509.NewCertPool()</span><br><span class="line">	ca, err := ioutil.ReadFile(<span class="string">&quot;../encryption/ca.crt&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;ca证书读取错误&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 尝试解析所传入的 PEM 编码的证书。如果解析成功会将其加到 CertPool 中，便于后面的使用</span></span><br><span class="line">	certPool.AppendCertsFromPEM(ca)</span><br><span class="line">	<span class="comment">// 构建基于 TLS 的 TransportCredentials 选项</span></span><br><span class="line">	creds := credentials.NewTLS(&amp;tls.Config&#123;</span><br><span class="line">		<span class="comment">// 设置证书链，允许包含一个或多个</span></span><br><span class="line">		Certificates: []tls.Certificate&#123;cert&#125;,</span><br><span class="line">		<span class="comment">// 要求必须校验客户端的证书。可以根据实际情况选用以下参数</span></span><br><span class="line">		ClientAuth: tls.RequireAndVerifyClientCert,</span><br><span class="line">		<span class="comment">// 设置根证书的集合，校验方式使用 ClientAuth 中设定的模式</span></span><br><span class="line">		ClientCAs: certPool,</span><br><span class="line">	&#125;)</span><br><span class="line">	listen, _ := net.Listen(<span class="string">&quot;tcp&quot;</span>, <span class="string">&quot;:8080&quot;</span>)</span><br><span class="line">	<span class="comment">// 创建服务并添加证书</span></span><br><span class="line">	newServer := grpc.NewServer(grpc.Creds(creds))</span><br><span class="line"></span><br><span class="line">	pd.RegisterHelloServerServer(newServer, <span class="built_in">new</span>(Server))</span><br><span class="line">	err = newServer.Serve(listen)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Print(<span class="string">&quot;err:&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>在最后面添加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">&quot;http://127.0.0.1:7890&quot;</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">&quot;http://127.0.0.1:7890&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// 添加证书</span></span><br><span class="line">	cert, _ := tls.LoadX509KeyPair(<span class="string">&quot;./client.pem&quot;</span>, <span class="string">&quot;./client.key&quot;</span>)</span><br><span class="line">	<span class="comment">// 创建一个新的、空的 CertPool</span></span><br><span class="line">	certPool := x509.NewCertPool()</span><br><span class="line">	ca, _ := ioutil.ReadFile(<span class="string">&quot;../encryption/ca.crt&quot;</span>)</span><br><span class="line">	<span class="comment">// 尝试解析所传入的 PEM 编码的证书。如果解析成功会将其加到 CertPool 中，便于后面的使用</span></span><br><span class="line">	certPool.AppendCertsFromPEM(ca)</span><br><span class="line">	<span class="comment">// 构建基于 TLS 的 TransportCredentials 选项</span></span><br><span class="line">	creds := credentials.NewTLS(&amp;tls.Config&#123;</span><br><span class="line">		<span class="comment">// 设置证书链，允许包含一个或多个</span></span><br><span class="line">		Certificates: []tls.Certificate&#123;cert&#125;,</span><br><span class="line">		<span class="comment">// 要求必须校验客户端的证书。可以根据实际情况选用以下参数</span></span><br><span class="line">		ServerName: <span class="string">&quot;*.test.example.com&quot;</span>,</span><br><span class="line">		RootCAs:    certPool,</span><br><span class="line">	&#125;)</span><br><span class="line">	conn, err := grpc.Dial(<span class="string">&quot;:8080&quot;</span>, grpc.WithTransportCredentials(creds))</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Print(err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> conn.Close()</span><br><span class="line">	client := pd.NewHelloServerClient(conn)</span><br><span class="line">	feature, err := client.Say(context.Background(), &amp;pd.HelloReq&#123;</span><br><span class="line">		Name: <span class="string">&quot;hello&quot;</span>,</span><br><span class="line">		Age:  <span class="number">22</span>,</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Print(err)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Print(feature)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>保存退出后</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+<h2 id="token认证"><a href="#token认证" class="headerlink" title="token认证"></a>token认证</h2><h3 id="服务端校验"><a href="#服务端校验" class="headerlink" title="服务端校验"></a>服务端校验</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;context&quot;</span></span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc/codes&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc/metadata&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc/status&quot;</span></span><br><span class="line">	pd <span class="string">&quot;grpc_helloworld/server/proto&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;net&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Server <span class="keyword">struct</span> &#123;</span><br><span class="line">	pd.UnimplementedHelloServerServer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s *Server)</span></span> Say(ctx context.Context, q *pd.HelloReq) (*pd.HelloRep, <span class="type">error</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> &amp;pd.HelloRep&#123;</span><br><span class="line">		Say: fmt.Sprintf(<span class="string">&quot;%s已经%d岁了&quot;</span>, q.Name, q.Age),</span><br><span class="line">	&#125;, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> authInterceptor grpc.UnaryServerInterceptor</span><br><span class="line">	authInterceptor = <span class="function"><span class="keyword">func</span><span class="params">(</span></span></span><br><span class="line"><span class="params"><span class="function">		ctx context.Context,</span></span></span><br><span class="line"><span class="params"><span class="function">		req <span class="keyword">interface</span>&#123;&#125;,</span></span></span><br><span class="line"><span class="params"><span class="function">		info *grpc.UnaryServerInfo,</span></span></span><br><span class="line"><span class="params"><span class="function">		handler grpc.UnaryHandler,</span></span></span><br><span class="line"><span class="params"><span class="function">	)</span></span> (resp <span class="keyword">interface</span>&#123;&#125;, err <span class="type">error</span>) &#123;</span><br><span class="line">		<span class="comment">//拦截普通方法请求，验证 Token</span></span><br><span class="line">		err = Auth(ctx)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">// 继续处理请求</span></span><br><span class="line">		<span class="keyword">return</span> handler(ctx, req)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	listen, _ := net.Listen(<span class="string">&quot;tcp&quot;</span>, <span class="string">&quot;:8080&quot;</span>)</span><br><span class="line">	<span class="comment">// 创建服务并添加证书</span></span><br><span class="line">	newServer := grpc.NewServer(grpc.UnaryInterceptor(authInterceptor))</span><br><span class="line"></span><br><span class="line">	pd.RegisterHelloServerServer(newServer, <span class="built_in">new</span>(Server))</span><br><span class="line">	err := newServer.Serve(listen)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Print(<span class="string">&quot;err:&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Auth</span><span class="params">(ctx context.Context)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">	md, ok := metadata.FromIncomingContext(ctx)</span><br><span class="line">	<span class="keyword">if</span> !ok &#123;</span><br><span class="line">		<span class="keyword">return</span> fmt.Errorf(<span class="string">&quot;missing credentials&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> user <span class="type">string</span></span><br><span class="line">	<span class="keyword">var</span> password <span class="type">string</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> val, ok := md[<span class="string">&quot;user&quot;</span>]; ok &#123;</span><br><span class="line">		user = val[<span class="number">0</span>]</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> val, ok := md[<span class="string">&quot;password&quot;</span>]; ok &#123;</span><br><span class="line">		password = val[<span class="number">0</span>]</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> user != <span class="string">&quot;admin&quot;</span> || password != <span class="string">&quot;123456&quot;</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> status.Errorf(codes.Unauthenticated, <span class="string">&quot;token不合法&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./clash -d .</span><br></pre></td></tr></table></figure>
-
-<h3 id="实现网络代理的切换"><a href="#实现网络代理的切换" class="headerlink" title="实现网络代理的切换"></a>实现网络代理的切换</h3><h4 id="首先启动clash"><a href="#首先启动clash" class="headerlink" title="首先启动clash"></a>首先启动clash</h4><p><img src="/../images/image-20220917182431311.png" class="lazyload" data-srcset="/../images/image-20220917182431311.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220917182431311"></p>
-<p>可以看到外部可以访问的端口为9090</p>
-<blockquote>
-<p>记得配置服务器的端口，可以使外部访问9090端口</p>
-</blockquote>
-<h4 id="点击clash-razord-top进行配置"><a href="#点击clash-razord-top进行配置" class="headerlink" title="点击clash.razord.top进行配置"></a>点击<a target="_blank" rel="noopener" href="http://clash.razord.top/">clash.razord.top</a>进行配置</h4><p><img src="/../images/image-20220917182656411.png" class="lazyload" data-srcset="/../images/image-20220917182656411.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220917182656411"></p>
-<p>host 设置为服务器的IP，密码可以不用配置。</p>
-<h4 id="在代理中切换"><a href="#在代理中切换" class="headerlink" title="在代理中切换"></a>在代理中切换</h4><p><img src="/../images/image-20220917182919017.png" class="lazyload" data-srcset="/../images/image-20220917182919017.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220917182919017"></p>
-<h3 id="在GUI界面中实现配置"><a href="#在GUI界面中实现配置" class="headerlink" title="在GUI界面中实现配置"></a>在GUI界面中实现配置</h3><p>点击查看<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/430035973">配置 clash for linux ，适用于ubuntu 20.04（更新于2021.11.6） - 知乎 (zhihu.com)</a></p>
-
+<h3 id="客户端-1"><a href="#客户端-1" class="headerlink" title="客户端"></a>客户端</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;context&quot;</span></span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc&quot;</span></span><br><span class="line">	<span class="string">&quot;google.golang.org/grpc/credentials/insecure&quot;</span></span><br><span class="line">	pd <span class="string">&quot;grpc_helloworld/client/proto&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Authentication <span class="keyword">struct</span> &#123;</span><br><span class="line">	User     <span class="type">string</span></span><br><span class="line">	Password <span class="type">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *Authentication)</span></span> GetRequestMetadata(context.Context, ...<span class="type">string</span>) (</span><br><span class="line">	<span class="keyword">map</span>[<span class="type">string</span>]<span class="type">string</span>, <span class="type">error</span>,</span><br><span class="line">) &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">map</span>[<span class="type">string</span>]<span class="type">string</span>&#123;<span class="string">&quot;user&quot;</span>: a.User, <span class="string">&quot;password&quot;</span>: a.Password&#125;, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *Authentication)</span></span> RequireTransportSecurity() <span class="type">bool</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	user := &amp;Authentication&#123;</span><br><span class="line">		User:     <span class="string">&quot;admin&quot;</span>,</span><br><span class="line">		Password: <span class="string">&quot;123456&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	conn, err := grpc.Dial(<span class="string">&quot;:8080&quot;</span>, grpc.WithTransportCredentials(insecure.NewCredentials()), grpc.WithPerRPCCredentials(user))</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Print(err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> conn.Close()</span><br><span class="line">	client := pd.NewHelloServerClient(conn)</span><br><span class="line">	feature, err := client.Say(context.Background(), &amp;pd.HelloReq&#123;</span><br><span class="line">		Name: <span class="string">&quot;hello&quot;</span>,</span><br><span class="line">		Age:  <span class="number">22</span>,</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Print(err)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Print(feature)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
   
   
@@ -2700,10 +2663,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-17T18:30:42+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-22T10:57:27+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 17, 2022</p>
+    <p>更新于：Jun 22, 2023</p>
   </a>
 </div>
 
@@ -2711,10 +2674,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/clash/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>clash</p></a></div>
-  <span hidden itemprop="keywords">clash</span>
-
 
         
       
@@ -2726,7 +2685,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/&title=服务器安装Clash - 秋季的blog&pics=https://w.wallhaven.cc/full/rd/wallhaven-rdvl8w.png&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2023/06/22/openssl%E4%BD%BF%E7%94%A8/&title= - 秋季的blog&summary="
           
           >
           
@@ -2738,7 +2697,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/&title=服务器安装Clash - 秋季的blog&pics=https://w.wallhaven.cc/full/rd/wallhaven-rdvl8w.png&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2023/06/22/openssl%E4%BD%BF%E7%94%A8/&title= - 秋季的blog&summary="
           
           >
           
@@ -2750,7 +2709,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/&title=服务器安装Clash - 秋季的blog&pics=https://w.wallhaven.cc/full/rd/wallhaven-rdvl8w.png&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2023/06/22/openssl%E4%BD%BF%E7%94%A8/&title= - 秋季的blog&summary="
           
           >
           
@@ -2783,18 +2742,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/09/22/Hyperledger-Fabric-%E7%AE%80%E4%BB%8B/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Hyperledger Fabric 简介</p>
-          <p class='content'>简介比特币和以太坊属于同一类区块链，我们将其归类为公共非许可（Public Permissionless）区块链技术。
-Hyperledger Fabric开源的企业级许可分布式账本技术平台。（...</p>
+        <a class='prev' href='/2023/06/22/GRPC%E4%BD%BF%E7%94%A8openssl/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>GRPC使用openssl</p>
+          <p class='content'>GRPC使用openssl证书加密数据传输过程，保证调用的安全性。
+证书生成自签证书（root CA）命令解析：https://blog.csdn.net/adminstate/article/...</p>
         </a>
       
       
-        <a class='next' href='/2022/09/14/BeeGo%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8A%E4%BC%A0%E4%B8%8E%E4%B8%8B%E8%BD%BD/'>
-          <p class='title'>BeeGo实现文件的上传与下载<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>beego实现文件的上传和下载文件的上传html的处理
-
-1234&lt;form id=&quot;&quot; method=&quot;POST&quot; enctype=&quot;m...</p>
+        <a class='next' href='/2023/06/19/GRPC%E4%BD%BF%E7%94%A8/'>
+          <p class='title'>GRPC使用<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Grpc简介及使用简介在 gRPC 中，客户端应用程序可以像本地对象一样直接调用不同机器上的服务器应用程序上的方法，可以更轻松地创建分布式应用程序和服务。
+服务端实现了接口，运行一个gRPC服务...</p>
         </a>
       
     </div>
@@ -2810,7 +2768,7 @@ Hyperledger Fabric开源的企业级许可分布式账本技术平台。（...</
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/22/openssl%E4%BD%BF%E7%94%A8/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2852,7 +2810,7 @@ Hyperledger Fabric开源的企业级许可分布式账本技术平台。（...</
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Clash%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B"><span class="toc-text">Clash安装教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF"><span class="toc-text">配置订阅信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86"><span class="toc-text">设置系统代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8"><span class="toc-text">启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%BB%9C%E4%BB%A3%E7%90%86%E7%9A%84%E5%88%87%E6%8D%A2"><span class="toc-text">实现网络代理的切换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E5%90%AF%E5%8A%A8clash"><span class="toc-text">首先启动clash</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%B9%E5%87%BBclash-razord-top%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="toc-text">点击clash.razord.top进行配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E4%BB%A3%E7%90%86%E4%B8%AD%E5%88%87%E6%8D%A2"><span class="toc-text">在代理中切换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8GUI%E7%95%8C%E9%9D%A2%E4%B8%AD%E5%AE%9E%E7%8E%B0%E9%85%8D%E7%BD%AE"><span class="toc-text">在GUI界面中实现配置</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90"><span class="toc-text">证书生成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6%EF%BC%88root-CA%EF%BC%89"><span class="toc-text">自签证书（root CA）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SAN%E8%AF%81%E4%B9%A6"><span class="toc-text">SAN证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-text">目录结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E9%A1%B9%E8%AE%A4%E8%AF%81"><span class="toc-text">单项认证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8C%E5%90%91%E8%AE%A4%E8%AF%81"><span class="toc-text">双向认证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">客户端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#token%E8%AE%A4%E8%AF%81"><span class="toc-text">token认证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A0%A1%E9%AA%8C"><span class="toc-text">服务端校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF-1"><span class="toc-text">客户端</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2924,7 +2882,7 @@ Hyperledger Fabric开源的企业级许可分布式账本技术平台。（...</
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=true;
+  pdata.ispage=false;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2933,14 +2891,14 @@ Hyperledger Fabric开源的企业级许可分布式账本技术平台。（...</
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4071,7 +4029,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/实用/","name":"实用"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2022/09/17/服务器安装Clash/","name":"服务器安装Clash"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"服务器安装Clash","description":"通过安装clash for liunx实现服务器访问外网","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2022/09/17/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E8%A3%85Clash/","wordCount":0,"datePublished":"2022-09-17T09:58:46.000Z","dateModified":"2022-09-17T10:30:42.000Z","articleSection":"实用","keywords":"clash","image":{"@type":"ImageObject","url":"https://w.wallhaven.cc/full/rd/wallhaven-rdvl8w.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/06/22/openssl使用/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/06/22/openssl%E4%BD%BF%E7%94%A8/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/06/22/openssl%E4%BD%BF%E7%94%A8/","wordCount":0,"datePublished":"2023-06-22T01:18:57.602Z","dateModified":"2023-06-22T02:57:27.716Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
