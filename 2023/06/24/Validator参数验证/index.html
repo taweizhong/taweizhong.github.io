@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://peapod.top/2023/05/11/gorm/"/>
+  <link rel="canonical" href="http://peapod.top/2023/06/24/validator参数验证/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,19 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>秋季的blog</title>
+  <title>Validator 参数验证 - 秋季的blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="秋季的blog">
-<meta property="og:url" content="http://peapod.top/2023/05/11/GORM/index.html">
+<meta property="og:title" content="Validator 参数验证">
+<meta property="og:url" content="http://peapod.top/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/index.html">
 <meta property="og:site_name" content="秋季的blog">
-<meta property="og:description" content="GORM手册连接数据库导入驱动 1import _ &quot;github.com&#x2F;go-sql-driver&#x2F;mysql&quot;  123456789import (    &quot;github.com&#x2F;jinzhu&#x2F;gorm&quot;    _ &quot;github.com&#x2F;jinzhu&#x2F;gorm&#x2F;dialects&#x2F;mysql&quot;)func main() &amp;#123;">
+<meta property="og:description" content="Validator 参数验证Validator 简介Validator 是基于 tag（标记）实现结构体和单个字段的值验证库，它包含以下功能：  使用验证 tag（标记）或自定义验证器进行跨字段和跨结构体验证。 关于 slice、数组和 map，允许验证多维字段的任何或所有级别。 能够深入 map 键和值进行验证。 通过在验证之前确定接口的基础类型来处理类型接口。 处理自定义字段类型（如 sql">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-11T01:59:48.000Z">
-<meta property="article:modified_time" content="2023-05-11T02:36:35.920Z">
+<meta property="article:published_time" content="2023-06-24T02:18:58.000Z">
+<meta property="article:modified_time" content="2023-06-24T02:49:14.262Z">
 <meta property="article:author" content="他维忠">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2558,7 +2558,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/05/11/GORM/">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/24/Validator参数验证/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2578,21 +2578,79 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        Validator 参数验证
+      </h1>
+      <div class='new-meta-box'>
         
-      </span>
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">taweizhong</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-24T10:18:58+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 24, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="GORM手册"><a href="#GORM手册" class="headerlink" title="GORM手册"></a>GORM手册</h1><h2 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2><p>导入驱动</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="string">&quot;github.com/go-sql-driver/mysql&quot;</span></span><br></pre></td></tr></table></figure>
+    <h1 id="Validator-参数验证"><a href="#Validator-参数验证" class="headerlink" title="Validator 参数验证"></a>Validator 参数验证</h1><h2 id="Validator-简介"><a href="#Validator-简介" class="headerlink" title="Validator 简介"></a>Validator 简介</h2><p>Validator 是基于 tag（标记）实现结构体和单个字段的值验证库，它包含以下功能：</p>
+<ul>
+<li>使用验证 tag（标记）或自定义验证器进行跨字段和跨结构体验证。</li>
+<li>关于 slice、数组和 map，允许验证多维字段的任何或所有级别。</li>
+<li>能够深入 map 键和值进行验证。</li>
+<li>通过在验证之前确定接口的基础类型来处理类型接口。</li>
+<li>处理自定义字段类型（如 sql 驱动程序 Valuer）。</li>
+<li>别名验证标记，它允许将多个验证映射到单个标记，以便更轻松地定义结构体上的验证。</li>
+<li>提取自定义的字段名称，例如，可以指定在验证时提取 JSON 名称，并在生成的 FieldError 中使用该名称。</li>
+<li>可自定义 i18n 错误消息。</li>
+<li>Web 框架 gin 的默认验证器。</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go get github.com/go-playground/validator/v10</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">&quot;github.com/jinzhu/gorm&quot;</span></span><br><span class="line">    _ <span class="string">&quot;github.com/jinzhu/gorm/dialects/mysql&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  db, err := gorm.Open(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;user:password@tcp(port)/dbname?charset=utf8&amp;parseTime=True&amp;loc=Local&quot;</span>)</span><br><span class="line">  <span class="keyword">defer</span> db.Close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="单个变量验证"><a href="#单个变量验证" class="headerlink" title="单个变量验证"></a>单个变量验证</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  validate := validator.New()</span><br><span class="line">  <span class="comment">// 验证变量</span></span><br><span class="line">  email := <span class="string">&quot;admin#admin.com&quot;</span></span><br><span class="line">  err := validate.Var(email, <span class="string">&quot;required,email&quot;</span>)</span><br><span class="line">  <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    validationErrors := err.(validator.ValidationErrors)</span><br><span class="line">    fmt.Println(validationErrors)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  validate = validator.New()</span><br><span class="line">  <span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">    ID     <span class="type">int64</span>  <span class="string">`json:&quot;id&quot; validate:&quot;gt=0&quot;`</span></span><br><span class="line">    Name   <span class="type">string</span> <span class="string">`json:&quot;name&quot; validate:&quot;required&quot;`</span></span><br><span class="line">    Gender <span class="type">string</span> <span class="string">`json:&quot;gender&quot; validate:&quot;required,oneof=man woman&quot;`</span></span><br><span class="line">    Age    <span class="type">uint8</span>  <span class="string">`json:&quot;age&quot; validate:&quot;required,gte=0,lte=130&quot;`</span></span><br><span class="line">    Email  <span class="type">string</span> <span class="string">`json:&quot;email&quot; validate:&quot;required,email&quot;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  user := &amp;User&#123;</span><br><span class="line">    ID:     <span class="number">1</span>,</span><br><span class="line">    Name:   <span class="string">&quot;frank&quot;</span>,</span><br><span class="line">    Gender: <span class="string">&quot;boy&quot;</span>,</span><br><span class="line">    Age:    <span class="number">180</span>,</span><br><span class="line">    Email:  <span class="string">&quot;gopher@88.com&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  err = validate.Struct(user)</span><br><span class="line">  <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    validationErrors := err.(validator.ValidationErrors)</span><br><span class="line">    fmt.Println(validationErrors)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="错误信息翻译为中文"><a href="#错误信息翻译为中文" class="headerlink" title="错误信息翻译为中文"></a>错误信息翻译为中文</h3><h4 id="安装翻译包"><a href="#安装翻译包" class="headerlink" title="安装翻译包"></a>安装翻译包</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> get -u github.com/<span class="keyword">go</span>-playground/locales</span><br><span class="line"><span class="keyword">go</span> get -u github.com/<span class="keyword">go</span>-playground/universal-translator</span><br></pre></td></tr></table></figure>
+
+<h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;github.com/go-playground/locales/zh&quot;</span></span><br><span class="line">ut <span class="string">&quot;github.com/go-playground/universal-translator&quot;</span></span><br><span class="line"><span class="string">&quot;github.com/go-playground/validator/v10&quot;</span></span><br><span class="line">zh_translations <span class="string">&quot;github.com/go-playground/validator/v10/translations/zh&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">// 实例化验证器</span></span><br><span class="line">	validate := validator.New()</span><br><span class="line">	<span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">		ID     <span class="type">int64</span>  <span class="string">`json:&quot;id&quot; validate:&quot;gt=0&quot;`</span></span><br><span class="line">		Name   <span class="type">string</span> <span class="string">`json:&quot;name&quot; validate:&quot;required&quot;`</span></span><br><span class="line">		Gender <span class="type">string</span> <span class="string">`json:&quot;gender&quot; validate:&quot;required,oneof=man woman&quot;`</span></span><br><span class="line">		Age    <span class="type">uint8</span>  <span class="string">`json:&quot;age&quot; validate:&quot;required,gte=0,lte=130&quot;`</span></span><br><span class="line">		Email  <span class="type">string</span> <span class="string">`json:&quot;email&quot; validate:&quot;required,email&quot;`</span></span><br><span class="line">	&#125;</span><br><span class="line">	user := &amp;User&#123;</span><br><span class="line">		ID:     <span class="number">1</span>,</span><br><span class="line">		Name:   <span class="string">&quot;frank&quot;</span>,</span><br><span class="line">		Gender: <span class="string">&quot;boy&quot;</span>,</span><br><span class="line">		Age:    <span class="number">180</span>,</span><br><span class="line">		Email:  <span class="string">&quot;gopher@88.com&quot;</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 注册一个函数，获取结构体字段的备用名称</span></span><br><span class="line">	validate.RegisterTagNameFunc(<span class="function"><span class="keyword">func</span><span class="params">(fld reflect.StructField)</span></span> <span class="type">string</span> &#123;</span><br><span class="line">		name := strings.SplitN(fld.Tag.Get(<span class="string">&quot;json&quot;</span>), <span class="string">&quot;,&quot;</span>, <span class="number">2</span>)[<span class="number">0</span>]</span><br><span class="line">		<span class="keyword">if</span> name == <span class="string">&quot;-&quot;</span> &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">&quot;j&quot;</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> name</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="comment">// 中文翻译器</span></span><br><span class="line">	uni := ut.New(zh.New())</span><br><span class="line">	trans, _ := uni.GetTranslator(<span class="string">&quot;zh&quot;</span>)</span><br><span class="line">	<span class="comment">// 注册翻译器到校验器</span></span><br><span class="line">	_ = zh_translations.RegisterDefaultTranslations(validate, trans)</span><br><span class="line"></span><br><span class="line">	err := validate.Struct(user)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">for</span> _, err := <span class="keyword">range</span> err.(validator.ValidationErrors) &#123;</span><br><span class="line">		<span class="comment">// 错误翻译</span></span><br><span class="line">			fmt.Println(err.Translate(trans))</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
   </div>
   
   
@@ -2624,10 +2682,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-11T10:36:35+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-24T10:49:14+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：May 11, 2023</p>
+    <p>更新于：Jun 24, 2023</p>
   </a>
 </div>
 
@@ -2646,7 +2704,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2023/05/11/GORM/&title= - 秋季的blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/&title=Validator 参数验证 - 秋季的blog&summary="
           
           >
           
@@ -2658,7 +2716,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2023/05/11/GORM/&title= - 秋季的blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/&title=Validator 参数验证 - 秋季的blog&summary="
           
           >
           
@@ -2670,7 +2728,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2023/05/11/GORM/&title= - 秋季的blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/&title=Validator 参数验证 - 秋季的blog&summary="
           
           >
           
@@ -2703,21 +2761,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/06/10/Protocol-Buffers/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Protocol Buffers</p>
-          <p class='content'>Protocol Buffers 概述简介Protocol Buffers语言无关，平台无关，可扩展的结构化数据序列化方案, 用于协议通讯, 数据存储和其他更多用途。是一个灵活,高效,自动化的结...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/05/08/gin-blog%E8%AF%B4%E6%98%8E/'>
-          <p class='title'>May 11, 2023<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>gin-blogday1初始化项目目录gin-blog/
-
-├── conf 存储配置文件
-├── middleware 中间件
-├── models 数据库模型
-├── pkg 三方包
-├──...</p>
+        <a class='next' href='/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/'>
+          <p class='title'>GRPC流的使用<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>GRPC流的使用流传输方式简介客户端流客户端发送多次，服务端响应一次（关闭时响应）。
+服务端流客户端先发送一次，服务端响应多次。
+双向流客户端发送，服务端响应。
+客户端流服务定义1rpc Cli...</p>
         </a>
       
     </div>
@@ -2733,7 +2783,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/05/11/GORM/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2775,7 +2825,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">连接数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B"><span class="toc-text">模型</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Validator-%E7%AE%80%E4%BB%8B"><span class="toc-text">Validator 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%B8%AA%E5%8F%98%E9%87%8F%E9%AA%8C%E8%AF%81"><span class="toc-text">单个变量验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">结构体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF%E7%BF%BB%E8%AF%91%E4%B8%BA%E4%B8%AD%E6%96%87"><span class="toc-text">错误信息翻译为中文</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%BF%BB%E8%AF%91%E5%8C%85"><span class="toc-text">安装翻译包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5"><span class="toc-text">导入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-text">使用</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -2847,7 +2897,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3994,7 +4044,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/05/11/GORM/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/05/11/GORM/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/05/11/GORM/","wordCount":0,"datePublished":"2023-05-11T01:59:48.000Z","dateModified":"2023-05-11T02:36:35.920Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/06/24/Validator参数验证/","name":"Validator 参数验证"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Validator 参数验证","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/","wordCount":0,"datePublished":"2023-06-24T02:18:58.000Z","dateModified":"2023-06-24T02:49:14.262Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
