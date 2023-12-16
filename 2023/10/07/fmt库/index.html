@@ -44,7 +44,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-07T03:14:16.000Z">
-<meta property="article:modified_time" content="2023-10-07T03:20:34.535Z">
+<meta property="article:modified_time" content="2023-10-07T07:51:10.000Z">
 <meta property="article:author" content="他维忠">
 <meta property="article:tag" content="标准库">
 <meta name="twitter:card" content="summary">
@@ -1759,7 +1759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1696648840141),
+    lastupdate: new Date(1702716266227),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","webinfo","qrcode","lastupdate","repos"],
       for_post: ["toc"],
@@ -2573,7 +2573,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class='headimg-div'>
       <a class='headimg-a'>
-        <img itemprop="image" class='headimg' src='https://f.pz.al/pzal/2023/10/07/34ea06fa37d2c.png'/>
+        <img itemprop="image" class='headimg' src='https://f.pz.al/pzal/2023/10/07/06b70bec9ccc2.png'/>
       </a>
     </div>
   
@@ -2643,7 +2643,161 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="fmt库使用"><a href="#fmt库使用" class="headerlink" title="fmt库使用"></a>fmt库使用</h2>
+    <h2 id="fmt库使用"><a href="#fmt库使用" class="headerlink" title="fmt库使用"></a>fmt库使用</h2><h3 id="Print、Printf、Println"><a href="#Print、Printf、Println" class="headerlink" title="Print、Printf、Println"></a>Print、Printf、Println</h3><p>Print函数直接输出内容，Printf函数支持格式化输出字符串，Println函数会在输出内容的结尾添加一个换行符。</p>
+<h3 id="Fprint"><a href="#Fprint" class="headerlink" title="Fprint"></a>Fprint</h3><p>将内容输出到一个io.Writer接口类型的变量w中，通常用这个函数往文件中写入内容。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fmt.Fprintln(os.Stdout, <span class="string">&quot;向标准输出写入内容&quot;</span>)</span><br><span class="line">fileObj, err := os.OpenFile(<span class="string">&quot;./xx.txt&quot;</span>, os.O_CREATE|os.O_WRONLY|os.O_APPEND, <span class="number">0644</span>)</span><br><span class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    fmt.Println(<span class="string">&quot;打开文件出错，err:&quot;</span>, err)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line">name := <span class="string">&quot;枯藤&quot;</span></span><br><span class="line"><span class="comment">// 向打开的文件句柄中写入内容</span></span><br><span class="line">fmt.Fprintf(fileObj, <span class="string">&quot;往文件中写如信息：%s&quot;</span>, name)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Sprint"><a href="#Sprint" class="headerlink" title="Sprint"></a>Sprint</h3><p>Sprint系列函数会把传入的数据生成并返回一个字符串。</p>
+<h3 id="Errorf"><a href="#Errorf" class="headerlink" title="Errorf"></a>Errorf</h3><p>根据format参数生成格式化字符串并返回一个包含该字符串的错误。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Errorf</span><span class="params">(format <span class="type">string</span>, a ...<span class="keyword">interface</span>&#123;&#125;)</span></span> <span class="type">error</span> </span><br></pre></td></tr></table></figure>
+
+<h3 id="格式化占位符"><a href="#格式化占位符" class="headerlink" title="格式化占位符"></a>格式化占位符</h3><table>
+<thead>
+<tr>
+<th align="left">占位符</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">%v</td>
+<td align="left">值的默认格式表示</td>
+</tr>
+<tr>
+<td align="left">%+v</td>
+<td align="left">类似%v，但输出结构体时会添加字段名</td>
+</tr>
+<tr>
+<td align="left">%#v</td>
+<td align="left">值的Go语法表示</td>
+</tr>
+<tr>
+<td align="left">%T</td>
+<td align="left">打印值的类型</td>
+</tr>
+<tr>
+<td align="left">%%</td>
+<td align="left">百分号</td>
+</tr>
+<tr>
+<td align="left">%t</td>
+<td align="left">true或false</td>
+</tr>
+<tr>
+<td align="left">%b</td>
+<td align="left">表示为二进制</td>
+</tr>
+<tr>
+<td align="left">%c</td>
+<td align="left">该值对应的unicode码值</td>
+</tr>
+<tr>
+<td align="left">%d</td>
+<td align="left">表示为十进制</td>
+</tr>
+<tr>
+<td align="left">%o</td>
+<td align="left">表示为八进制</td>
+</tr>
+<tr>
+<td align="left">%x</td>
+<td align="left">表示为十六进制，使用a-f</td>
+</tr>
+<tr>
+<td align="left">%X</td>
+<td align="left">表示为十六进制，使用A-F</td>
+</tr>
+<tr>
+<td align="left">%U</td>
+<td align="left">表示为Unicode格式：U+1234，等价于”U+%04X”</td>
+</tr>
+<tr>
+<td align="left">%q</td>
+<td align="left">该值对应的单引号括起来的go语法字符字面值，必要时会采用安全的转义表示</td>
+</tr>
+<tr>
+<td align="left">%b</td>
+<td align="left">无小数部分、二进制指数的科学计数法，如-123456p-78</td>
+</tr>
+<tr>
+<td align="left">%e</td>
+<td align="left">科学计数法，如-1234.456e+78</td>
+</tr>
+<tr>
+<td align="left">%E</td>
+<td align="left">科学计数法，如-1234.456E+78</td>
+</tr>
+<tr>
+<td align="left">%f</td>
+<td align="left">有小数部分但无指数部分，如123.456</td>
+</tr>
+<tr>
+<td align="left">%F</td>
+<td align="left">等价于%f</td>
+</tr>
+<tr>
+<td align="left">%g</td>
+<td align="left">根据实际情况采用%e或%f格式（以获得更简洁、准确的输出）</td>
+</tr>
+<tr>
+<td align="left">%G</td>
+<td align="left">根据实际情况采用%E或%F格式（以获得更简洁、准确的输出）</td>
+</tr>
+<tr>
+<td align="left">%s</td>
+<td align="left">直接输出字符串或者[]byte</td>
+</tr>
+<tr>
+<td align="left">%q</td>
+<td align="left">该值对应的双引号括起来的go语法字符串字面值，必要时会采用安全的转义表示</td>
+</tr>
+<tr>
+<td align="left">%x</td>
+<td align="left">每个字节用两字符十六进制数表示（使用a-f</td>
+</tr>
+<tr>
+<td align="left">%X</td>
+<td align="left">每个字节用两字符十六进制数表示（使用A-F）</td>
+</tr>
+<tr>
+<td align="left">%f</td>
+<td align="left">默认宽度，默认精度</td>
+</tr>
+<tr>
+<td align="left">%9f</td>
+<td align="left">宽度9，默认精度</td>
+</tr>
+<tr>
+<td align="left">%.2f</td>
+<td align="left">默认宽度，精度2</td>
+</tr>
+<tr>
+<td align="left">%9.2f</td>
+<td align="left">宽度9，精度2</td>
+</tr>
+<tr>
+<td align="left">’+’</td>
+<td align="left">总是输出数值的正负号；对%q（%+q）会生成全部是ASCII字符的输出（通过转义）；</td>
+</tr>
+<tr>
+<td align="left">’ ‘</td>
+<td align="left">对数值，正数前加空格而负数前加负号；对字符串采用%x或%X时（% x或% X）会给各打印的字节之间加空格</td>
+</tr>
+<tr>
+<td align="left">’-’</td>
+<td align="left">在输出右边填充空白而不是默认的左边（即从默认的右对齐切换为左对齐）；</td>
+</tr>
+<tr>
+<td align="left">’#’</td>
+<td align="left">八进制数前加0（%#o），十六进制数前加0x（%#x）或0X（%#X），指针去掉前面的0x（%#p）对%q（%#q），对%U（%#U）会输出空格和单引号括起来的go字面值；</td>
+</tr>
+<tr>
+<td align="left">‘0’</td>
+<td align="left">使用0而不是空格填充，对于数值类型会把填充的0放在正负号后面；</td>
+</tr>
+</tbody></table>
+<h3 id="输入一行"><a href="#输入一行" class="headerlink" title="输入一行"></a>输入一行</h3><h4 id="bufio-NewReader"><a href="#bufio-NewReader" class="headerlink" title="bufio.NewReader"></a>bufio.NewReader</h4><p>完整获取输入的内容，而输入的内容可能包含空格，这种情况下可以使用bufio包来实现.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">bufioDemo</span><span class="params">()</span></span> &#123;</span><br><span class="line">    reader := bufio.NewReader(os.Stdin) <span class="comment">// 从标准输入生成读对象</span></span><br><span class="line">    fmt.Print(<span class="string">&quot;请输入内容：&quot;</span>)</span><br><span class="line">    text, _ := reader.ReadString(<span class="string">&#x27;\n&#x27;</span>) <span class="comment">// 读到换行</span></span><br><span class="line">    text = strings.TrimSpace(text)</span><br><span class="line">    fmt.Printf(<span class="string">&quot;%#v\n&quot;</span>, text)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
   </div>
   
   
@@ -2675,7 +2829,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-07T11:20:34+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-07T15:51:10+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Oct 7, 2023</p>
@@ -2758,6 +2912,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2023/10/25/go-zero%E5%85%A5%E9%97%A8/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>go-zero入门</p>
+          <p class='content'>go-zero简介go-zero 是一个集成了各种工程实践的 web 和 rpc 框架。
+
+保持简单，第一原则
+弹性设计，面向故障编程
+工具大于约定和文档
+高可用
+高并发
+易扩展
+对业务开发友好...</p>
+        </a>
+      
       
         <a class='next' href='/2023/10/06/%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86/'>
           <p class='title'>终端使用代理<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -2821,7 +2988,7 @@ shell脚本123456789...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#fmt%E5%BA%93%E4%BD%BF%E7%94%A8"><span class="toc-text">fmt库使用</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#fmt%E5%BA%93%E4%BD%BF%E7%94%A8"><span class="toc-text">fmt库使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Print%E3%80%81Printf%E3%80%81Println"><span class="toc-text">Print、Printf、Println</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fprint"><span class="toc-text">Fprint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sprint"><span class="toc-text">Sprint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Errorf"><span class="toc-text">Errorf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="toc-text">格式化占位符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E4%B8%80%E8%A1%8C"><span class="toc-text">输入一行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#bufio-NewReader"><span class="toc-text">bufio.NewReader</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3811,7 +3978,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4040,7 +4207,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/每日一库/","name":"每日一库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/10/07/fmt库/","name":"fmt库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fmt库","description":"标准库fmt库的使用","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/10/07/fmt%E5%BA%93/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/10/07/fmt%E5%BA%93/","wordCount":0,"datePublished":"2023-10-07T03:14:16.000Z","dateModified":"2023-10-07T03:20:34.535Z","articleSection":"每日一库","keywords":"标准库","image":{"@type":"ImageObject","url":"https://f.pz.al/pzal/2023/10/07/34ea06fa37d2c.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/每日一库/","name":"每日一库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/10/07/fmt库/","name":"fmt库"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fmt库","description":"标准库fmt库的使用","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/10/07/fmt%E5%BA%93/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/10/07/fmt%E5%BA%93/","wordCount":0,"datePublished":"2023-10-07T03:14:16.000Z","dateModified":"2023-10-07T07:51:10.000Z","articleSection":"每日一库","keywords":"标准库","image":{"@type":"ImageObject","url":"https://f.pz.al/pzal/2023/10/07/06b70bec9ccc2.png","width":1024,"height":768}}]</script>
 
 
 
