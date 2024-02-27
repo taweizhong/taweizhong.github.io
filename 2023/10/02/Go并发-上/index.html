@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://peapod.top/2023/10/02/go并发/"/>
+  <link rel="canonical" href="http://peapod.top/2023/10/02/go并发-上/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,19 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Go并发 - 秋季的blog</title>
+  <title>Go并发-上 - 秋季的blog</title>
   <meta name="keywords" content="Go,null">
   <meta desc name="description" content="并发1。 - 他维忠 - 秋季的blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Go并发">
-<meta property="og:url" content="http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91/index.html">
+<meta property="og:title" content="Go并发-上">
+<meta property="og:url" content="http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/index.html">
 <meta property="og:site_name" content="秋季的blog">
 <meta property="og:description" content="并发1。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-02T12:53:23.000Z">
-<meta property="article:modified_time" content="2024-02-27T10:49:19.241Z">
+<meta property="article:modified_time" content="2024-02-27T11:00:18.074Z">
 <meta property="article:author" content="他维忠">
 <meta property="article:tag" content="Go">
 <meta name="twitter:card" content="summary">
@@ -1759,7 +1759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1709031446761),
+    lastupdate: new Date(1709031733317),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","webinfo","qrcode","lastupdate","repos"],
       for_post: ["toc"],
@@ -2559,7 +2559,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/10/02/Go并发/">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/10/02/Go并发-上/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2580,13 +2580,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="article-meta" id="top">
     
     
-      <a title='Go并发' href='/2023/10/02/Go%E5%B9%B6%E5%8F%91/'>
+      <a title='Go并发-上' href='/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/'>
         <img itemprop="image" class='thumbnail' src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612'>
       </a>
     
     
       <h1 class="title" itemprop="name headline">
-        Go并发
+        Go并发-上
       </h1>
       <div class='new-meta-box'>
         
@@ -2643,7 +2643,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="Go并发"><a href="#Go并发" class="headerlink" title="Go并发"></a>Go并发</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进程是程序在操作系统中的一次执行过程，系统进行资源分配和调度的一个独立单位。</span><br><span class="line">线程是进程的一个执行实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位。</span><br><span class="line">一个进程可以创建和撤销多个线程;同一个进程中的多个线程之间可以并发执行。</span><br></pre></td></tr></table></figure>
+    <h2 id="Go并发-上"><a href="#Go并发-上" class="headerlink" title="Go并发-上"></a>Go并发-上</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进程是程序在操作系统中的一次执行过程，系统进行资源分配和调度的一个独立单位。</span><br><span class="line">线程是进程的一个执行实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位。</span><br><span class="line">一个进程可以创建和撤销多个线程;同一个进程中的多个线程之间可以并发执行。</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">多线程程序在一个核的cpu上运行，就是并发。</span><br><span class="line">多线程程序在多个核的cpu上运行，就是并行。 </span><br><span class="line"></span><br><span class="line">协程：独立的栈空间，共享堆空间，调度由用户自己控制，本质上有点类似于用户级线程，这些用户级线程的调度也是自己实现的。</span><br><span class="line">线程：一个线程上可以跑多个协程，协程是轻量级的线程。</span><br><span class="line">并发主要由切换时间片来实现”同时”运行，并行则是直接利用多核实现多线程的运行，go可以设置使用核数，以发挥多核计算机的能力。</span><br></pre></td></tr></table></figure>
 
@@ -2706,7 +2706,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-27T18:49:19+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-27T19:00:18+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Feb 27, 2024</p>
@@ -2732,7 +2732,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91/&title=Go并发 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/&title=Go并发-上 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
           
           >
           
@@ -2744,7 +2744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91/&title=Go并发 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/&title=Go并发-上 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
           
           >
           
@@ -2756,7 +2756,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91/&title=Go并发 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/&title=Go并发-上 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
           
           >
           
@@ -2815,7 +2815,7 @@ reflect 包来访问程序的反射信息。
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/10/02/Go%E5%B9%B6%E5%8F%91/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2857,7 +2857,7 @@ reflect 包来访问程序的反射信息。
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Go%E5%B9%B6%E5%8F%91"><span class="toc-text">Go并发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goroutine"><span class="toc-text">Goroutine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#goroutine%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="toc-text">goroutine与线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPM"><span class="toc-text">GPM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#channel"><span class="toc-text">channel</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Go%E5%B9%B6%E5%8F%91-%E4%B8%8A"><span class="toc-text">Go并发-上</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Goroutine"><span class="toc-text">Goroutine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#goroutine%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="toc-text">goroutine与线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GPM"><span class="toc-text">GPM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#channel"><span class="toc-text">channel</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3847,7 +3847,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4076,7 +4076,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/golang标准库/","name":"golang标准库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/10/02/Go并发/","name":"Go并发"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Go并发","description":"并发1。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91/","wordCount":0,"datePublished":"2023-10-02T12:53:23.000Z","dateModified":"2024-02-27T10:49:19.241Z","articleSection":"golang标准库","keywords":"Go","image":{"@type":"ImageObject","url":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/golang标准库/","name":"golang标准库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2023/10/02/Go并发-上/","name":"Go并发-上"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Go并发-上","description":"并发1。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2023/10/02/Go%E5%B9%B6%E5%8F%91-%E4%B8%8A/","wordCount":0,"datePublished":"2023-10-02T12:53:23.000Z","dateModified":"2024-02-27T11:00:18.074Z","articleSection":"golang标准库","keywords":"Go","image":{"@type":"ImageObject","url":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612","width":1024,"height":768}}]</script>
 
 
 

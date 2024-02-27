@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://peapod.top/2024/02/27/go并发-1/"/>
+  <link rel="canonical" href="http://peapod.top/2024/02/27/go并发-下/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,19 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Go并发 - 秋季的blog</title>
+  <title>Go并发-下 - 秋季的blog</title>
   <meta name="keywords" content="Go,null">
   <meta desc name="description" content="对共享资源实现加锁操作。 - 他维忠 - 秋季的blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Go并发">
-<meta property="og:url" content="http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/index.html">
+<meta property="og:title" content="Go并发-下">
+<meta property="og:url" content="http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/index.html">
 <meta property="og:site_name" content="秋季的blog">
 <meta property="og:description" content="对共享资源实现加锁操作。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-02-27T10:47:35.000Z">
-<meta property="article:modified_time" content="2024-02-27T10:52:41.215Z">
+<meta property="article:modified_time" content="2024-02-27T11:00:39.697Z">
 <meta property="article:author" content="他维忠">
 <meta property="article:tag" content="Go">
 <meta name="twitter:card" content="summary">
@@ -1759,7 +1759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1709031446761),
+    lastupdate: new Date(1709031733317),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","webinfo","qrcode","lastupdate","repos"],
       for_post: ["toc"],
@@ -2559,7 +2559,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/02/27/Go并发-1/">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/02/27/Go并发-下/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2580,13 +2580,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="article-meta" id="top">
     
     
-      <a title='Go并发' href='/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/'>
+      <a title='Go并发-下' href='/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/'>
         <img itemprop="image" class='thumbnail' src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612'>
       </a>
     
     
       <h1 class="title" itemprop="name headline">
-        Go并发
+        Go并发-下
       </h1>
       <div class='new-meta-box'>
         
@@ -2643,7 +2643,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="Golang并发"><a href="#Golang并发" class="headerlink" title="Golang并发"></a>Golang并发</h2><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>并发和并行之间的区别。</p>
+    <h2 id="Go并发-下"><a href="#Go并发-下" class="headerlink" title="Go并发-下"></a>Go并发-下</h2><h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>并发和并行之间的区别。</p>
 <ul>
 <li>并发（concurrency）：把任务在不同的时间点交给处理器进行处理。在同一时间点，任务并不会同时运行。</li>
 <li>并行（parallelism）：把每一个任务分配给每一个处理器独立完成。在同一时间点，任务一定是同时运行。</li>
@@ -2798,7 +2798,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-27T18:52:41+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-27T19:00:39+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Feb 27, 2024</p>
@@ -2824,7 +2824,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/&title=Go并发 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/&title=Go并发-下 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
           
           >
           
@@ -2836,7 +2836,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/&title=Go并发 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/&title=Go并发-下 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
           
           >
           
@@ -2848,7 +2848,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/&title=Go并发 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/&title=Go并发-下 - 秋季的blog&pics=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612&summary="
           
           >
           
@@ -2903,7 +2903,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2945,7 +2945,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Golang%E5%B9%B6%E5%8F%91"><span class="toc-text">Golang并发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#goroutine"><span class="toc-text">goroutine</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#channel"><span class="toc-text">channel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E3%80%81%E6%B4%BB%E9%94%81%E5%92%8C%E9%A5%A5%E9%A5%BF"><span class="toc-text">死锁、活锁和饥饿</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E9%80%9A%E4%BF%A1"><span class="toc-text">并发通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%AD%90%E5%87%BD%E6%95%B0"><span class="toc-text">原子函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%92%E6%96%A5%E9%94%81%E5%92%8C%E8%AF%BB%E5%86%99%E9%94%81"><span class="toc-text">互斥锁和读写锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%89%E5%BE%85%E7%BB%84"><span class="toc-text">等待组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%81%93%EF%BC%88chan%EF%BC%89"><span class="toc-text">通道（chan）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E9%81%93%E5%A3%B0%E6%98%8E"><span class="toc-text">通道声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E9%81%93%E5%88%9B%E5%BB%BA"><span class="toc-text">通道创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE"><span class="toc-text">发送数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%A5%E5%8F%97%E6%95%B0%E6%8D%AE"><span class="toc-text">接受数据</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%90%91%E9%80%9A%E9%81%93"><span class="toc-text">单向通道</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E7%BC%93%E5%86%B2%E7%9A%84%E9%80%9A%E9%81%93"><span class="toc-text">带缓冲的通道</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BC%93%E5%86%B2%E9%80%9A%E9%81%93"><span class="toc-text">创建缓冲通道</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E6%9D%A1%E4%BB%B6"><span class="toc-text">阻塞条件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E6%97%B6%E6%9C%BA%E5%88%B6"><span class="toc-text">超时机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%A0%B8%E5%B9%B6%E8%A1%8C%E5%8C%96"><span class="toc-text">多核并行化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSP%EF%BC%9A%E9%80%9A%E4%BF%A1%E9%A1%BA%E5%BA%8F%E8%BF%9B%E7%A8%8B"><span class="toc-text">CSP：通信顺序进程</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Go%E5%B9%B6%E5%8F%91-%E4%B8%8B"><span class="toc-text">Go并发-下</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#goroutine"><span class="toc-text">goroutine</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#channel"><span class="toc-text">channel</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%BB%E9%94%81%E3%80%81%E6%B4%BB%E9%94%81%E5%92%8C%E9%A5%A5%E9%A5%BF"><span class="toc-text">死锁、活锁和饥饿</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E9%80%9A%E4%BF%A1"><span class="toc-text">并发通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8E%9F%E5%AD%90%E5%87%BD%E6%95%B0"><span class="toc-text">原子函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%92%E6%96%A5%E9%94%81%E5%92%8C%E8%AF%BB%E5%86%99%E9%94%81"><span class="toc-text">互斥锁和读写锁</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AD%89%E5%BE%85%E7%BB%84"><span class="toc-text">等待组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E9%81%93%EF%BC%88chan%EF%BC%89"><span class="toc-text">通道（chan）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E9%81%93%E5%A3%B0%E6%98%8E"><span class="toc-text">通道声明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E9%81%93%E5%88%9B%E5%BB%BA"><span class="toc-text">通道创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE"><span class="toc-text">发送数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%A5%E5%8F%97%E6%95%B0%E6%8D%AE"><span class="toc-text">接受数据</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%90%91%E9%80%9A%E9%81%93"><span class="toc-text">单向通道</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A6%E7%BC%93%E5%86%B2%E7%9A%84%E9%80%9A%E9%81%93"><span class="toc-text">带缓冲的通道</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%BC%93%E5%86%B2%E9%80%9A%E9%81%93"><span class="toc-text">创建缓冲通道</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%98%BB%E5%A1%9E%E6%9D%A1%E4%BB%B6"><span class="toc-text">阻塞条件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E6%97%B6%E6%9C%BA%E5%88%B6"><span class="toc-text">超时机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%A0%B8%E5%B9%B6%E8%A1%8C%E5%8C%96"><span class="toc-text">多核并行化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSP%EF%BC%9A%E9%80%9A%E4%BF%A1%E9%A1%BA%E5%BA%8F%E8%BF%9B%E7%A8%8B"><span class="toc-text">CSP：通信顺序进程</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3935,7 +3935,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4164,7 +4164,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/golang标准库/","name":"golang标准库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/02/27/Go并发-1/","name":"Go并发"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Go并发","description":"对共享资源实现加锁操作。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-1/","wordCount":0,"datePublished":"2024-02-27T10:47:35.000Z","dateModified":"2024-02-27T10:52:41.215Z","articleSection":"golang标准库","keywords":"Go","image":{"@type":"ImageObject","url":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/golang标准库/","name":"golang标准库"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/02/27/Go并发-下/","name":"Go并发-下"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Go并发-下","description":"对共享资源实现加锁操作。","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/","wordCount":0,"datePublished":"2024-02-27T10:47:35.000Z","dateModified":"2024-02-27T11:00:39.697Z","articleSection":"golang标准库","keywords":"Go","image":{"@type":"ImageObject","url":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612","width":1024,"height":768}}]</script>
 
 
 
