@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://peapod.top/archives/2024/"/>
+  
+  <link rel="canonical" href="http://peapod.top/2024/03/27/grpc-简介/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,16 +32,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2024 - 秋季的blog</title>
-  <meta name="keywords" content="null">
+  <title>GRPC 简介 - 秋季的blog</title>
+  <meta name="keywords" content="GRPC,null">
   <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="秋季的blog">
-<meta property="og:url" content="http://peapod.top/archives/2024/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="GRPC 简介">
+<meta property="og:url" content="http://peapod.top/2024/03/27/GRPC-%E7%AE%80%E4%BB%8B/index.html">
 <meta property="og:site_name" content="秋季的blog">
+<meta property="og:description" content="GRPC 简介gRPC：gRPC是Google公布的开源项目，基于HTTP2.0协议，并支持常见的众多编程语言。HTTP 2.0协议是基于二进制的HTTP协议的升级版本，gRPC底层使用了Netty框架。 使用gRPC， 可以一次性的在一个.proto文件中定义服务并使用任何支持它的语言去实现客户端和服务端，它们可以应用在各种场景中， gRPC解决了不同语言及环境间通信的复杂性。使用protoco">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-03-27T08:53:09.000Z">
+<meta property="article:modified_time" content="2024-03-27T09:32:17.809Z">
 <meta property="article:author" content="他维忠">
+<meta property="article:tag" content="GRPC">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1754,7 +1759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1711016410560),
+    lastupdate: new Date(1711544425417),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","webinfo","qrcode","lastupdate","repos"],
       for_post: ["toc"],
@@ -2179,7 +2184,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2468,7 +2473,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2553,40 +2558,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/21/Go-http包详解/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/27/GRPC-简介/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2595,697 +2568,437 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2024/03/21/Go-http%E5%8C%85%E8%AF%A6%E8%A7%A3/">
-        <img itemprop="image" class='headimg' alt="Go http包详解" src='https://img2.imgtp.com/2024/03/21/lSncTJ8R.webp'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/21/Go-http%E5%8C%85%E8%AF%A6%E8%A7%A3/"  itemprop="url">
-        Go http包详解
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>net/http库实现web连接过程。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-21T17:59:01+08:00">2024-03-21</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Go/">Go</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Go/" itemprop="url"><span itemprop="name">Go</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/21/Go-http%E5%8C%85%E8%AF%A6%E8%A7%A3/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/19/Mysql事物与锁/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2024/03/19/Mysql%E4%BA%8B%E7%89%A9%E4%B8%8E%E9%94%81/">
-        <img itemprop="image" class='headimg' alt="Mysql事物与锁" src='https://img2.imgtp.com/2024/03/19/gMi0lrLq.jpeg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/19/Mysql%E4%BA%8B%E7%89%A9%E4%B8%8E%E9%94%81/"  itemprop="url">
-        Mysql事物与锁
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>mysql事物的定义、隔离性与锁。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-19T10:32:46+08:00">2024-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/19/Mysql%E4%BA%8B%E7%89%A9%E4%B8%8E%E9%94%81/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/17/redis-基础数据类型/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2024/03/17/redis-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-        <img itemprop="image" class='headimg' alt="redis 基础数据类型" src='https://img2.imgtp.com/2024/03/17/TSwcIGLa.jpeg'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/17/redis-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"  itemprop="url">
-        redis 基础数据类型
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>redis中基本数据类型及其底层数据结构。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-17T17:18:14+08:00">2024-03-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url"><span itemprop="name">数据库</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/17/redis-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/17/blog标准化/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/17/blog%E6%A0%87%E5%87%86%E5%8C%96/"  itemprop="url">
-        blog标准化
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        blog标准化标签标签使用已经生成的标签，每种相关框架作为单独标签使用。标签名字使用英文标识，简单、可以快速检索。
-分类分类使用中文标识，分类应该精简，可以代表大部分的文章，不超过10种。
-
-      
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title" itemprop="name headline">
+        GRPC 简介
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">taweizhong</p>
+  </a>
+</div>
+
+          
         
-        <time itemprop="dateCreated datePublished" datetime="2024-03-17T15:43:56+08:00">2024-03-17</time>
+          
+            
+
+          
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-03-27T16:53:09+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Mar 27, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="GRPC-简介"><a href="#GRPC-简介" class="headerlink" title="GRPC 简介"></a>GRPC 简介</h2><p>gRPC：gRPC是Google公布的开源项目，基于HTTP2.0协议，并支持常见的众多编程语言。HTTP 2.0协议是基于二进制的HTTP协议的升级版本，gRPC底层使用了Netty框架。</p>
+<p>使用gRPC， 可以一次性的在一个<code>.proto</code>文件中定义服务并使用任何支持它的语言去实现客户端和服务端，它们可以应用在各种场景中， gRPC解决了不同语言及环境间通信的复杂性。使用<code>protocol buffers</code>提供高效的序列化、简单的IDL以及容易进行接口更新。总之一句话，使用gRPC可以更容易的编写跨语言的分布式代码。</p>
+<h3 id="rpc工作原理"><a href="#rpc工作原理" class="headerlink" title="rpc工作原理"></a>rpc工作原理</h3><p>RPC（Remote Procedure Call，远程过程调用）是一种分布式计算模型，它允许程序在不同的计算机之间通过网络进行通信和交互，实现像本地调用一样的程序调用和数据传输。RPC通常用于构建分布式系统和微服务架构。</p>
+<p>RPC的工作原理可以简单地分为以下几个步骤：</p>
+<ol>
+<li>客户端调用远程服务：客户端程序调用本地接口，接口封装了需要执行的操作和参数，然后将请求通过网络发送到远程服务端。</li>
+<li>服务端接收请求：远程服务端接收请求，解析请求的内容，根据请求的操作调用相应的方法，执行操作。</li>
+<li>服务端返回结果：服务端将执行结果返回给客户端，客户端接收到结果后继续执行。</li>
+<li>客户端接收结果：客户端接收到服务端返回的结果，进行处理并返回给调用者。</li>
+</ol>
+<p>在这个过程中，RPC通常需要解决以下问题：</p>
+<ol>
+<li>远程服务的定位：客户端需要知道远程服务的位置和地址，才能将请求发送到正确的服务端。解决这个问题可以使用命名服务（如DNS）、注册中心等技术。</li>
+<li>数据传输和序列化：客户端和服务端之间需要进行数据传输和序列化。RPC框架通常使用网络协议（如HTTP、TCP等）进行数据传输，同时需要将数据序列化成二进制流或其他格式(Protobuf, json)。</li>
+<li>异常处理和容错机制：由于网络和远程服务的不确定性，RPC框架需要提供异常处理和容错机制，例如超时重试、故障转移等技术，保证RPC调用的可靠性和稳定性。</li>
+</ol>
+<ul>
+<li>rpc 调用基于 sdk 方式，调用方法和出入参协议固定，stub 文件本身还能起到接口文档的作用，很大程度上优化了通信双方约定协议达成共识的成本。</li>
+<li>rpc 在传输层协议 tcp 基础之上，可以由实现框架自定义填充应用层协议细节，理论上存在着更高的上限。</li>
+</ul>
+<h3 id="gRPC优势"><a href="#gRPC优势" class="headerlink" title="gRPC优势"></a>gRPC优势</h3><p>RPC（远程过程调用）之所以被称为 “远程”，是因为在微服务架构下，当服务部署到不同的服务器时，它可以实现远程服务之间的通信。从用户的角度来看，它就像一个本地函数调用。</p>
+<ol>
+<li><p>更高的<code>性能</code>：gRPC使用二进制协议，可以比HTTP传输更快地传输数据，可以提高系统的响应速度和吞吐量，特别是在大数据传输和高并发的场景下更为明显。</p>
+</li>
+<li><p>更小的<code>带宽</code>占用：gRPC使用Protocol Buffers作为数据序列化协议，与XML和JSON相比，它可以将数据更紧凑地编码，从而减少网络带宽的占用，降低系统的网络开销。</p>
+</li>
+<li><p>gRPC 基于 HTTP&#x2F;2 标准设计，要比传统的http1快</p>
+</li>
+<li><p>更严格的接口定义：gRPC使用IDL（Interface Definition Language）定义接口，可以清晰地定义每个服务的接口、参数和返回值，并生成相应的代码，降低开发者的开发难度和出错率，同时也增加了接口的可读性和可维护性。</p>
+</li>
+<li><p>更多的语言支持：gRPC支持多种编程语言，包括Java、C++、Python、Go等，可以让开发者根据自己的喜好和技能选择最适合的编程语言进行开发，提高了开发效率和灵活性。</p>
+</li>
+<li><p>更好的扩展性和互操作性：gRPC支持负载均衡、流控制和错误处理等功能，可以让开发者轻松地构建高可用的分布式系统，同时也可以与其他系统集成，实现跨平台、跨语言的服务调用。</p>
+</li>
+</ol>
+<h3 id="gRPC工作流程"><a href="#gRPC工作流程" class="headerlink" title="gRPC工作流程"></a>gRPC工作流程</h3><p>gRPC流程分为四个步骤：<code>定义服务</code>、<code>生成源代码</code>、<code>实现服务</code>、<code>启动服务</code>。首先，需要定义要实现的服务及其接口，使用Protocol Buffers编写接口定义文件。其次，使用编译器生成客户端和服务器端的源代码。然后，实现生成的接口。最后，启动服务器并将其部署在适当的位置。</p>
+<p><img src="https://img2.imgtp.com/2024/03/27/0UpvLilK.png" class="lazyload" data-srcset="https://img2.imgtp.com/2024/03/27/0UpvLilK.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>步骤 1：从客户端发出 REST 调用。请求体通常为 JSON 格式。<br>步骤 2 - 4：订单服务（gRPC 客户端）接收 REST 调用，对其进行转换，然后向支付服务发出 RPC 调用。<br>步骤 5：gRPC 通过 HTTP2 在网络上发送数据包。由于采用了二进制编码和网络优化，gRPC 据说比 JSON 快 5 倍。<br>步骤 6 - 8：支付服务（gRPC 服务器）接收来自网络的数据包，解码后调用服务器应用程序。<br>步骤 9 - 11：结果从服务器应用程序返回，经过编码后发送到传输层。<br>步骤 12 - 14：订单服务接收数据包、解码并将结果发送给客户端应用程序。</p>
+<h3 id="http对比rpc"><a href="#http对比rpc" class="headerlink" title="http对比rpc"></a>http对比rpc</h3><ul>
+<li>纯裸 TCP 是能收发数据，但它是个<strong>无边界</strong>的数据流，上层需要定义<strong>消息格式</strong>用于定义<strong>消息边界</strong>。于是就有了各种协议，HTTP 和各类 RPC 协议就是在 TCP 之上定义的应用层协议。</li>
+<li><strong>RPC 本质上不算是协议，而是一种调用方式</strong>，而像 gRPC 和 Thrift 这样的具体实现，才是协议，它们是实现了 RPC 调用的协议。目的是希望程序员能像调用本地方法那样去调用远端的服务方法。同时 RPC 有很多种实现方式，<strong>不一定非得基于 TCP 协议</strong>。</li>
+<li>从发展历史来说，<strong>HTTP 主要用于 B&#x2F;S 架构，而 RPC 更多用于 C&#x2F;S 架构。但现在其实已经没分那么清了，B&#x2F;S 和 C&#x2F;S 在慢慢融合</strong>。很多软件同时支持多端，所以对外一般用 HTTP 协议，而内部集群的微服务之间则采用 RPC 协议进行通讯。</li>
+<li><code>RPC 其实比 HTTP 出现的要早</code>，且比目前主流的 HTTP&#x2F;1.1 <strong>性能</strong>要更好，所以大部分公司内部都还在使用 RPC。</li>
+<li><strong>HTTP&#x2F;2.0</strong> 在 <strong>HTTP&#x2F;1.1</strong> 的基础上做了优化，性能可能比很多 RPC 协议都要好，但由于是这几年才出来的，所以也不太可能取代掉 RPC。</li>
+</ul>
+<h3 id="检测-RPC-调用"><a href="#检测-RPC-调用" class="headerlink" title="检测 RPC 调用"></a>检测 RPC 调用</h3><ol>
+<li>健康检查和监控： 定期探活<br> 在RPC调用的架构中，可以实现健康检查和监控机制，定期检测RPC服务的可用性和网络连接状态。通过监控系统的指标和警报，可以及时发现并解决网络问题。</li>
+<li>日志记录和错误处理：<br> 在RPC调用的代码中，可以添加日志记录功能，以捕获网络相关的错误和异常。通过检查日志，可以查看是否有网络连接失败、超时或其他网络相关的错误信息。</li>
+<li>监控网络延迟、丢包、带宽。</li>
+</ol>
+<h3 id="grpc通信方式"><a href="#grpc通信方式" class="headerlink" title="grpc通信方式"></a>grpc通信方式</h3><p>普通rpc：这就是一般的rpc调用，一个请求对象对应一个返回对象，&#x3D;&#x3D;传统的 即刻响应的 &#x3D;&#x3D;<br>服务端流式rpc：一个请求对象，服务端可以传回多个结果对象，&#x3D;&#x3D;入参为流&#x3D;&#x3D;<br>客户端流式rpc：客户端传入多个请求对象，服务端返回一个响应结果，&#x3D;&#x3D;出参为流&#x3D;&#x3D;<br>双向流式rpc：结合客户端流式rpc和服务端流式rpc，可以传入多个对象，返回多个响应对象，&#x3D;&#x3D;出入参均为流&#x3D;&#x3D;</p>
+<p>grpc通过使用流式（关键字<code>stream</code>）的方式，返回&#x2F;接受多个实例可以用于类似不定长数组的入参和出参</p>
+<h2 id="protocol-buffers"><a href="#protocol-buffers" class="headerlink" title="protocol buffers"></a>protocol buffers</h2><p>Protobuf是由Google开发的二进制格式，用于在不同服务之间序列化数据。是一种IDL（interface description language）语言。</p>
+<ul>
+<li><strong><code>Protocol Buffers</code> (protobuf)</strong> 是 除了 <strong>json</strong> 和 <strong>xml</strong> 之外的另一种 <strong>数据传输方式</strong>。</li>
+<li>一条 <strong>数据</strong>，用 <strong>protobuf</strong> 序列化后的大小是 <strong>json</strong> 的 <strong>10分之一</strong>, 性能却是它的 <strong>5~100倍</strong>。</li>
+<li>支持多种语言</li>
+<li><strong><code>缺点</code></strong>: 由于是 <strong>二进制格式</strong> 存储的，所以 <strong>可读性较差</strong></li>
+</ul>
+<ol>
+<li><strong>体积小-无需分隔符</strong> 存储方式tag-value不需要分隔符</li>
+<li><strong>空白字段可以省略</strong>，若字段没有被设置字段值，那么该字段序列化时的数据是完全不存在的，即不需要进行编码，而json会传key和空值的value</li>
+<li>tag用二进制表示，tag是用字段的数字值然后转换成二进制进行表示的，比json的key用字符串表示更加省空间</li>
+<li>编码快，tag的里面存储了字段的类型，可以直接知道value的长度，或者当value是字符串的时候，则用length存储了长度，可以直接从length后取n个字节就是value的值，而如果不知道value的长度，我们就必须要做字符串匹配。主要使用的两种编码方式就是<code>varint</code>和<code>ZigZag</code></li>
+</ol>
+<h3 id="底层"><a href="#底层" class="headerlink" title="底层"></a>底层</h3><p>Protobuf 是一系列键值对。消息的二进制版本只使用<strong>字段的标签</strong>作为<strong>键</strong>，每个字段的名称和声明类型只能在解码结束时通过引用消息类型的定义来确定。</p>
+<ul>
+<li><strong>varint和ZigZag的编码方式</strong>；</li>
+<li><strong>隔断冗余信息的剔除</strong>；</li>
+<li><strong>tag-value方式的存储，tag采用二进制进行存储</strong>。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://blog.haohtml.com/archives/20215">Protobuf协议实现原理 | 学习笔记 (haohtml.com)</a></p>
+<p><strong>和json编码比较而言，protobuf首先就去除了{}””,等标点符号，其次完全没有字段名，而是仅保留了字段的编号。因此protobuf的编码结果会比json的编码结果更小</strong></p>
+<p>原始的json数据：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;personJson&quot;</span><span class="punctuation">,</span><span class="attr">&quot;id&quot;</span><span class="punctuation">:</span><span class="number">15</span><span class="punctuation">,</span><span class="attr">&quot;email&quot;</span><span class="punctuation">:</span><span class="string">&quot;personJson@google.com&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>按照之前定义的.proto文件，name编号为1，id编号为2，email编号为3，编码后的结果若翻译成可读的文字来说如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1personJson2153personJson@google.com</span><br></pre></td></tr></table></figure>
+<p>即1号字段的值是personJson，2号字段的值是15，3号字段的值是personJson@google.com</p>
+<h4 id="数字编码Varint、数据长度"><a href="#数字编码Varint、数据长度" class="headerlink" title="数字编码Varint、数据长度"></a>数字编码Varint、数据长度</h4><p>在网络上传递编码成字节的数据时，由于网络传输半包、粘包等等各种因素的存在，<u>如何确定整个数据的长度就是最首要的任务。</u>因为数据大小的不确定性，无法约定固定的字节表示数据长度。例如有时候数据量小于255个字节，那么一个字节就能表示长度，若超过了65535，那么就需要3个字节才能表示数据长度了。</p>
+<p>为了解决这个问题，采用了varint编码方式。它约定，<strong>每个表示数字字节的最高位若为1，则说明该数字还需要读取下一个字节。若字节的最高位位0，则表示数字的字节读取完毕。而剩下的7位则记录具体的数字。</strong></p>
+<p><img src="https://img2.imgtp.com/2024/03/27/sq7yamCp.png" class="lazyload" data-srcset="https://img2.imgtp.com/2024/03/27/sq7yamCp.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>Varint 是一种紧凑的表示数字的方法。它用一个或多个字节来表示一个数字，值越小的数字使用越少的字节数。这能减少用来表示数字的字节数。</p>
+<p>比如对于 int32 类型的数字，一般需要 4 个 byte 来表示。但是采用 Varint，对于很小的 int32 类型的数字，则可以用 1 个 byte 来表示。当然凡事都有好的也有不好的一面，采用 Varint 表示法，大的数字则需要 5 个 byte 来表示。从统计的角度来说，一般不会所有的消息中的数字都是大数，因此大多数情况下，采用 Varint 后，可以用更少的字节数来表示数字信息</p>
+<p>Varint 中的每个 byte 的最高位 bit 有特殊的含义，如果该位为 1，表示后续的 byte 也是该数字的一部分；如果该位为 0，则结束。其他的 7 个 bit 都用来表示数字。因此小于 128 的数字都可以用一个 byte 表示。大于 128 的数字，比如 300，会用两个字节来表示：</p>
+<p>1<strong>010 1100</strong> 0<strong>000 0010</strong>。</p>
+<p>另外如果从数据大小角度来看，这种表示方式比真正要代表的数据多了一个bit, 所以其实际传输大小就多14%（1&#x2F;7 &#x3D; 0.142857143），对于这一点我们需要有所了解。</p>
+<h4 id="数据编号Message-Buffer"><a href="#数据编号Message-Buffer" class="headerlink" title="数据编号Message Buffer"></a>数据编号Message Buffer</h4><p>消息经过序列化后会成为一个二进制数据流，该流中的数据为一系列的 Key-Value 对。如下图所示：<br><img src="https://img2.imgtp.com/2024/03/27/ZT7TIb1w.png" class="lazyload" data-srcset="https://img2.imgtp.com/2024/03/27/ZT7TIb1w.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>采用这种 Key-Pair 结构无需使用分隔符来分割不同的 Field。<strong>对于可选的 Field，如果消息中不存在该 field，那么在最终的 Message Buffer 中就没有该 field</strong>，这些特性都有助于节约消息本身的大小。<br>Key 用来标识具体的 field，在解包的时候，客户端创建一个结构对象，Protocol Buffer 从数据流中读取并反序列化数据，并根据 Key 就可以知道相应的 Value 应该对应于结构体中的哪一个 field。</p>
+<p>定义模型的.proto文件中，有看到每个字段后面会跟着一个数字。这不表示这个字段的默认值，而是表示这个字段的编号。当编码完成后的字节中，每一个字段的数据之前都会有几个字节表示该数据的编号。</p>
+<p>而Key也是由以下两部分组成</p>
+<p>Key 的定义如下：  <code>(field_number &lt;&lt; 3) | wire_type</code> </p>
+<p>可以看到 Key 由两部分组成。第一部分是 <strong>field_number</strong>。第二部分为 <strong>wire_type</strong>。表示 Value 的传输类型。</p>
+<p>一个字节的低3位表示数据类型，其它位则表示字段序号。</p>
+<table>
+<thead>
+<tr>
+<th><strong>Type</strong></th>
+<th><strong>Meaning</strong></th>
+<th><strong>Used For</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Varint</td>
+<td>int32, int64, uint32, uint64, sint32, sint64, bool, enum</td>
+</tr>
+<tr>
+<td>1</td>
+<td>64-bit</td>
+<td>fixed64, sfixed64, double</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Length-delimi</td>
+<td>string, bytes, embedded messages, packed repeated fields</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Start group</td>
+<td>Groups (deprecated)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>End group</td>
+<td>Groups (deprecated)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>32-bit</td>
+<td>fixed32, sfixed32, float</td>
+</tr>
+</tbody></table>
+<h4 id="Protobuf-fixed32类型和int32类型有什么区别"><a href="#Protobuf-fixed32类型和int32类型有什么区别" class="headerlink" title="Protobuf fixed32类型和int32类型有什么区别?"></a>Protobuf fixed32类型和int32类型有什么区别?</h4><p>Protobuf 中的 <code>fixed32</code> 类型和 <code>int32</code> 类型之间有以下区别：</p>
+<ol>
+<li>数据范围：<ul>
+<li><code>fixed32</code> 类型是一个无符号的 32 位整数，取值范围为 0 到 2^32-1。</li>
+<li><code>int32</code> 类型是一个带符号的 32 位整数，取值范围为 -2^31 到 2^31-1。</li>
+</ul>
+</li>
+<li>内存占用：<ul>
+<li><code>fixed32</code> 类型始终占用 4 个字节的内存空间，无论存储的值是多少。</li>
+<li><code>int32</code> 类型使用变长编码进行存储，根据存储的值的大小动态选择所需的字节数，通常情况下会占用更少的内存空间。</li>
+</ul>
+</li>
+<li>符号位处理：<ul>
+<li><code>fixed32</code> 类型是无符号的，不包含符号位。</li>
+<li><code>int32</code> 类型是带符号的，包含一个符号位，用于表示正数、负数或零。</li>
+</ul>
+</li>
+</ol>
+<p>选择使用 <code>fixed32</code> 还是 <code>int32</code> 取决于你的数据的性质和需求：</p>
+<ul>
+<li>如果你的数据范围是非负数，并且需要精确表示 0 到 2^32-1 之间的整数，那么可以选择 <code>fixed32</code> 类型。</li>
+<li>如果你的数据范围包括正数、负数和零，并且希望节省存储空间，可以选择 <code>int32</code> 类型。同时，使用变长编码可以在存储较小的值时节省空间。</li>
+</ul>
+<h3 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h3><ol>
+<li><p>在消息流中每个<strong>Tag</strong>都是varint，编码方式为：field_num &lt;&lt; 3 | wire_type。即，Tag由 .proto文件中<strong>字段的编号(field_num)</strong> 和 **传输类型(wire_type)**两部分组成。</p>
+</li>
+<li><p>注：Tag也是Varints编码，其后三位是传输类型(wire_type)，之前的数值为是字段编号(field_num)。</p>
+</li>
+<li><p>注意并不是说Tag只能是一个字节，这里说了Tag也是用Varint编码，显然使用Varint编码方式几千&#x2F;几万的字段序号(field_num)都是可以被表示的。</p>
+</li>
+<li><p>在对一条消息(message)进行编码的时候是把该消息中所有的key-value对序列化成二进制字节流；key和value分别采用不同的编码方式。</p>
+</li>
+<li><p>消息的二进制格式只使用消息字段的字段编号(field_num)作为Tag(key&#x2F;键)的一部分，字段名和声名类型只能在解析端通过引用参考消息类型的定义(即.proto文件)才能确定。</p>
+</li>
+<li><p><strong>解码的时候解码程序(解码器)读入二进制的字节流，解析出每一个key-value对；</strong> 如果解码过程中遇到识别不出来的filed_num就直接跳过。这样的机制保证了即使该消息(message)添加了新的字段，也不会影响旧的编&#x2F;解码程序正常工作。</p>
+</li>
+</ol>
+<h3 id="序号的作用"><a href="#序号的作用" class="headerlink" title="序号的作用"></a>序号的作用</h3><ul>
+<li>每个字段有唯一编号，在二进制流中标识字段，可以看后面protobuf 编解码原理去了解字段的作用。</li>
+<li>消息被使用了，字段就不能改了，改了会造成数据错乱（常见坑)，服务器和客户端很多bug，是proto buffer 文件更改，未使用更改后的协议导致。</li>
+<li>1 到 15 范围内的字段编号需要一个字节进行编码，编码结果将同时包含编号和类型</li>
+<li>16 到 2047 范围内的字段编号占用两个字节。因此，非常频繁出现的 message 元素保留字段编号 1 到 15。</li>
+<li>字段最小数字为1，最大字段数为2^29 - 1。（原因在编码原理那章讲解过，字段数字会作为key，key最后三位是类型）</li>
+</ul>
+<p>在 Protocol Buffers（protobuf）中，每个字段后面的序号（Field Number）用于标识和区分不同的字段。每个字段都必须有一个唯一的序号，它在定义消息结构时起到以下几个作用：</p>
+<ol>
+<li>标识字段：<br> 序号用于唯一标识消息结构中的每个字段。通过序号，可以清楚地指定消息中的特定字段，从而在序列化和反序列化过程中准确地读取和写入对应的值。</li>
+<li>向后兼容性：<br> 序号在 Protocol Buffers 的版本演进中起到重要作用。当你需要向现有的消息结构中添加新字段时，可以使用未使用的序号，这样旧版本的解析器仍然能够正确解析旧的消息，并忽略它们不了解的新字段。</li>
+<li>优化编码：<br> 序号还用于优化编码和消息的大小。Protocol Buffers 使用了一种紧凑的二进制编码格式，通过使用序号而不是字段名来进行编码，可以减少序列化后的消息大小，提高网络传输效率。</li>
+</ol>
+<p>需要注意的是，序号的分配应该是有规划和稳定的。一旦为字段分配了序号，就应该保持稳定，不要更改或重复使用序号，以确保向后兼容性和正确的解析。</p>
+<p>原始的json数据：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;name&quot;</span><span class="punctuation">:</span><span class="string">&quot;personJson&quot;</span><span class="punctuation">,</span><span class="attr">&quot;id&quot;</span><span class="punctuation">:</span><span class="number">15</span><span class="punctuation">,</span><span class="attr">&quot;email&quot;</span><span class="punctuation">:</span><span class="string">&quot;personJson@google.com&quot;</span><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>按照之前定义的.proto文件，name编号为1，id编号为2，email编号为3，编码后的结果若翻译成可读的文字来说如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1personJson2153personJson@google.com</span><br></pre></td></tr></table></figure>
+<p>即1号字段的值是personJson，2号字段的值是15，3号字段的值是personJson@google.com</p>
+<h3 id="拦截器Interceptor"><a href="#拦截器Interceptor" class="headerlink" title="拦截器Interceptor"></a>拦截器Interceptor</h3><p>拦截器的作用，是在执行核心业务方法的前后，创造出一个统一的切片，来执行所有业务方法锁共有的通用逻辑. 此外，还能够通过这部分通用逻辑的执行结果，来判断是否需要熔断当前的执行链路，以起到所谓的”拦截“效果.</p>
+<p><strong>拦截器是gRPC生态中的中间件</strong>，可以对RPC的请求和响应进行拦截处理，而且既可以在客户端进行拦截，也可以对服务器端进行拦截。</p>
+<p><strong>拦截器可以做统一接口的认证工作</strong>，再也不需要每一个接口都做一次认证了，多个接口多次访问，只需要在统一个地方认证即可</p>
+<p>分类：</p>
+<ul>
+<li>按功能分：<ol>
+<li>一元拦截器UnaryInterceptor</li>
+<li>流式拦截器StreamInterceptor</li>
+</ol>
+</li>
+<li>按端角度分：<ol>
+<li>客户端拦截器ClientInterceptor</li>
+<li>服务端拦截器ServerInterceptor</li>
+</ol>
+</li>
+</ul>
+<p>常见：身份认证、日志框架</p>
+<h3 id="序列化和反序列化"><a href="#序列化和反序列化" class="headerlink" title="序列化和反序列化"></a>序列化和反序列化</h3><ul>
+<li>序列化： 将数据结构或对象转换成二进制串的过程</li>
+<li>反序列化：将在序列化过程中所生成的二进制串转换成数据结构或者对象的过程</li>
+</ul>
+<h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><p>性能包括两个方面，时间复杂度和空间复杂度：</p>
+<p>第一、<strong>空间开销</strong>（Verbosity）， 序列化需要在原有的数据上加上描述字段，以为反序列化解析之用。如果序列化过程引入的额外开销过高，可能会导致过大的网络，磁盘等各方面的压力。对于海量分布式存储系统，数据量往往以TB为单位，巨大的的额外空间开销意味着高昂的成本。</p>
+<p>第二、<strong>时间开销</strong>（Complexity），复杂的序列化协议会导致较长的解析时间，这可能会使得序列化和反序列化阶段成为整个系统的瓶颈。</p>
+<h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>总的来说，采用JSON进行序列化的额外空间开销比较大，对于大数据量服务或持久化，这意味着巨大的内存和磁盘开销，这种场景不适合。没有统一可用的IDL降低了对参与方的约束，实际操作中往往只能采用文档方式来进行约定，这可能会给调试带来一些不便，延长开发周期。 由于JSON在一些语言中的序列化和反序列化需要采用反射机制，所以在性能要求为ms级别，不建议使用。</p>
+<p>go中解析json就需要反射</p>
+<h4 id="Protobuf"><a href="#Protobuf" class="headerlink" title="Protobuf"></a>Protobuf</h4><p>Protobuf具有广泛的用户基础，空间开销小以及高解析性能是其亮点，非常适合于公司内部的对性能要求高的RPC调用。由于Protobuf提供了标准的IDL以及对应的编译器，其IDL文件是参与各方的非常强的业务约束，另外，Protobuf与传输层无关，采用HTTP具有良好的跨防火墙的访问属性，所以Protobuf也适用于公司间对性能要求比较高的场景。由于其解析性能高，序列化后数据量相对少，非常适合应用层对象的持久化场景。</p>
+<p>Protobuf 是一系列键值对。消息的二进制版本只使用<strong>字段的标签</strong>作为<strong>键</strong>，每个字段的名称和声明类型只能在解码结束时通过引用消息类型的定义来确定。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/03/17/blog%E6%A0%87%E5%87%86%E5%8C%96/' itemprop="url">
-            Read More
-          </a>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://raw.githubusercontent.com/taweizhong/images/main/my.JPG'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-03-27T17:32:17+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Mar 27, 2024</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/17/io多路复用/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
+          
   
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2024/03/17/io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
-        <img itemprop="image" class='headimg' alt="io多路复用" src='https://img2.imgtp.com/2024/03/17/52UAEOj9.png'/>
-      </a>
-    </div>
-  
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/GRPC/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>GRPC</p></a></div>
+  <span hidden itemprop="keywords">GRPC</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/17/io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"  itemprop="url">
-        io多路复用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2024/03/27/GRPC-%E7%AE%80%E4%BB%8B/&title=GRPC 简介 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
     
-      <p>套接字连接过程，io多路复用技术的实现原理。</p>
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2024/03/27/GRPC-%E7%AE%80%E4%BB%8B/&title=GRPC 简介 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2024/03/27/GRPC-%E7%AE%80%E4%BB%8B/&title=GRPC 简介 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+</div>
+
+
+
         
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-17T14:44:15+08:00">2024-03-17</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">笔记</span></a>
-            </span>
-          
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/2024/03/17/io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
+        
+          
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/03/21/Go-http%E5%8C%85%E8%AF%A6%E8%A7%A3/'>
+          <p class='title'>Go http包详解<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>http包详解http包运行机制基础概念：
+
+Request：用户请求的信息，用来解析用户的请求信息，包括post、get、cookie、url等信息
+Response：服务器需要反馈给客户端的...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/16/GO缓存/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
   
-  
-  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2024/03/27/GRPC-%E7%AE%80%E4%BB%8B/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/16/GO%E7%BC%93%E5%AD%98/"  itemprop="url">
-        GO缓存
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        本地缓存实现12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-16T10:49:46+08:00">2024-03-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/16/GO%E7%BC%93%E5%AD%98/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/16/ECS框架/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/16/ECS%E6%A1%86%E6%9E%B6/"  itemprop="url">
-        ECS框架
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        ECS框架简介ECS stands for Entity Component System，为“实体组件系统”。ECS是一种以数据为导向的编程方式。
-提供给开发者一种方便的写出高性能代码的方式，同时代码的逻辑架构足够清晰，模块之间的耦合性足够小。
-它的基本思想是：
-
-将数据与行为分离，让数据在内存中紧凑排列，提高cpu的缓存命中率；
-同时不使用引用类型，不使用继承，让多线程代码的编写更为简单...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-16T10:48:46+08:00">2024-03-16</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/16/ECS%E6%A1%86%E6%9E%B6/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/10/查找表/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/10/%E6%9F%A5%E6%89%BE%E8%A1%A8/"  itemprop="url">
-        查找表
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        查找表一般对于查找表有以下几种操作：
-
-在查找表中查找某个具体的数据元素；
-在查找表中插入数据元素；
-从查找表中删除数据元素；
-
-在查找表中只做查找操作，而不改动表中数据元素，称此类查找表为静态查找表；反之，在查找表中做查找操作的同时进行插入数据或者删除数据的操作，称此类表为动态查找表。
-二分查找使用的前提是静态查找表中的数据必须是有序的。
-折半查找的运行过程可以用二叉树来描述，这棵树通常称...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-10T13:59:22+08:00">2024-03-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/10/%E6%9F%A5%E6%89%BE%E8%A1%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/03/07/STL-容器简介/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/03/07/STL-%E5%AE%B9%E5%99%A8%E7%AE%80%E4%BB%8B/"  itemprop="url">
-        STL 容器简介
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        STL 容器 简介STL 容器是一些模板类的集合，容器中封装的是组织数据的方法（也就是数据结构）。STL 提供有 3 类标准容器，分别是序列容器、排序容器和哈希容器，其中后两类容器有时也统称为关联容器。
-vector 的底层为顺序表（数组），list 的底层为双向链表，deque 的底层为循环队列，set 的底层为红黑树，hash_set 的底层为哈希表。
+  </article>
 
 
 
-容器种类
-功能
 
 
 
-序列容...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-03-07T21:05:29+08:00">2024-03-07</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/03/07/STL-%E5%AE%B9%E5%99%A8%E7%AE%80%E4%BB%8B/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/02/27/Go并发-下/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/">
-        <img itemprop="image" class='headimg' alt="Go并发-下" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic2.zhimg.com%2Fv2-a4bd0e19fc987be19e1133fa61016226_1440w.jpg%3Fsource%3D172ae18b&refer=http%3A%2F%2Fpic2.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667618496&t=8ecfd986b600bae0f11bd7670ca5a612'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/"  itemprop="url">
-        Go并发-下
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>对共享资源实现加锁操作。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://gameofthrones.fandom.com/wiki/Jon_Snow'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://gameofthrones.fandom.com/wiki/Jon_Snow">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-02-27T18:47:35+08:00">2024-02-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/">golang标准库</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/" itemprop="url"><span itemprop="name">golang标准库</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/02/27/Go%E5%B9%B6%E5%8F%91-%E4%B8%8B/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
-
-
-	
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3294,379 +3007,68 @@ vector 的底层为顺序表（数组），list 的底层为双向链表，deque
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F4436a54e725d25b2cf37f7a47188967a18f41115.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665223631&t=b53f0138aca639fde0f360d11587f8dc'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>taweizhong</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">秋季的blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget grid desktop mobile pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/volantis-x/hexo-theme-volantis'><i class="fa fa-credit-card-alt fa-fw" aria-hidden="true"></i><span class='name'>导航</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/taweizhong?tab=repositories"
-          
-          
-          active-action="action-https:githubcomtaweizhong?tab=repositories">
-          
-            <i class="fab fa-github-alt fa-fw" aria-hidden="true"></i>
-          
-          GitHub
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://music.163.com/"
-          
-          
-          active-action="action-https:music163com">
-          
-            <i class="fas fa-music fa-fw" aria-hidden="true"></i>
-          
-          网易云
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/taweizhong/taweizhong.github.io/issues"
-          
-          
-          active-action="action-https:githubcomtaweizhongtaweizhonggithubioissues">
-          
-            <i class="fas fa-lightbulb fa-fw" aria-hidden="true"></i>
-          
-          提个建议
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Go/" href="/categories/Go/"
-            active-action="action-categoriesGo"
-            ><div class='name'>Go</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Web/" href="/categories/Web/"
-            active-action="action-categoriesWeb"
-            ><div class='name'>Web</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Web%E5%89%8D%E7%AB%AF/" href="/categories/Web%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesWebE5898DE7ABAF"
-            ><div class='name'>Web前端</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/" href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/"
-            active-action="action-categoriesgolangE6A087E58786E5BA93"
-            ><div class='name'>golang标准库</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/" href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/"
-            active-action="action-categoriesE4BA91E58E9FE7949F"
-            ><div class='name'>云原生</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"
-            active-action="action-categoriesE58886E5B883E5BC8FE7B3BBE7BB9F"
-            ><div class='name'>分布式系统</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"
-            active-action="action-categoriesE58CBAE59D97E993BE"
-            ><div class='name'>区块链</div><div class='badge'>(15)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AE%9E%E7%94%A8/" href="/categories/%E5%AE%9E%E7%94%A8/"
-            active-action="action-categoriesE5AE9EE794A8"
-            ><div class='name'>实用</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            active-action="action-categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%BA%93/" href="/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E5%BA%93/"
-            active-action="action-categoriesE6AF8FE697A5E4B880E5BA93"
-            ><div class='name'>每日一库</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE7AC94E8AEB0"
-            ><div class='name'>笔记</div><div class='badge'>(18)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%B4%E6%98%8E/" href="/categories/%E8%AF%B4%E6%98%8E/"
-            active-action="action-categoriesE8AFB4E6988E"
-            ><div class='name'>说明</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/GRPC/" style="font-size: 14px; color: #999">GRPC</a> <a href="/tags/Gin/" style="font-size: 19px; color: #777">Gin</a> <a href="/tags/Git/" style="font-size: 15.67px; color: #8e8e8e">Git</a> <a href="/tags/Go/" style="font-size: 24px; color: #555">Go</a> <a href="/tags/HTML/" style="font-size: 19px; color: #777">HTML</a> <a href="/tags/Hyperledger-Fabric/" style="font-size: 22.33px; color: #606060">Hyperledger Fabric</a> <a href="/tags/Hyperledger-Fabric%E8%BF%9B%E9%98%B6/" style="font-size: 15.67px; color: #8e8e8e">Hyperledger Fabric进阶</a> <a href="/tags/JSON/" style="font-size: 14px; color: #999">JSON</a> <a href="/tags/Vue3/" style="font-size: 20.67px; color: #6c6c6c">Vue3</a> <a href="/tags/beego/" style="font-size: 15.67px; color: #8e8e8e">beego</a> <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/clash/" style="font-size: 14px; color: #999">clash</a> <a href="/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/tags/javascript/" style="font-size: 14px; color: #999">javascript</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/python/" style="font-size: 17.33px; color: #828282">python</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 17.33px; color: #828282">微服务</a> <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" style="font-size: 14px; color: #999">微服务框架</a> <a href="/tags/%E6%A0%87%E5%87%86%E5%BA%93/" style="font-size: 15.67px; color: #8e8e8e">标准库</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 15.67px; color: #8e8e8e">测试</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 17.33px; color: #828282">笔记</a> <a href="/tags/%E8%AF%B4%E6%98%8E/" style="font-size: 15.67px; color: #8e8e8e">说明</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>103 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2024-03-21 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget qrcode desktop mobile pjax">
-  
-  <header>
-    
-      <a href='/blog/tags/'><i class=" fa-fw" aria-hidden="true"></i><span class='name'>联系我</span></a>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      <img src='https://raw.githubusercontent.com/taweizhong/images/main/my.JPG'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop mobile pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2024/03/21/Go-http%E5%8C%85%E8%AF%A6%E8%A7%A3/"><div class="item"><time>2024-03-21</time><span>Go</span></div><span>Go http包详解</span></a></li><li><a class="widget-last" href="/2024/03/19/Mysql%E4%BA%8B%E7%89%A9%E4%B8%8E%E9%94%81/"><div class="item"><time>2024-03-19</time><span>数据库</span></div><span>Mysql事物与锁</span></a></li><li><a class="widget-last" href="/2024/03/17/redis-%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><div class="item"><time>2024-03-17</time><span>数据库</span></div><span>redis 基础数据类型</span></a></li><li><a class="widget-last" href="/2024/03/17/blog%E6%A0%87%E5%87%86%E5%8C%96/"><div class="item"><time>2024-03-17</time></div><span>blog标准化</span></a></li><li><a class="widget-last" href="/2024/03/17/io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"><div class="item"><time>2024-03-17</time><span>笔记</span></div><span>io多路复用</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/taweizhong?tab=repositories'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>项目</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p>您的赞对我来说很重要，如果您喜欢本主题，希望能够给下面的项目点个赞来支持一下。</p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/taweizhong/python_Reptile"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/taweizhong/blockchain"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/Inspire"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#GRPC-%E7%AE%80%E4%BB%8B"><span class="toc-text">GRPC 简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rpc%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">rpc工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gRPC%E4%BC%98%E5%8A%BF"><span class="toc-text">gRPC优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gRPC%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">gRPC工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#http%E5%AF%B9%E6%AF%94rpc"><span class="toc-text">http对比rpc</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B-RPC-%E8%B0%83%E7%94%A8"><span class="toc-text">检测 RPC 调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grpc%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-text">grpc通信方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#protocol-buffers"><span class="toc-text">protocol buffers</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%95%E5%B1%82"><span class="toc-text">底层</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%BC%96%E7%A0%81Varint%E3%80%81%E6%95%B0%E6%8D%AE%E9%95%BF%E5%BA%A6"><span class="toc-text">数字编码Varint、数据长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BC%96%E5%8F%B7Message-Buffer"><span class="toc-text">数据编号Message Buffer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Protobuf-fixed32%E7%B1%BB%E5%9E%8B%E5%92%8Cint32%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-text">Protobuf fixed32类型和int32类型有什么区别?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E7%A0%81"><span class="toc-text">解码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%8F%B7%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">序号的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8Interceptor"><span class="toc-text">拦截器Interceptor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-text">序列化和反序列化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%A7%E8%83%BD"><span class="toc-text">性能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSON"><span class="toc-text">JSON</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Protobuf"><span class="toc-text">Protobuf</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3690,13 +3092,14 @@ vector 的底层为顺序表（数组），list 的底层为双向链表，deque
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3705,14 +3108,14 @@ vector 的底层为顺序表（数组），list 的底层为双向链表，deque
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4614,7 +4017,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4843,7 +4246,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/archives/2024/","name":"2024"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/03/27/GRPC-简介/","name":"GRPC 简介"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"GRPC 简介","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/03/27/GRPC-%E7%AE%80%E4%BB%8B/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/03/27/GRPC-%E7%AE%80%E4%BB%8B/","wordCount":0,"datePublished":"2024-03-27T08:53:09.000Z","dateModified":"2024-03-27T09:32:17.809Z","keywords":"GRPC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
