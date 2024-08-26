@@ -40,11 +40,11 @@
 <meta property="og:title" content="fyne-编译指南">
 <meta property="og:url" content="http://peapod.top/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="秋季的blog">
-<meta property="og:description" content="fyne-其他系统编译要在 macOS 上为 Windows 或liunx目标系统构建应用程序，需要进行交叉编译。 设置环境变量Window123export GOOS&#x3D;windowsexport GOARCH&#x3D;amd64export CC&#x3D;x86_64-w64-mingw32-gcc  liunx12export GOOS&#x3D;linuxexport GOARCH&#x3D;amd64  命令执行1fyne">
+<meta property="og:description" content="fyne-其他系统编译要在 macOS 上为 Windows 或liunx目标系统构建应用程序，需要进行交叉编译。 设置环境变量Window123export GOOS&#x3D;windowsexport GOARCH&#x3D;amd64export CC&#x3D;x86_64-w64-mingw32-gcc  liunx12345export CC&#x3D;x86_64-linux-musl-gccexport CXX&#x3D;x86">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-08-19T08:58:16.000Z">
-<meta property="article:modified_time" content="2024-08-19T09:01:26.034Z">
+<meta property="article:modified_time" content="2024-08-21T00:35:24.318Z">
 <meta property="article:author" content="他维忠">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1758,7 +1758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1724058124842),
+    lastupdate: new Date(1724632809667),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","webinfo","qrcode","lastupdate","repos"],
       for_post: ["toc"],
@@ -2629,11 +2629,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <h2 id="fyne-其他系统编译"><a href="#fyne-其他系统编译" class="headerlink" title="fyne-其他系统编译"></a>fyne-其他系统编译</h2><p>要在 macOS 上为 Windows 或liunx目标系统构建应用程序，需要进行交叉编译。</p>
 <h4 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a><strong>设置环境变量</strong></h4><h5 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export GOOS=windows</span><br><span class="line">export GOARCH=amd64</span><br><span class="line">export CC=x86_64-w64-mingw32-gcc</span><br></pre></td></tr></table></figure>
 
-<h5 id="liunx"><a href="#liunx" class="headerlink" title="liunx"></a>liunx</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export GOOS=linux</span><br><span class="line">export GOARCH=amd64</span><br></pre></td></tr></table></figure>
+<h5 id="liunx"><a href="#liunx" class="headerlink" title="liunx"></a>liunx</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export CC=x86_64-linux-musl-gcc</span><br><span class="line">export CXX=x86_64-linux-musl-g++</span><br><span class="line">export CGO_ENABLED=1</span><br><span class="line">export GOOS=linux</span><br><span class="line">export GOARCH=amd64</span><br></pre></td></tr></table></figure>
 
 <h4 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fyne package -os windows -icon icon.jpeg</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fyne package -os liunx -icon icon.jpeg</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fyne package -os linux -icon icon.jpeg</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fyne package -os darwin -icon myapp.png</span><br></pre></td></tr></table></figure>
 
 
   </div>
@@ -2667,10 +2669,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-19T17:01:26+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-21T08:35:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Aug 19, 2024</p>
+    <p>更新于：Aug 21, 2024</p>
   </a>
 </div>
 
@@ -2750,6 +2752,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2024/08/26/K8s-AWS-EC2-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>K8s AWS EC2 安装教程</p>
+          <p class='content'>K8s AWS EC2 安装教程虚拟机安装：https://blog.csdn.net/weixin_52799373/article/details/140430146
+官方文档： https...</p>
+        </a>
       
       
         <a class='next' href='/2024/04/05/C-%E5%A4%9A%E6%80%81/'>
@@ -3804,7 +3812,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4033,7 +4041,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/08/19/fyne-编译指南/","name":"fyne-编译指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fyne-编译指南","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/","wordCount":0,"datePublished":"2024-08-19T08:58:16.000Z","dateModified":"2024-08-19T09:01:26.034Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/08/19/fyne-编译指南/","name":"fyne-编译指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fyne-编译指南","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/","wordCount":0,"datePublished":"2024-08-19T08:58:16.000Z","dateModified":"2024-08-21T00:35:24.318Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
