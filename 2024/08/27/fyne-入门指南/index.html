@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://peapod.top/archives/2023/06/"/>
+  
+  <link rel="canonical" href="http://peapod.top/2024/08/27/fyne-入门指南/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,15 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Archive: 2023/6 - 秋季的blog</title>
+  <title>fyne 入门指南 - 秋季的blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="秋季的blog">
-<meta property="og:url" content="http://peapod.top/archives/2023/06/index.html">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="fyne 入门指南">
+<meta property="og:url" content="http://peapod.top/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="秋季的blog">
+<meta property="og:description" content="Fyne 入门 指南简介Fyne是一个使用Go语言开发的跨平台GUI框架，它通过简单的API为开发现代桌面和移动应用提供了强大的工具。利用矢量图形和 Material Design，Fyne旨在构建美观、高性能的应用程序，支持自动缩放以适应不同屏幕尺寸和分辨率。 快速开始安装教程Fyne需要3个基本元素：Go工具（至少版本1.12）、一个C编译器（用于与系统图形驱动连接）和一个系统图形驱动。 Ma">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-08-27T01:35:18.000Z">
+<meta property="article:modified_time" content="2024-08-27T01:35:51.909Z">
 <meta property="article:author" content="他维忠">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2179,7 +2183,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2468,7 +2472,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2553,34 +2557,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/24/Validator参数验证/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/08/27/fyne-入门指南/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2589,486 +2567,261 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/"  itemprop="url">
-        Validator 参数验证
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        Validator 参数验证Validator 简介Validator 是基于 tag（标记）实现结构体和单个字段的值验证库，它包含以下功能：
-
-使用验证 tag（标记）或自定义验证器进行跨字段和跨结构体验证。
-关于 slice、数组和 map，允许验证多维字段的任何或所有级别。
-能够深入 map 键和值进行验证。
-通过在验证之前确定接口的基础类型来处理类型接口。
-处理自定义字段类型（如 s...
-      
     
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title" itemprop="name headline">
+        fyne 入门指南
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">taweizhong</p>
+  </a>
+</div>
+
+          
         
-        <time itemprop="dateCreated datePublished" datetime="2023-06-24T10:18:58+08:00">2023-06-24</time>
+          
+            
+
+          
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-08-27T09:35:18+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Aug 27, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="Fyne-入门-指南"><a href="#Fyne-入门-指南" class="headerlink" title="Fyne 入门 指南"></a>Fyne 入门 指南</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Fyne是一个使用Go语言开发的跨平台GUI框架，它通过简单的API为开发现代桌面和移动应用提供了强大的工具。利用矢量图形和 Material Design，Fyne旨在构建美观、高性能的应用程序，支持自动缩放以适应不同屏幕尺寸和分辨率。</p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h3><p>Fyne需要3个基本元素：Go工具（至少版本1.12）、一个C编译器（用于与系统图形驱动连接）和一个系统图形驱动。</p>
+<h4 id="Mac安装教程"><a href="#Mac安装教程" class="headerlink" title="Mac安装教程"></a>Mac安装教程</h4><p>已经安装xcode</p>
+<ol>
+<li>使用Go模块</li>
+<li>下载Fyne模块和辅助工具</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">go mod init MODULE_NAME</span><br><span class="line"></span><br><span class="line">go get fyne.io/fyne/v2@latest</span><br><span class="line">go install fyne.io/fyne/v2/cmd/fyne@latest</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fyne.io/fyne/v2/app&quot;</span></span><br><span class="line">	<span class="string">&quot;fyne.io/fyne/v2/widget&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	a := app.New() <span class="comment">// 创建一个应用实例</span></span><br><span class="line">	w := a.NewWindow(<span class="string">&quot;Hello World&quot;</span>) <span class="comment">// 打开一个窗口</span></span><br><span class="line"></span><br><span class="line">	w.SetContent(widget.NewLabel(<span class="string">&quot;Hello World!&quot;</span>))<span class="comment">// 设置为主内容</span></span><br><span class="line">	w.ShowAndRun()  <span class="comment">// 显示应用UI</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用与主循环"><a href="#应用与主循环" class="headerlink" title="应用与主循环"></a>应用与主循环</h3><p>图形用户界面（GUI）应用程序，需要运行一个事件循环（有时被称为运行循环），来处理用户交互和绘图事件。在Fyne中，通过使用<code>App.Run()</code>或<code>Window.ShowAndRun()</code>函数启动。这些函数中必须有一个在你的<code>main()</code>函数代码末尾被调用。</p>
+<p>一个应用程序应该只有一个运行循环，在代码中只调用<code>Run()</code>一次。</p>
+<p>一个应用程序可以通过调用<code>App.Quit()</code>直接退出（移动应用不支持此功能）。一旦所有窗口都被关闭，应用程序也将退出。</p>
+<p>在应用程序退出之前，执行<code>Run()</code>之后的函数将不会被调用。</p>
+<h3 id="更新GUI内容"><a href="#更新GUI内容" class="headerlink" title="更新GUI内容"></a>更新GUI内容</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">&quot;time&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;fyne.io/fyne/v2/app&quot;</span></span><br><span class="line">    <span class="string">&quot;fyne.io/fyne/v2/widget&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">updateTime</span><span class="params">(clock *widget.Label)</span></span> &#123;</span><br><span class="line">    formatted := time.Now().Format(<span class="string">&quot;Time: 03:04:05&quot;</span>)</span><br><span class="line">    clock.SetText(formatted)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    a := app.New()</span><br><span class="line">    w := a.NewWindow(<span class="string">&quot;Clock&quot;</span>)</span><br><span class="line"></span><br><span class="line">    clock := widget.NewLabel(<span class="string">&quot;&quot;</span>)</span><br><span class="line">    updateTime(clock)</span><br><span class="line"></span><br><span class="line">    w.SetContent(clock)</span><br><span class="line">    <span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">for</span> <span class="keyword">range</span> time.Tick(time.Second) &#123;</span><br><span class="line">            updateTime(clock)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;()</span><br><span class="line">    w.ShowAndRun()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="window窗口"><a href="#window窗口" class="headerlink" title="window窗口"></a>window窗口</h3><p>窗口是使用<code>App.NewWindow()</code>创建的，并需要使用<code>Show()</code>函数来显示。</p>
+<p>调用<code>Window.Resize()</code>方法来设置更大的尺寸。这个方法接受一个<code>fyne.Size</code>，其中包含使用设备独立像素的宽度和高度。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w.Resize(fyne.NewSize(<span class="number">100</span>, <span class="number">100</span>))</span><br></pre></td></tr></table></figure>
+
+<p>设置一个窗口为“主窗口”，这样如果该窗口关闭，应用程序就会退出。要做到这一点，使用<code>Window</code>上的<code>SetMaster()</code>函数。</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>main.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fyne.io/fyne/v2/app&quot;</span></span><br><span class="line">	<span class="string">&quot;fyne.io/fyne/v2/container&quot;</span></span><br><span class="line">	<span class="string">&quot;fyne.io/fyne/v2/widget&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">SetUI</span><span class="params">()</span></span> (*widget.Label, *widget.Entry) &#123;</span><br><span class="line">	out := widget.NewLabel(<span class="string">&quot;hello world&quot;</span>)</span><br><span class="line">	in := widget.NewEntry()</span><br><span class="line"></span><br><span class="line">	in.OnChanged = <span class="function"><span class="keyword">func</span><span class="params">(s <span class="type">string</span>)</span></span> &#123;</span><br><span class="line">		out.SetText(<span class="string">&quot;hello &quot;</span> + s)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> out, in</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	app := app.New()</span><br><span class="line">	window := app.NewWindow(<span class="string">&quot;test&quot;</span>)</span><br><span class="line"></span><br><span class="line">	window.SetContent(container.NewVBox(SetUI()))</span><br><span class="line">	window.ShowAndRun()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>ui_test.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fyne.io/fyne/v2/test&quot;</span></span><br><span class="line">	<span class="string">&quot;testing&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestSetUI</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	out, in := SetUI()</span><br><span class="line"></span><br><span class="line">	test.Type(in, <span class="string">&quot;Andy&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> out.Text != <span class="string">&quot;hello Andy&quot;</span> &#123;</span><br><span class="line">		t.Error(<span class="string">&quot;Incorrect user greeting&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><p>“fyne”应用有一个“package”命令可以自动处理这一切。只需指定目标操作系统和任何所需的元数据（如图标），就会生成适当的包。对于.icns或.ico图标转换将自动完成，所以只需提供.png文件 :)。</p>
+<p>要在 macOS 上为 Windows 或liunx目标系统构建应用程序，需要进行交叉编译。</p>
+<h4 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a><strong>设置环境变量</strong></h4><h5 id="Window"><a href="#Window" class="headerlink" title="Window"></a>Window</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export GOOS=windows</span><br><span class="line">export GOARCH=amd64</span><br><span class="line">export CC=x86_64-w64-mingw32-gcc</span><br></pre></td></tr></table></figure>
+
+<h5 id="liunx"><a href="#liunx" class="headerlink" title="liunx"></a>liunx</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export GOOS=linux</span><br><span class="line">export GOARCH=amd64</span><br></pre></td></tr></table></figure>
+
+<h4 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fyne package -os darwin -icon myapp.png</span><br><span class="line">fyne package -os linux -icon myapp.png</span><br><span class="line">fyne package -os windows -icon myapp.png</span><br><span class="line">// 安装</span><br><span class="line">fyne install -icon myapp.png</span><br></pre></td></tr></table></figure>
+
+<p>从Fyne 2.1开始，使用 <a target="_blank" rel="noopener" href="https://www.poloxue.com/gofyne/docs/01-started/11-metadata/">元数据文件</a>，为项目设置默认选项。</p>
+<h3 id="元数据文件"><a href="#元数据文件" class="headerlink" title="元数据文件"></a>元数据文件</h3><p>支持一个元数据文件，允许在仓库中存储有关应用的信息。这个文件是可选的，但可以帮助避免在每个包和发布命令中记住特定的构建参数。</p>
+<p>文件应该命名为<code>FyneApp.toml</code>，位于你运行<code>fyne</code>命令的目录中（通常是<code>main</code>包）。</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Website</span> = <span class="string">&quot;https://example.com&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="section">[Details]</span></span><br><span class="line"><span class="attr">Icon</span> = <span class="string">&quot;Icon.png&quot;</span></span><br><span class="line"><span class="attr">Name</span> = <span class="string">&quot;My App&quot;</span></span><br><span class="line"><span class="attr">ID</span> = <span class="string">&quot;com.example.app&quot;</span></span><br><span class="line"><span class="attr">Version</span> = <span class="string">&quot;1.0.0&quot;</span></span><br><span class="line"><span class="attr">Build</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>文件的顶部部分是元数据，如果你将你的应用上传到<a target="_blank" rel="noopener" href="https://apps.fyne.io列表页面时会使用,因此它是可选的./">https://apps.fyne.io列表页面时会使用，因此它是可选的。</a></p>
+<p>[Details]部分包含了其他应用商店和操作系统在发布过程中使用的有关应用的数据。</p>
+<p>如果找到了这个文件，fyne工具将会使用它，仍然可以使用命令行参数覆盖这些值。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/06/24/Validator%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81/' itemprop="url">
-            Read More
-          </a>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+        <div class='donate'>
+          <div class='imgs'>
+            
+              <img src='https://raw.githubusercontent.com/taweizhong/images/main/my.JPG'>
+            
+          </div>
         </div>
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-27T09:35:51+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Aug 27, 2024</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/22/GRPC流的使用/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/&title=fyne 入门指南 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/&title=fyne 入门指南 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/&title=fyne 入门指南 - 秋季的blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+        
+          
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/08/26/K8s-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/'>
+          <p class='title'>K8s 生产环境安装<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>K8s 生产环境安装容器运行时
+说明： 自 1.24 版起，Dockershim 已从 Kubernetes 项目中移除。
+
+在集群内每个节点上安装一个 容器运行时 以使 Pod 可以运行在上面...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/"  itemprop="url">
-        GRPC流的使用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        GRPC流的使用流传输方式简介客户端流客户端发送多次，服务端响应一次（关闭时响应）。
-服务端流客户端先发送一次，服务端响应多次。
-双向流客户端发送，服务端响应。
-客户端流服务定义1rpc ClientStreamPing(stream PingRequest) returns (PingReply);
 
-客户端123456789101112131415161718192021stream, ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-22T19:38:45+08:00">2023-06-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/22/GRPC%E6%B5%81%E7%9A%84%E4%BD%BF%E7%94%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
+    <div id="layoutHelper-comments"></div>
 
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/22/GRPC使用openssl/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/22/GRPC%E4%BD%BF%E7%94%A8openssl/"  itemprop="url">
-        GRPC使用openssl
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        GRPC使用openssl证书加密数据传输过程，保证调用的安全性。
-证书生成自签证书（root CA）命令解析：https://blog.csdn.net/adminstate/article/details/128662641
-
-生成私钥文件
-1openssl genrsa -des3 -out private.key 2048
-
-创建证书请求
-1openssl req -new -key...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-22T11:08:18+08:00">2023-06-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/22/GRPC%E4%BD%BF%E7%94%A8openssl/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/22/openssl使用/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/22/openssl%E4%BD%BF%E7%94%A8/"  itemprop="url">
-        Jun 22, 2023
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        GRPC使用openssl证书加密数据传输过程，保证调用的安全性。
-证书生成自签证书（root CA）命令解析：https://blog.csdn.net/adminstate/article/details/128662641
-
-生成私钥文件
-1openssl genrsa -des3 -out private.key 2048
-
-创建证书请求
-1openssl req -new -key...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-22T10:57:27+08:00">2023-06-22</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/22/openssl%E4%BD%BF%E7%94%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/19/GRPC使用/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/19/GRPC%E4%BD%BF%E7%94%A8/"  itemprop="url">
-        GRPC使用
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Grpc简介及使用简介在 gRPC 中，客户端应用程序可以像本地对象一样直接调用不同机器上的服务器应用程序上的方法，可以更轻松地创建分布式应用程序和服务。
-服务端实现了接口，运行一个gRPC服务端来处理客户端调用。客户端提供与服务器相同的方法。
-
-使用
-编写.proto文件
-使用protoc生成.pd.go和-grpc.pd.go文件
-编写服务端代码
-实现接口
-监听端口
-新建grpc服务
-注...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-19T20:20:34+08:00">2023-06-19</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/19/GRPC%E4%BD%BF%E7%94%A8/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/10/Protocol-Buffers/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2023/06/10/Protocol-Buffers/">
-        <img itemprop="image" class='headimg' alt="Protocol Buffers" src='https://pic.rmb.bdstatic.com/bjh/news/330dc9ae7356839d048877f2922d1897.png@wm_2,t_55m+5a625Y+3L0NXSUtJVVM=,fc_ffffff,ff_U2ltSGVp'/>
-      </a>
-    </div>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/10/Protocol-Buffers/"  itemprop="url">
-        Protocol Buffers
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Protocol Buffers文件的编写及生成。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://taweizhong.github.io/'><img src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93">
-            <meta itemprop="name" content="他维忠">
-            <meta itemprop="url" content="https://taweizhong.github.io/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-10T20:05:04+08:00">2023-06-10</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/" itemprop="url"><span itemprop="name">云原生</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/10/Protocol-Buffers/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2023/06/10/rides配置/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/06/10/rides%E9%85%8D%E7%BD%AE/"  itemprop="url">
-        Jun 10, 2023
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        sudo docker run -p 6379:6379 –name redis -v &#x2F;root&#x2F;go&#x2F;src&#x2F;redis&#x2F;redis.conf:&#x2F;etc&#x2F;redis&#x2F;redis.conf  -v &#x2F;data&#x2F;redis&#x2F;data:&#x2F;data -d redis redis...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-06-10T18:46:21+08:00">2023-06-10</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/06/10/rides%E9%85%8D%E7%BD%AE/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3077,379 +2830,68 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F4436a54e725d25b2cf37f7a47188967a18f41115.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665223631&t=b53f0138aca639fde0f360d11587f8dc'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>taweizhong</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">秋季的blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:me@xxx.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget grid desktop mobile pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/volantis-x/hexo-theme-volantis'><i class="fa fa-credit-card-alt fa-fw" aria-hidden="true"></i><span class='name'>导航</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="grid navigation fixed">
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/taweizhong?tab=repositories"
-          
-          
-          active-action="action-https:githubcomtaweizhong?tab=repositories">
-          
-            <i class="fab fa-github-alt fa-fw" aria-hidden="true"></i>
-          
-          GitHub
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://music.163.com/"
-          
-          
-          active-action="action-https:music163com">
-          
-            <i class="fas fa-music fa-fw" aria-hidden="true"></i>
-          
-          网易云
-        </a>
-      
-        <a class="flat-box" target="_blank" rel="noopener" href="https://github.com/taweizhong/taweizhong.github.io/issues"
-          
-          
-          active-action="action-https:githubcomtaweizhongtaweizhonggithubioissues">
-          
-            <i class="fas fa-lightbulb fa-fw" aria-hidden="true"></i>
-          
-          提个建议
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Web/" href="/categories/Web/"
-            active-action="action-categoriesWeb"
-            ><div class='name'>Web</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Web%E5%89%8D%E7%AB%AF/" href="/categories/Web%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesWebE5898DE7ABAF"
-            ><div class='name'>Web前端</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/" href="/categories/golang%E6%A0%87%E5%87%86%E5%BA%93/"
-            active-action="action-categoriesgolangE6A087E58786E5BA93"
-            ><div class='name'>golang标准库</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/" href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/"
-            active-action="action-categoriesE4BA91E58E9FE7949F"
-            ><div class='name'>云原生</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"
-            active-action="action-categoriesE58886E5B883E5BC8FE7B3BBE7BB9F"
-            ><div class='name'>分布式系统</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/"
-            active-action="action-categoriesE58CBAE59D97E993BE"
-            ><div class='name'>区块链</div><div class='badge'>(15)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%90%8E%E7%AB%AF/"
-            active-action="action-categoriesE5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AE%9E%E7%94%A8/" href="/categories/%E5%AE%9E%E7%94%A8/"
-            active-action="action-categoriesE5AE9EE794A8"
-            ><div class='name'>实用</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"
-            active-action="action-categoriesE695B0E68DAEE5BA93"
-            ><div class='name'>数据库</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%99%A8/" href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%99%A8/"
-            active-action="action-categoriesE78988E69CACE68EA7E588B6E599A8"
-            ><div class='name'>版本控制器</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AC%94%E8%AE%B0/" href="/categories/%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE7AC94E8AEB0"
-            ><div class='name'>笔记</div><div class='badge'>(17)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%B4%E6%98%8E/" href="/categories/%E8%AF%B4%E6%98%8E/"
-            active-action="action-categoriesE8AFB4E6988E"
-            ><div class='name'>说明</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/C/" style="font-size: 17.33px; color: #828282">C++</a> <a href="/tags/GRPC/" style="font-size: 15.67px; color: #8e8e8e">GRPC</a> <a href="/tags/Gin/" style="font-size: 19px; color: #777">Gin</a> <a href="/tags/Git/" style="font-size: 15.67px; color: #8e8e8e">Git</a> <a href="/tags/Go/" style="font-size: 24px; color: #555">Go</a> <a href="/tags/HTML/" style="font-size: 19px; color: #777">HTML</a> <a href="/tags/Hyperledger-Fabric/" style="font-size: 22.33px; color: #606060">Hyperledger Fabric</a> <a href="/tags/Hyperledger-Fabric%E8%BF%9B%E9%98%B6/" style="font-size: 15.67px; color: #8e8e8e">Hyperledger Fabric进阶</a> <a href="/tags/JSON/" style="font-size: 14px; color: #999">JSON</a> <a href="/tags/Vue3/" style="font-size: 20.67px; color: #6c6c6c">Vue3</a> <a href="/tags/beego/" style="font-size: 15.67px; color: #8e8e8e">beego</a> <a href="/tags/blog/" style="font-size: 14px; color: #999">blog</a> <a href="/tags/clash/" style="font-size: 14px; color: #999">clash</a> <a href="/tags/css/" style="font-size: 14px; color: #999">css</a> <a href="/tags/javascript/" style="font-size: 14px; color: #999">javascript</a> <a href="/tags/mysql/" style="font-size: 14px; color: #999">mysql</a> <a href="/tags/python/" style="font-size: 17.33px; color: #828282">python</a> <a href="/tags/redis/" style="font-size: 14px; color: #999">redis</a> <a href="/tags/vim/" style="font-size: 14px; color: #999">vim</a> <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 17.33px; color: #828282">微服务</a> <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/" style="font-size: 14px; color: #999">微服务框架</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 15.67px; color: #8e8e8e">测试</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 17.33px; color: #828282">笔记</a> <a href="/tags/%E8%AF%B4%E6%98%8E/" style="font-size: 15.67px; color: #8e8e8e">说明</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>118 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2024-08-27 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget qrcode desktop mobile pjax">
-  
-  <header>
-    
-      <a href='/blog/tags/'><i class=" fa-fw" aria-hidden="true"></i><span class='name'>联系我</span></a>
-    
-  </header>
-
-
-  <div class='content article-entry'>
-    
-      <img src='https://raw.githubusercontent.com/taweizhong/images/main/my.JPG'
-      
-        height='64px'
-      />
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-<section class="widget desktop mobile pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-clock WISTERIA fa-fw" aria-hidden="true"></i><span class='name'>最近更新</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2023/01/15/Git%E6%95%99%E7%A8%8B/"><div class="item"><time>2024-08-27</time><span>笔记</span></div><span>Git教程</span></a></li><li><a class="widget-last" href="/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"><div class="item"><time>2024-08-27</time></div><span>fyne 入门指南</span></a></li><li><a class="widget-last" href="/2024/08/26/K8s-AWS-EC2-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"><div class="item"><time>2024-08-26</time></div><span>K8s AWS EC2 安装教程</span></a></li><li><a class="widget-last" href="/2024/08/26/K8s-%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"><div class="item"><time>2024-08-26</time></div><span>K8s 生产环境安装</span></a></li><li><a class="widget-last" href="/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/"><div class="item"><time>2024-08-21</time></div><span>fyne-编译指南</span></a></li></ul>
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/taweizhong?tab=repositories'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>项目</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-      <p>您的赞对我来说很重要，如果您喜欢本主题，希望能够给下面的项目点个赞来支持一下。</p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/taweizhong/python_Reptile"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/taweizhong/blockchain"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/xaoxuu/Inspire"><img src="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="50px"></a></p>
-
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"><span class="toc-text">快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B"><span class="toc-text">安装教程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mac%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B"><span class="toc-text">Mac安装教程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8"><span class="toc-text">创建应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E4%B8%8E%E4%B8%BB%E5%BE%AA%E7%8E%AF"><span class="toc-text">应用与主循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0GUI%E5%86%85%E5%AE%B9"><span class="toc-text">更新GUI内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#window%E7%AA%97%E5%8F%A3"><span class="toc-text">window窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-text">测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85"><span class="toc-text">打包</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">设置环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Window"><span class="toc-text">Window</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#liunx"><span class="toc-text">liunx</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="toc-text">命令执行</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6"><span class="toc-text">元数据文件</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3473,13 +2915,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3488,14 +2931,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4626,7 +4069,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/archives/2023/","name":"2023"}},{"@type":"ListItem","position":4,"item":{"@id":"http://peapod.top/archives/2023/6/","name":"6"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/08/27/fyne-入门指南/","name":"fyne 入门指南"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"fyne 入门指南","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/08/27/fyne-%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/","wordCount":0,"datePublished":"2024-08-27T01:35:18.000Z","dateModified":"2024-08-27T01:35:51.909Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
