@@ -32,19 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>gateway实现 - 秋季的blog</title>
+  <title>OpenAI-Gateway设计与实现 - 秋季的blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="gateway实现">
+<meta property="og:title" content="OpenAI-Gateway设计与实现">
 <meta property="og:url" content="http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="秋季的blog">
-<meta property="og:description" content="gateway设计与开发项目背景微服务API网关可反向代理内部的服务，保证内部服务的不可见。作为系统的统一入口，再此基础之上可以实现负载均衡等、限流、路由和限流等功能。 在大模型应用背景下，通过K8s pod 运行VLLM等框架部署大模型，使用OpenAI的标准接口调用。统一个模型可以启多个模型应用，同时为了支持不同的模型请求，屏蔽底层调用的差异，实现请求调用的监控统计。为了实现以上的功能，开发网">
+<meta property="og:description" content="OpenAI-Gateway设计与实现项目背景微服务API网关通常可以反向代理系统内部的服务，保证内部服务对外不可见和安全。网关作为统一的流量入口，还可以实现负载均衡等、流量限制、消峰平谷、节点路由等功能，与Prometheus结合时还可以提供所有请求的监控统计功能。 在maas（模型即服务）系统的构建过程中，底层使用Ollamm和VLLM等框架推理模型并提供服务。使用K8s实现推理Pod和Ser">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-10-18T07:25:42.000Z">
-<meta property="article:modified_time" content="2024-10-18T07:26:37.047Z">
+<meta property="article:modified_time" content="2025-04-24T09:24:46.434Z">
 <meta property="article:author" content="他维忠">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1758,7 +1758,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1744969111454),
+    lastupdate: new Date(1745486892161),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","webinfo","qrcode","lastupdate","repos"],
       for_post: ["toc"],
@@ -2561,7 +2561,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        gateway实现
+        OpenAI-Gateway设计与实现
       </h1>
       <div class='new-meta-box'>
         
@@ -2608,27 +2608,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="gateway设计与开发"><a href="#gateway设计与开发" class="headerlink" title="gateway设计与开发"></a>gateway设计与开发</h2><h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><p>微服务API网关可反向代理内部的服务，保证内部服务的不可见。作为系统的统一入口，再此基础之上可以实现负载均衡等、限流、路由和限流等功能。</p>
-<p>在大模型应用背景下，通过K8s pod 运行VLLM等框架部署大模型，使用OpenAI的标准接口调用。统一个模型可以启多个模型应用，同时为了支持不同的模型请求，屏蔽底层调用的差异，实现请求调用的监控统计。为了实现以上的功能，开发网关项目。</p>
-<p>其主要功能有：</p>
-<ol>
-<li>apikey校验</li>
-<li>请求转发</li>
-<li>token统计</li>
-<li>熔断限流</li>
-</ol>
-<h3 id="项目实现"><a href="#项目实现" class="headerlink" title="项目实现"></a>项目实现</h3><p>使用fiber框架实现网关，而fiber基于fasthttp实现，fasthttp引入协程池，对比net&#x2F;http具有更高的性能。但截至当前暂不支持http2,需要配合其他包实现，在不使用grpc前提下，还是具有可靠的选择性。</p>
-<h4 id="核心结构"><a href="#核心结构" class="headerlink" title="核心结构"></a>核心结构</h4><p><img src="https://i.imgur.com/e4zxmtq.jpeg" class="lazyload" data-srcset="https://i.imgur.com/e4zxmtq.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="网关架构.drawio"></p>
+    <h2 id="OpenAI-Gateway设计与实现"><a href="#OpenAI-Gateway设计与实现" class="headerlink" title="OpenAI-Gateway设计与实现"></a>OpenAI-Gateway设计与实现</h2><h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><p>微服务API网关通常可以反向代理系统内部的服务，保证内部服务对外不可见和安全。网关作为统一的流量入口，还可以实现负载均衡等、流量限制、消峰平谷、节点路由等功能，与Prometheus结合时还可以提供所有请求的监控统计功能。</p>
+<p>在maas（模型即服务）系统的构建过程中，底层使用Ollamm和VLLM等框架推理模型并提供服务。使用K8s实现推理Pod和Server的管理，方便挂载模型文件、与推理日志的采集。在启用多个模型服务之后，需要对外提供统一的模型接口，统计每个模型调用的token使用情况。网关需要实现以下功能：</p>
+<ul>
+<li>支持OpenAI的标准接口调用，如chat</li>
+<li>通过请求中模型名称转发到后端的推理服务</li>
+<li>相同模型推理服务的后端节点的自动选择</li>
+<li>校验apikey的正确性</li>
+<li>记录首token、单对话token数量等的统计</li>
+<li>每个模型的调用统计</li>
+</ul>
+<h3 id="项目实现"><a href="#项目实现" class="headerlink" title="项目实现"></a>项目实现</h3><h4 id="相关技术"><a href="#相关技术" class="headerlink" title="相关技术"></a>相关技术</h4><p>web框架：fiber</p>
+<p>fiber基于fasthttp实现，fasthttp引入协程池，对比net&#x2F;http具有更高的性能。但截至当前暂不支持http2,需要配合其他包实现。</p>
+<p>中间件：PostgresqlDb、Kafka、Influxdb、Redis、Prometheus、Grafana</p>
+<p>部署方式：docker镜像、K8s、kubevela CI</p>
+<h4 id="请求流程"><a href="#请求流程" class="headerlink" title="请求流程"></a>请求流程</h4><p><img src="https://i.imgur.com/e4zxmtq.jpeg" class="lazyload" data-srcset="https://i.imgur.com/e4zxmtq.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
 <p>执行步骤：</p>
 <ol>
 <li>用户使用标准OpenAI接口调用模型，向网关发送请求</li>
 <li>网关获取请求之后，校验apikey并根据请求参数找到真实的模型地址</li>
-<li>网关创建一个客户端，使用客户端请求模型地址</li>
+<li>网关创建一个客户端，使用客户端请求模型</li>
 <li>客户端得到响应之后，根据需求分析响应的内容（计算token）</li>
 <li>客户端将响应赋值给网关的响应</li>
 <li>网关返回响应给用户</li>
 </ol>
-<h4 id="客户端结构"><a href="#客户端结构" class="headerlink" title="客户端结构"></a>客户端结构</h4><p><img src="https://i.imgur.com/kUWXe5W.jpeg" class="lazyload" data-srcset="https://i.imgur.com/kUWXe5W.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="gateway流程图.drawio"></p>
+<h3 id="项目架构"><a href="#项目架构" class="headerlink" title="项目架构"></a>项目架构</h3><h4 id="客户端架构"><a href="#客户端架构" class="headerlink" title="客户端架构"></a>客户端架构</h4><p><img src="https://i.imgur.com/kUWXe5W.jpeg" class="lazyload" data-srcset="https://i.imgur.com/kUWXe5W.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="gateway流程图.drawio"></p>
 <p>上图是项目<a target="_blank" rel="noopener" href="https://github.com/go-kratos/gateway.git">gateway</a>中client的实现，具体实现可以参考在项目中的内容。</p>
 <blockquote>
 <p>重点分析：大模型的调用一般返回的都是流式响应，客户端获取的响应和网关返回给用户的响应都是流式数据，在fasthttp的实现中，响应的读取使用io read实现，读取客户端的响应就会将响应读取完，不能赋值给网关的响应。具体的请求转发逻辑的实现，在那个过程实现。可以封装fasthttp client在其之上实现，也可以直接在网关层实现。</p>
@@ -2669,10 +2673,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-10-18T15:26:37+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-24T17:24:46+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Oct 18, 2024</p>
+    <p>更新于：Apr 24, 2025</p>
   </a>
 </div>
 
@@ -2691,7 +2695,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/&title=gateway实现 - 秋季的blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/&title=OpenAI-Gateway设计与实现 - 秋季的blog&summary="
           
           >
           
@@ -2703,7 +2707,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/&title=gateway实现 - 秋季的blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/&title=OpenAI-Gateway设计与实现 - 秋季的blog&summary="
           
           >
           
@@ -2715,7 +2719,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/&title=gateway实现 - 秋季的blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/&title=OpenAI-Gateway设计与实现 - 秋季的blog&summary="
           
           >
           
@@ -2753,9 +2757,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/11/04/Llama-factory%E4%BD%BF%E7%94%A8/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Llama-factory使用</p>
-          <p class='content'>Llama-factory 微调简介LLaMA-Factory 是一个开源的、简单易用且高效的大型语言模型（LLM）训练与微调框架，旨在帮助用户以低代码或无代码的方式对超过 100 种预训练模型...</p>
+        <a class='prev' href='/2024/11/04/Llama-factory%E5%BE%AE%E8%B0%83/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Llama-factory LoRA 微调</p>
+          <p class='content'>Llama-factory LoRA 微调简介LLaMA-Factory 是一个开源的、简单易用且高效的大型语言模型（LLM）训练与微调框架，旨在帮助用户以低代码或无代码的方式对超过 100 种...</p>
         </a>
       
       
@@ -2819,7 +2823,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gateway%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91"><span class="toc-text">gateway设计与开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-text">项目背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%AE%9E%E7%8E%B0"><span class="toc-text">项目实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%BB%93%E6%9E%84"><span class="toc-text">核心结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%BB%93%E6%9E%84"><span class="toc-text">客户端结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-text">问题解决</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenAI-Gateway%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0"><span class="toc-text">OpenAI-Gateway设计与实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-text">项目背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%AE%9E%E7%8E%B0"><span class="toc-text">项目实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF"><span class="toc-text">相关技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%B5%81%E7%A8%8B"><span class="toc-text">请求流程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84"><span class="toc-text">项目架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9E%B6%E6%9E%84"><span class="toc-text">客户端架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-text">问题解决</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3809,7 +3813,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4038,7 +4042,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/10/18/gateway实现/","name":"gateway实现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"gateway实现","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/","wordCount":0,"datePublished":"2024-10-18T07:25:42.000Z","dateModified":"2024-10-18T07:26:37.047Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2024/10/18/gateway实现/","name":"OpenAI-Gateway设计与实现"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"OpenAI-Gateway设计与实现","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/","wordCount":0,"datePublished":"2024-10-18T07:25:42.000Z","dateModified":"2025-04-24T09:24:46.434Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
