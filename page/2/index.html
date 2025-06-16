@@ -1754,7 +1754,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: false,
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1748597382887),
+    lastupdate: new Date(1750038311033),
     sidebar: {
       for_page: ["blogger","feedback","category","tagcloud","donate","webinfo","qrcode","lastupdate","repos"],
       for_post: ["toc"],
@@ -2543,6 +2543,72 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/08/19/fyne-编译指南/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="秋季的blog">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="秋季的blog">
+    <meta itemprop="description" content="">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/"  itemprop="url">
+        fyne-编译指南
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        fyne-其他系统编译要在 macOS 上为 Windows 或liunx目标系统构建应用程序，需要进行交叉编译。
+设置环境变量Window123export GOOS=windowsexport GOARCH=amd64export CC=x86_64-w64-mingw32-gcc
+
+liunx12345export CC=x86_64-linux-musl-gccexport CXX=...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
+            <meta itemprop="name" content="taweizhong">
+            <meta itemprop="url" content="/">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2024-08-19T16:58:16+08:00">2024-08-19</time>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2024/08/19/fyne-%E7%BC%96%E8%AF%91%E6%8C%87%E5%8D%97/' itemprop="url">
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
   <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/04/05/C-多态/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
@@ -3194,71 +3260,6 @@ MQ优势
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2024/04/04/场景知识/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="秋季的blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="秋季的blog">
-    <meta itemprop="description" content="">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/04/04/%E5%9C%BA%E6%99%AF%E7%9F%A5%E8%AF%86/"  itemprop="url">
-        场景知识
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        场景知识限流漏桶和令牌桶都是常用的限流算法，用于控制系统的流量，防止系统被过度访问而崩溃。总的来说，漏桶算法适用于需要稳定处理请求的场景，而令牌桶算法适用于需要应对瞬时流量激增的场景。
-固定窗口算法劣势：临界时间点产生突发流量，统计数量不准确。
-滑动窗口算法滑动窗口算法把间隔时间划分成更小的粒度，当更小粒度的时间间隔过去后，把过去的间隔请求数减掉，再补充一个空的时间间隔。当滑动窗口的格子划分...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' href='/'><img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png'></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png">
-            <meta itemprop="name" content="taweizhong">
-            <meta itemprop="url" content="/">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-04-04T15:28:44+08:00">2024-04-04</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/04/04/%E5%9C%BA%E6%99%AF%E7%9F%A5%E8%AF%86/' itemprop="url">
-            Read More
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
     
   </section>
   
@@ -3549,7 +3550,7 @@ MQ优势
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>124 篇</div>
+          <div>125 篇</div>
         </div>
       
 
@@ -3570,7 +3571,7 @@ MQ优势
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2025-05-30 日</div>
+          <div id="last-update-show">2025-06-16 日</div>
         </div>
       
     </div>
@@ -3621,7 +3622,7 @@ MQ优势
 
 
   <div class='content'>
-    <ul class="list entry navigation"><li><a class="widget-last" href="/2025/05/30/%E4%BD%BF%E7%94%A8-Helm-%E9%83%A8%E7%BD%B2-HAMi-%E9%A1%B9%E7%9B%AE/"><div class="item"><time>2025-05-30</time></div><span>使用 Helm 部署 HAMi 项目</span></a></li><li><a class="widget-last" href="/2025/05/30/deer-flow-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/"><div class="item"><time>2025-05-30</time></div><span>deer-flow 项目详解</span></a></li><li><a class="widget-last" href="/2025/04/24/kbebuilder-CronJob/"><div class="item"><time>2025-04-24</time></div><span>kbebuilder CronJob</span></a></li><li><a class="widget-last" href="/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/"><div class="item"><time>2025-04-24</time></div><span>OpenAI-Gateway设计与实现</span></a></li><li><a class="widget-last" href="/2024/11/04/Llama-factory%E5%BE%AE%E8%B0%83/"><div class="item"><time>2025-04-24</time></div><span>Llama-factory LoRA 微调</span></a></li></ul>
+    <ul class="list entry navigation"><li><a class="widget-last" href="/2025/06/16/velero-k8s%E5%A4%87%E4%BB%BD/"><div class="item"><time>2025-06-16</time></div><span>velero k8s备份</span></a></li><li><a class="widget-last" href="/2025/05/30/%E4%BD%BF%E7%94%A8-Helm-%E9%83%A8%E7%BD%B2-HAMi-%E9%A1%B9%E7%9B%AE/"><div class="item"><time>2025-05-30</time></div><span>使用 Helm 部署 HAMi 项目</span></a></li><li><a class="widget-last" href="/2025/05/30/deer-flow-%E9%A1%B9%E7%9B%AE%E8%AF%A6%E8%A7%A3/"><div class="item"><time>2025-05-30</time></div><span>deer-flow 项目详解</span></a></li><li><a class="widget-last" href="/2025/04/24/kbebuilder-CronJob/"><div class="item"><time>2025-04-24</time></div><span>kbebuilder CronJob</span></a></li><li><a class="widget-last" href="/2024/10/18/gateway%E5%AE%9E%E7%8E%B0/"><div class="item"><time>2025-04-24</time></div><span>OpenAI-Gateway设计与实现</span></a></li></ul>
   </div>
 </section>
 
@@ -4616,7 +4617,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp"];
   let index = 0;
   let IntervalParallax = null;
 
