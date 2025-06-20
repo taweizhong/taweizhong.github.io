@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://peapod.top/2022/09/13/beego教程/"/>
+  <link rel="canonical" href="http://peapod.top/2025/06/20/fiber中的流式响应/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,21 +32,20 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>BeeGo教程 - 秋季的blog</title>
-  <meta name="keywords" content="beego,null">
-  <meta desc name="description" content="函数应用 - 他维忠 - 秋季的blog">
+  <title>Fiber中的流式响应 - 秋季的blog</title>
+  <meta name="keywords" content="null">
+  <meta desc name="description" content="秋季的blog - 他维忠 - 秋季的blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="BeeGo教程">
-<meta property="og:url" content="http://peapod.top/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:title" content="Fiber中的流式响应">
+<meta property="og:url" content="http://peapod.top/2025/06/20/Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94/index.html">
 <meta property="og:site_name" content="秋季的blog">
-<meta property="og:description" content="函数应用">
+<meta property="og:description" content="Fiber中的流式响应Fiber（基于 fasthttp）中实现流式响应，需要使用 底层的流式写入接口，使得服务器可以边生成边发送数据，而不是一次性发送完整响应 应用场景示例 OpenAI 的流式 Chat Completion 接口； Server-Sent Events（SSE）； 实时日志输出； 音视频分片推送； 大文件边处理边发送；  使用SetBodyStreamWriter实现1234">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-09-13T08:36:10.000Z">
-<meta property="article:modified_time" content="2022-09-13T12:42:56.000Z">
+<meta property="article:published_time" content="2025-06-20T07:44:55.000Z">
+<meta property="article:modified_time" content="2025-06-20T08:00:49.802Z">
 <meta property="article:author" content="他维忠">
-<meta property="article:tag" content="beego">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2184,7 +2183,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2455,7 +2454,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper post search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2541,7 +2540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://peapod.top/2022/09/13/BeeGo教程/">
+  <link itemprop="mainEntityOfPage" href="http://peapod.top/2025/06/20/Fiber中的流式响应/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="秋季的blog">
   </span>
@@ -2553,31 +2552,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <div class='headimg-div'>
-      <a class='headimg-a'>
-        <img itemprop="image" class='headimg' src='https://w.wallhaven.cc/full/j3/wallhaven-j36ydm.png'/>
-      </a>
-    </div>
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
   
   <div class="article-meta" id="top">
     
     
-      <a title='BeeGo教程' href='/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/'>
-        <img itemprop="image" class='thumbnail' src='https://w.wallhaven.cc/full/j3/wallhaven-j36ydm.png'>
-      </a>
-    
     
       <h1 class="title" itemprop="name headline">
-        BeeGo教程
+        Fiber中的流式响应
       </h1>
       <div class='new-meta-box'>
         
           
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' target="_blank" href="https://taweizhong.github.io/" rel="nofollow noopener">
-    <img itemprop="image" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93" class="lazyload" data-srcset="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202009%2F28%2F20200928083945_03f68.thumb.400_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1667705828&t=c4dffdb79591b02d0edd6a0c94b4ee93" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">他维忠</p>
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">taweizhong</p>
   </a>
 </div>
 
@@ -2585,24 +2578,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/Web/">Web</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Web/" itemprop="url"><span itemprop="name">Web</span></a>
-      </span>
-    
-  </div>
-
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-13T16:36:10+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-20T15:44:55+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Sep 13, 2022</p>
+    <p>发布于：Jun 20, 2025</p>
   </a>
 </div>
 
@@ -2625,243 +2608,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="Beego-框架"><a href="#Beego-框架" class="headerlink" title="Beego 框架"></a>Beego 框架</h2><h3 id="1-beego框架-工作流程"><a href="#1-beego框架-工作流程" class="headerlink" title="1.beego框架 工作流程"></a>1.beego框架 工作流程</h3><p>beego框架是一个使用Go语言快速开发API、Web及后端服务等各种应用的MVC框架。<br>beego是一个完整的MVC框架，包括controller、model以及view等MVC必备模板。</p>
-<p><img src="/../images/50dd6b9c63995eae9dfe5785512f0c71.webp" class="lazyload" data-srcset="/../images/50dd6b9c63995eae9dfe5785512f0c71.webp" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="50dd6b9c63995eae9dfe5785512f0c71"></p>
-<ul>
-<li><p>HTTP请求从main函数进入框架</p>
-</li>
-<li><p>解析url路由，确定执行那个控制器</p>
-</li>
-<li><p>执行前请求过滤器</p>
-</li>
-<li><p>执行控制器</p>
-</li>
-<li><p>执行请求后的过滤器</p>
-</li>
-<li><p>输出结果</p>
-</li>
+    <h2 id="Fiber中的流式响应"><a href="#Fiber中的流式响应" class="headerlink" title="Fiber中的流式响应"></a>Fiber中的流式响应</h2><p><strong>Fiber（基于 fasthttp）中实现流式响应</strong>，需要使用 <strong>底层的流式写入接口</strong>，使得服务器可以边生成边发送数据，而不是一次性发送完整响应</p>
+<h3 id="应用场景示例"><a href="#应用场景示例" class="headerlink" title="应用场景示例"></a>应用场景示例</h3><ul>
+<li>OpenAI 的流式 Chat Completion 接口；</li>
+<li>Server-Sent Events（SSE）；</li>
+<li>实时日志输出；</li>
+<li>音视频分片推送；</li>
+<li>大文件边处理边发送；</li>
 </ul>
-<h3 id="2-beego框架-安装"><a href="#2-beego框架-安装" class="headerlink" title="2.beego框架 安装"></a>2.beego框架 安装</h3><ul>
-<li><p>设置代理</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go <span class="built_in">env</span> -w GO111MODULE=on</span><br><span class="line">$ go <span class="built_in">env</span> -w GOPROXY=https://goproxy.cn,direct</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装beego和bee（项目工具）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ go get github.com/beego/beego</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用bee创建项目</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bee new 项目名称</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>项目结构</p>
-<p> <img src="/../images/image-20220913170626595.png" class="lazyload" data-srcset="/../images/image-20220913170626595.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220913170626595"></p>
-</li>
-<li><p>运行项目</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bee run </span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="3-框架使用"><a href="#3-框架使用" class="headerlink" title="3.框架使用"></a>3.框架使用</h3><p>使用beego开发go语言项目，需要编写控制器、业务模型以及view等模块。</p>
-<ul>
-<li><p>控制器controller</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个控制器结构体</span></span><br><span class="line"><span class="comment">// 一般一个模块定义一个控制器</span></span><br><span class="line"><span class="keyword">type</span> MainController <span class="keyword">struct</span> &#123;</span><br><span class="line">    beego.Controller</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 覆盖beego.Controller的Get方法，用于处理 RESTful 请求中的 get 请求</span></span><br><span class="line"><span class="comment">// beego.Controller 默认支持多种 RESTful方法，例如：Post、Put、Delete等</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *MainController)</span></span> Get() &#123;</span><br><span class="line">    <span class="comment">// Data是继承过来的属性，是 map 类型，可以保存任意类型数据，主要用于保存请求响应数据</span></span><br><span class="line">    c.Data[<span class="string">&quot;Website&quot;</span>] = <span class="string">&quot;&quot;</span></span><br><span class="line">    c.Data[<span class="string">&quot;Email&quot;</span>] = <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="comment">// 设置需要渲染的模板文件，框架会去 views 目录查找这个模板文件</span></span><br><span class="line">    c.TplName = <span class="string">&quot;index.html&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置路由Url</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// 使用 beego.Router 函数，注册路由规则。</span></span><br><span class="line">    <span class="comment">// 第一个参数是url路由，第二个参数是控制器</span></span><br><span class="line">    <span class="comment">// 这里的意思就是将访问 / 这个url的请求，交给controllers.MainController控制器处理。</span></span><br><span class="line">    beego.Router(<span class="string">&quot;/&quot;</span>, &amp;controllers.MainController&#123;&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<blockquote>
-<p>路由规则说明：</p>
-<p>​	只是定义了Url 由哪个控制器执行，但是没有说明 Url 请求由控制器的那个函数执行，一个控制器可以包含多个函数。</p>
-</blockquote>
-<ul>
-<li><p>编写model业务逻辑</p>
-<ul>
-<li><p>定义表结构</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `users` (</span><br><span class="line">  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT &#x27;自增ID&#x27;,</span><br><span class="line">  `username` varchar(30) NOT NULL COMMENT &#x27;账号&#x27;,</span><br><span class="line">  `password` varchar(100) NOT NULL COMMENT &#x27;密码&#x27;,</span><br><span class="line">   PRIMARY KEY (`id`)</span><br><span class="line">  ) ENGINE=InnoDB DEFAULT CHARSET=utf8</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>初始化数据库连接</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    _ <span class="string">&quot;codebaoku/routers&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;github.com/astaxie/beego&quot;</span></span><br><span class="line">    <span class="string">&quot;github.com/astaxie/beego/orm&quot;</span></span><br><span class="line">    _ <span class="string">&quot;github.com/go-sql-driver/mysql&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// 这里注册一个default默认数据库，数据库驱动是mysql.</span></span><br><span class="line">    <span class="comment">// 第三个参数是数据库dsn, 配置数据库的账号密码，数据库名等参数</span></span><br><span class="line">    <span class="comment">//  dsn参数说明：</span></span><br><span class="line">    <span class="comment">//      username    - mysql账号</span></span><br><span class="line">    <span class="comment">//      password    - mysql密码</span></span><br><span class="line">    <span class="comment">//      db_name     - 数据库名</span></span><br><span class="line">    <span class="comment">//      127.0.0.1:3306 - 数据库的地址和端口</span></span><br><span class="line">    orm.RegisterDataBase(<span class="string">&quot;default&quot;</span>, <span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;username:password@tcp(主机IP:端口号)/db_name?charset=utf8&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    beego.Run()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建model</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义User模型，绑定users表结构, 其实就是用来保存sql查询结果。</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">	Id <span class="type">int</span></span><br><span class="line">	Username <span class="type">string</span></span><br><span class="line">	Password <span class="type">string</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 定义User 模型绑定那个表？</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(u *User)</span></span> TableName() <span class="type">string</span> &#123;</span><br><span class="line">    <span class="comment">// 返回mysql表名</span></span><br><span class="line">	<span class="keyword">return</span> <span class="string">&quot;users&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//初始化函数，可以用来向orm注册model</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// 向orm注册user模型</span></span><br><span class="line">	orm.RegisterModel(&amp;User&#123;&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//初始化函数，可以用来向orm注册model</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// 向orm注册user模型</span></span><br><span class="line">	orm.RegisterModel(&amp;User&#123;&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 根据id查询用户信息</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GetUserById</span><span class="params">(id <span class="type">int</span>)</span></span> *User &#123;</span><br><span class="line">	<span class="keyword">if</span>  id == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span>  <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 创建orm对象, 后面都是通过orm对象操作数据库</span></span><br><span class="line">	o := orm.NewOrm()</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 初始化一个User模型对象</span></span><br><span class="line">	user := User&#123;&#125;</span><br><span class="line">	<span class="comment">// 设置查询参数</span></span><br><span class="line">	user.Id = id</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 调用Read方法，根据user设置的参数，查询一条记录，结果保存到user结构体变量中</span></span><br><span class="line">	<span class="comment">// 默认是根据主键进行查询</span></span><br><span class="line">	<span class="comment">// 等价sql： SELECT `id`, `username`, `password` FROM `users` WHERE `id` = 1</span></span><br><span class="line">	err := o.Read(&amp;user)</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 检测查询结果，</span></span><br><span class="line">	<span class="keyword">if</span> err == orm.ErrNoRows &#123;</span><br><span class="line">		<span class="comment">// 找不到记录</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> err == orm.ErrMissPK &#123;</span><br><span class="line">		<span class="comment">// 找不到住建</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> &amp;user</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>控制器调用model</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">func (c *MainController) Get() &#123;</span><br><span class="line">	c.Data[&quot;Website&quot;] = &quot;codebaoku.com&quot;</span><br><span class="line">	c.Data[&quot;Email&quot;] = &quot;go@codebaoku.com&quot;</span><br><span class="line">	</span><br><span class="line">	// 调用model，查询用户id为1 的用户信息</span><br><span class="line">    user := models.GetUserById(1)</span><br><span class="line">	</span><br><span class="line">	// 然后将user数据保存到Data中, 将参数传给后面的 views 视图模板处理</span><br><span class="line">	c.Data[&quot;user&quot;] = user</span><br><span class="line">	</span><br><span class="line">	// 使用新的视图模板user.tpl</span><br><span class="line">	c.TplName = &quot;user.tpl&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编写view视图</p>
-</li>
-<li><p>项目打包</p>
-<p>使用 bee 工具打包，bee 工具可以一键将项目需要的相关文件一起打包成一个压缩包，只需要到线上解压即可。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bee pack</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-<h3 id="参数配置"><a href="#参数配置" class="headerlink" title="参数配置"></a>参数配置</h3><p>beego 默认使用了 INI 格式解析配置文件，通常在项目中会存在很多系统参数、业务参数配置，这些参数通常都是通过配置文件进行配置，而且不是写死在代码里面。</p>
-<blockquote>
-<p><em>提示：修改配置文件后，需要重启应用，配置才生效，即使使用bee run运行项目也得重启。</em></p>
-</blockquote>
-<ol>
-<li><p>系统参数</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 这是注释</span><br><span class="line">#应用名称</span><br><span class="line">appname = codebaoku</span><br><span class="line">#http 服务端口</span><br><span class="line">httpport = <span class="number">8080</span></span><br><span class="line">#运行模式，常用的运行模式有dev, test, prod</span><br><span class="line">runmode = dev</span><br></pre></td></tr></table></figure>
+<h3 id="使用SetBodyStreamWriter实现"><a href="#使用SetBodyStreamWriter实现" class="headerlink" title="使用SetBodyStreamWriter实现"></a>使用<code>SetBodyStreamWriter</code>实现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">app.Get(&quot;/stream&quot;, func(ctx *fiber.Ctx) error &#123;</span><br><span class="line">	ctx.Set(&quot;Content-Type&quot;, &quot;text/event-stream&quot;) // 或 application/octet-stream</span><br><span class="line">	ctx.Context().SetBodyStreamWriter(func(w *bufio.Writer) &#123;</span><br><span class="line">		for i := 0; i &lt; 5; i++ &#123;</span><br><span class="line">			// SSE格式：data: ...\n\n</span><br><span class="line">			fmt.Fprintf(w, &quot;data: message %d\n\n&quot;, i)</span><br><span class="line">			w.Flush() // ⚠️ 必须刷新，否则客户端收不到</span><br><span class="line">			time.Sleep(1 * time.Second)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">	return nil</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<table>
-<thead>
-<tr>
-<th align="left">参数名</th>
-<th align="left">默认值</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">AppName</td>
-<td align="left">beego</td>
-<td align="left">应用名</td>
-</tr>
-<tr>
-<td align="left">RunMode</td>
-<td align="left">dev</td>
-<td align="left">程序运行模式，常用模式有dev、test、prod，一般用于区分不同的运行环境</td>
-</tr>
-<tr>
-<td align="left">RouterCaseSensitive</td>
-<td align="left">true</td>
-<td align="left">是否路由忽略大小写匹配</td>
-</tr>
-<tr>
-<td align="left">ServerName</td>
-<td align="left">beego</td>
-<td align="left">beego 服务器默认在请求的时候输出 server 头的值。</td>
-</tr>
-<tr>
-<td align="left">RecoverPanic</td>
-<td align="left">true</td>
-<td align="left">是否异常恢复，默认值为 true，即当应用出现异常的情况，通过 recover 恢复回来，而不会导致应用异常退出。</td>
-</tr>
-<tr>
-<td align="left">EnableGzip</td>
-<td align="left">false</td>
-<td align="left">是否开启 gzip 支持</td>
-</tr>
-<tr>
-<td align="left">MaxMemory</td>
-<td align="left">64M</td>
-<td align="left">文件上传默认内存缓存大小，单位是字节</td>
-</tr>
-<tr>
-<td align="left">AutoRender</td>
-<td align="left">true</td>
-<td align="left">是否模板自动渲染，对于 API 类型的应用，应用需要把该选项设置为 false，不需要渲染模板。</td>
-</tr>
-<tr>
-<td align="left">StaticDir</td>
-<td align="left">static</td>
-<td align="left">静态文件目录设置</td>
-</tr>
-<tr>
-<td align="left">ViewsPath</td>
-<td align="left">views</td>
-<td align="left">模板路径</td>
-</tr>
-<tr>
-<td align="left">Graceful</td>
-<td align="left">false</td>
-<td align="left">是否开启热升级，默认是 false，关闭热升级。</td>
-</tr>
-<tr>
-<td align="left">ServerTimeOut</td>
-<td align="left">0</td>
-<td align="left">设置 HTTP 的超时时间，默认是 0，不超时。</td>
-</tr>
-<tr>
-<td align="left">HTTPAddr</td>
-<td align="left"></td>
-<td align="left">应用监听地址，默认为空，监听所有的网卡 IP。</td>
-</tr>
-<tr>
-<td align="left">HTTPPort</td>
-<td align="left">8080</td>
-<td align="left">应用监听端口</td>
-</tr>
-<tr>
-<td align="left">EnableHTTPS</td>
-<td align="left">false</td>
-<td align="left">是否启用 HTTPS，默认是 false 关闭。当需要启用时，先设置 EnableHTTPS &#x3D; true，并设置 HTTPSCertFile 和 HTTPSKeyFile</td>
-</tr>
-<tr>
-<td align="left">HTTPSAddr</td>
-<td align="left"></td>
-<td align="left">https应用监听地址，默认为空，监听所有的网卡 IP。</td>
-</tr>
-<tr>
-<td align="left">HTTPSPort</td>
-<td align="left">10443</td>
-<td align="left">https应用监听端口</td>
-</tr>
-<tr>
-<td align="left">HTTPSCertFile</td>
-<td align="left"></td>
-<td align="left">开启 HTTPS 后，ssl 证书路径</td>
-</tr>
-<tr>
-<td align="left">HTTPSKeyFile</td>
-<td align="left"></td>
-<td align="left">开启 HTTPS 之后，SSL 证书 keyfile 的路径。</td>
-</tr>
-<tr>
-<td align="left">EnableAdmin</td>
-<td align="left">false</td>
-<td align="left">是否开启进程内监控模块，默认 false 关闭。</td>
-</tr>
-<tr>
-<td align="left">AdminAddr</td>
-<td align="left">localhost</td>
-<td align="left">监控程序监听的地址。</td>
-</tr>
-<tr>
-<td align="left">AdminPort</td>
-<td align="left">8088</td>
-<td align="left">监控程序监听的地址。</td>
-</tr>
-<tr>
-<td align="left">SessionOn</td>
-<td align="left">false</td>
-<td align="left">session 是否开启</td>
-</tr>
-<tr>
-<td align="left">SessionProvider</td>
-<td align="left">memory</td>
-<td align="left">session 的引擎， 详情参考session章节的教程</td>
-</tr>
-<tr>
-<td align="left">SessionName</td>
-<td align="left">beegosessionID</td>
-<td align="left">存在客户端的 cookie 名称。</td>
-</tr>
-<tr>
-<td align="left">SessionGCMaxLifetime</td>
-<td align="left">3600</td>
-<td align="left">session 过期时间, 单位秒。</td>
-</tr>
-<tr>
-<td align="left">SessionProviderConfig</td>
-<td align="left"></td>
-<td align="left">配置信息，根据不同的session引擎设置不同的配置信息，详细的配置请参考session章节的教程</td>
-</tr>
-<tr>
-<td align="left">SessionCookieLifeTime</td>
-<td align="left">3600</td>
-<td align="left">session 默认存在客户端的 cookie 的时间, 单位秒。</td>
-</tr>
-<tr>
-<td align="left">SessionDomain</td>
-<td align="left"></td>
-<td align="left">session cookie 存储域名。</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>自定义参数</p>
-<p>可以自定义配置，然后通过beego.AppConfig对象的函数读取配置。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 下面是关于mysql数据库的配置参数</span><br><span class="line">mysql_user = <span class="string">&quot;root&quot;</span></span><br><span class="line">mysql_password = <span class="string">&quot;123456&quot;</span></span><br><span class="line">mysql_host = <span class="string">&quot;127.0.0.1:3306&quot;</span></span><br><span class="line">mysql_dbname = <span class="string">&quot;codebaoku&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用SetBodyStream-io-Pipe实现"><a href="#使用SetBodyStream-io-Pipe实现" class="headerlink" title="使用SetBodyStream+io.Pipe实现"></a>使用<code>SetBodyStream+io.Pipe</code>实现</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">app.Get(&quot;/stream&quot;, func(ctx *fiber.Ctx) error &#123;</span><br><span class="line">	pr, pw := io.Pipe() // 管道：一个 reader，一个 writer</span><br><span class="line"></span><br><span class="line">	// 设置响应头：使用 chunked 传输</span><br><span class="line">	ctx.Set(&quot;Content-Type&quot;, &quot;text/event-stream&quot;)</span><br><span class="line">	ctx.Response().SetBodyStream(pr, -1) // -1 表示 Transfer-Encoding: chunked</span><br><span class="line"></span><br><span class="line">	// 在另一个 goroutine 中写入内容（模拟流式数据）</span><br><span class="line">	go func() &#123;</span><br><span class="line">		for i := 0; i &lt; 5; i++ &#123;</span><br><span class="line">			fmt.Fprintf(pw, &quot;data: message %d\n\n&quot;, i)</span><br><span class="line">			time.Sleep(1 * time.Second)</span><br><span class="line">		&#125;</span><br><span class="line">		pw.Close() // 结束写入（很重要）</span><br><span class="line">	&#125;()</span><br><span class="line"></span><br><span class="line">	return nil</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p>读取配置代码:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">beego.AppConfig.String(<span class="string">&quot;mysql_user&quot;</span>)</span><br><span class="line">beego.AppConfig.String(<span class="string">&quot;mysql_password&quot;</span>)</span><br><span class="line">beego.AppConfig.String(<span class="string">&quot;mysql_host&quot;</span>)</span><br><span class="line">beego.AppConfig.String(<span class="string">&quot;mysql_dbname&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-</ol>
+<blockquote>
+<p>[!CAUTION]</p>
+<p>为什么不能用 <code>bytes.NewReader</code> 来流式返回？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reader := bytes.NewReader([]byte(&quot;hello\nworld&quot;))</span><br><span class="line">ctx.Response().SetBodyStream(reader, -1)</span><br></pre></td></tr></table></figure>
+
+<p><code>bytes.NewReader</code> 是完全内存里的数据，fasthttp 调用 <code>io.Copy()</code> 时一下子就读取完了。</p>
+<p><strong>二者的关键区别在于 <code>reader.Read()</code> 的行为：是否懒读取、是否阻塞。</strong></p>
+<ul>
+<li><code>bytes.NewReader</code> 会立刻把所有数据都“读完”，fasthttp 会缓存后统一发送。</li>
+<li><code>io.Pipe()</code> 的 <code>PipeReader.Read()</code> 会 <strong>阻塞直到写入数据</strong>，fasthttp 能边读边发。</li>
+</ul>
+</blockquote>
+<h4 id="关键对比：reader-Read-行为差异"><a href="#关键对比：reader-Read-行为差异" class="headerlink" title="关键对比：reader.Read() 行为差异"></a>关键对比：<code>reader.Read()</code> 行为差异</h4><h5 id="bytes-NewReader-byte-："><a href="#bytes-NewReader-byte-：" class="headerlink" title="bytes.NewReader([]byte(...))："></a><code>bytes.NewReader([]byte(...))</code>：</h5><ul>
+<li>是内存 reader；</li>
+<li><code>Read()</code> 调用时，数据已经全部存在；</li>
+<li>所以 fasthttp 通过 <code>io.Copy()</code> <strong>立刻读完所有内容</strong>；</li>
+<li>fasthttp 现在掌握了完整内容，就缓存起来，一次性写入 socket ➜ <strong>非流式</strong>；</li>
+<li>虽然你设了 chunked，但并没有任何“流”或“等待”发生。</li>
+</ul>
+<h5 id="io-Pipe-："><a href="#io-Pipe-：" class="headerlink" title="io.Pipe()："></a><code>io.Pipe()</code>：</h5><ul>
+<li><code>PipeReader</code> 是一个真正的管道；</li>
+<li><code>pr.Read()</code> 如果没有人 <code>pw.Write()</code>，就会阻塞在那里；</li>
+<li>fasthttp 调用 <code>io.Copy()</code> 时：<ul>
+<li>读一点（当有数据）；</li>
+<li>立即通过 chunked 写一点；</li>
+<li>再继续等写入（写入线程继续 <code>pw.Write()</code>）；</li>
+</ul>
+</li>
+<li>于是形成了：<strong>边写边读边发</strong> ➜ 真正的流式传输。</li>
+</ul>
 
   </div>
   
@@ -2894,10 +2682,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-13T20:42:56+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-20T16:00:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Sep 13, 2022</p>
+    <p>更新于：Jun 20, 2025</p>
   </a>
 </div>
 
@@ -2905,10 +2693,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/beego/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>beego</p></a></div>
-  <span hidden itemprop="keywords">beego</span>
-
 
         
       
@@ -2920,7 +2704,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/&title=BeeGo教程 - 秋季的blog&pics=https://w.wallhaven.cc/full/j3/wallhaven-j36ydm.png&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://peapod.top/2025/06/20/Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94/&title=Fiber中的流式响应 - 秋季的blog&summary="
           
           >
           
@@ -2932,7 +2716,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/&title=BeeGo教程 - 秋季的blog&pics=https://w.wallhaven.cc/full/j3/wallhaven-j36ydm.png&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://peapod.top/2025/06/20/Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94/&title=Fiber中的流式响应 - 秋季的blog&summary="
           
           >
           
@@ -2944,7 +2728,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/&title=BeeGo教程 - 秋季的blog&pics=https://w.wallhaven.cc/full/j3/wallhaven-j36ydm.png&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://peapod.top/2025/06/20/Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94/&title=Fiber中的流式响应 - 秋季的blog&summary="
           
           >
           
@@ -2982,17 +2766,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/09/14/BeeGo%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8A%E4%BC%A0%E4%B8%8E%E4%B8%8B%E8%BD%BD/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>BeeGo实现文件的上传与下载</p>
-          <p class='content'>beego实现文件的上传和下载文件的上传html的处理
-
-1234&lt;form id=&quot;&quot; method=&quot;POST&quot; enctype=&quot;m...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/09/09/%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0%E7%94%A8%E4%BD%9C%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/'>
-          <p class='title'>匿名函数用作回调函数<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>匿名函数用作回调函数123456789101112131415package mainimport &quot;fmt&quot;func fun(list []int, f func(int)...</p>
+        <a class='next' href='/2025/06/16/velero-k8s%E5%A4%87%E4%BB%BD/'>
+          <p class='title'>velero k8s备份<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>velero （k8s备份）简介Velero (原名 Heptio Ark) 是一个开源工具，专门用于安全地备份、恢复和迁移 Kubernetes 集群资源和持久卷。它提供了一种可靠的方法来保护...</p>
         </a>
       
     </div>
@@ -3008,7 +2785,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/06/20/Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3050,7 +2827,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Beego-%E6%A1%86%E6%9E%B6"><span class="toc-text">Beego 框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-beego%E6%A1%86%E6%9E%B6-%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">1.beego框架 工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-beego%E6%A1%86%E6%9E%B6-%E5%AE%89%E8%A3%85"><span class="toc-text">2.beego框架 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8"><span class="toc-text">3.框架使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE"><span class="toc-text">参数配置</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94"><span class="toc-text">Fiber中的流式响应</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B"><span class="toc-text">应用场景示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8SetBodyStreamWriter%E5%AE%9E%E7%8E%B0"><span class="toc-text">使用SetBodyStreamWriter实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8SetBodyStream-io-Pipe%E5%AE%9E%E7%8E%B0"><span class="toc-text">使用SetBodyStream+io.Pipe实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AF%B9%E6%AF%94%EF%BC%9Areader-Read-%E8%A1%8C%E4%B8%BA%E5%B7%AE%E5%BC%82"><span class="toc-text">关键对比：reader.Read() 行为差异</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#bytes-NewReader-byte-%EF%BC%9A"><span class="toc-text">bytes.NewReader([]byte(...))：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#io-Pipe-%EF%BC%9A"><span class="toc-text">io.Pipe()：</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3131,14 +2908,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -4269,7 +4046,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://peapod.top/categories/Web/","name":"Web"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2022/09/13/BeeGo教程/","name":"BeeGo教程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"BeeGo教程","description":"函数应用","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2022/09/13/BeeGo%E6%95%99%E7%A8%8B/","wordCount":0,"datePublished":"2022-09-13T08:36:10.000Z","dateModified":"2022-09-13T12:42:56.000Z","articleSection":"Web","keywords":"beego","image":{"@type":"ImageObject","url":"https://w.wallhaven.cc/full/j3/wallhaven-j36ydm.png","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://peapod.top/","name":"秋季的blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://peapod.top/2025/06/20/Fiber中的流式响应/","name":"Fiber中的流式响应"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"秋季的blog","url":"http://peapod.top/","keywords":null,"description":"","author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/","description":""},"publisher":{"@type":"Organization","name":"秋季的blog","url":"http://peapod.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://peapod.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Fiber中的流式响应","description":"","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://peapod.top/2025/06/20/Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94/"},"author":{"@type":"Person","name":"他维忠","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://peapod.top/"},"publisher":{"@type":"Organization","name":"秋季的blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://peapod.top/2025/06/20/Fiber%E4%B8%AD%E7%9A%84%E6%B5%81%E5%BC%8F%E5%93%8D%E5%BA%94/","wordCount":0,"datePublished":"2025-06-20T07:44:55.000Z","dateModified":"2025-06-20T08:00:49.802Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
